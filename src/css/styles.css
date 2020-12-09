@@ -1,0 +1,806 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Black.eot");
+  src: local("Raleway Black"), local("Raleway-Black"), url("../fonts/Raleway/Raleway-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Black.woff") format("woff"), url("../fonts/Raleway/Raleway-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ExtraLight.eot");
+  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("../fonts/Raleway/Raleway-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-ExtraLight.woff") format("woff"), url("../fonts/Raleway/Raleway-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Medium.eot");
+  src: local("Raleway Medium"), local("Raleway-Medium"), url("../fonts/Raleway/Raleway-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-LightItalic.eot");
+  src: local("Raleway Light Italic"), local("Raleway-LightItalic"), url("../fonts/Raleway/Raleway-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-LightItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Regular.eot");
+  src: local("Raleway"), local("Raleway-Regular"), url("../fonts/Raleway/Raleway-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Light.eot");
+  src: local("Raleway Light"), local("Raleway-Light"), url("../fonts/Raleway/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Light.woff") format("woff"), url("../fonts/Raleway/Raleway-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Thin.eot");
+  src: local("Raleway Thin"), local("Raleway-Thin"), url("../fonts/Raleway/Raleway-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Thin.woff") format("woff"), url("../fonts/Raleway/Raleway-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ExtraBoldItalic.eot");
+  src: local("Raleway ExtraBold Italic"), local("Raleway-ExtraBoldItalic"), url("../fonts/Raleway/Raleway-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-ExtraBoldItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ExtraLightItalic.eot");
+  src: local("Raleway ExtraLight Italic"), local("Raleway-ExtraLightItalic"), url("../fonts/Raleway/Raleway-ExtraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-ExtraLightItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-MediumItalic.eot");
+  src: local("Raleway Medium Italic"), local("Raleway-MediumItalic"), url("../fonts/Raleway/Raleway-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-MediumItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-BoldItalic.eot");
+  src: local("Raleway Bold Italic"), local("Raleway-BoldItalic"), url("../fonts/Raleway/Raleway-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-BoldItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ThinItalic.eot");
+  src: local("Raleway Thin Italic"), local("Raleway-ThinItalic"), url("../fonts/Raleway/Raleway-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-ThinItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-SemiBoldItalic.eot");
+  src: local("Raleway SemiBold Italic"), local("Raleway-SemiBoldItalic"), url("../fonts/Raleway/Raleway-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-SemiBoldItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-SemiBold.eot");
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("../fonts/Raleway/Raleway-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Italic.eot");
+  src: local("Raleway Italic"), local("Raleway-Italic"), url("../fonts/Raleway/Raleway-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Italic.woff") format("woff"), url("../fonts/Raleway/Raleway-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Bold.eot");
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("../fonts/Raleway/Raleway-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Bold.woff") format("woff"), url("../fonts/Raleway/Raleway-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ExtraBold.eot");
+  src: local("Raleway ExtraBold"), local("Raleway-ExtraBold"), url("../fonts/Raleway/Raleway-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-ExtraBold.woff") format("woff"), url("../fonts/Raleway/Raleway-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-BlackItalic.eot");
+  src: local("Raleway Black Italic"), local("Raleway-BlackItalic"), url("../fonts/Raleway/Raleway-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-BlackItalic.woff") format("woff"), url("../fonts/Raleway/Raleway-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1470px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: static;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+body.scroll-hidden {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+body main {
+  flex: 1 0 auto;
+}
+body .mario-footer {
+  flex-shrink: 0;
+  width: 100%;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+}
+body .mario-footer .mario-footer__footer-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* footer */
+.footer-top__container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 5% 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 475px) {
+  .footer-top__container {
+    flex-direction: column;
+  }
+}
+
+.footer-top__logo-container {
+  width: 256px;
+  height: 126px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.footer-top__logo-container img {
+  width: 100%;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .footer-top__logo-container {
+    width: 224px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .footer-top__logo-container {
+    margin: 0 auto;
+  }
+}
+
+.footer-top__list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .footer-top__list-container {
+    margin: 15px 0;
+  }
+}
+@media screen and (max-width: 475px) {
+  .footer-top__list-container {
+    padding: 0;
+  }
+}
+.footer-top__list-container h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #ffffff;
+}
+.footer-top__list-container ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 15px 0 0;
+}
+.footer-top__list-container ul li {
+  margin: 9px 0;
+}
+.footer-top__list-container ul li:hover a {
+  text-decoration: underline;
+}
+.footer-top__list-container ul li a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-top__list-container.footer-top__list-container--contacts li {
+  margin: 9px 0;
+}
+.footer-top__list-container.footer-top__list-container--contacts li p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #ffffff;
+}
+.footer-top__list-container.footer-top__list-container--contacts li p strong {
+  font-size: 30px;
+}
+
+.footer-bottom__container {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .footer-bottom__container {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.footer-bottom__creation-date-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom__creation-date-copyright p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #4b4b4b;
+}
+.footer-bottom__creation-date-copyright span {
+  display: inline-block;
+  width: 2px;
+  height: 24px;
+  background: #4b4b4b;
+  margin: 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .footer-bottom__creation-date-copyright {
+    flex-direction: column;
+    padding: 0 0 15px;
+  }
+  .footer-bottom__creation-date-copyright span {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+  }
+}
+
+.footer-bottom__mario-docs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom__mario-docs a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.footer-bottom__mario-docs a:hover {
+  text-decoration: underline;
+}
+.footer-bottom__mario-docs span {
+  display: inline-block;
+  width: 2px;
+  height: 24px;
+  background: #4b4b4b;
+  margin: 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .footer-bottom__mario-docs {
+    flex-direction: column;
+    padding: 15px 0 0;
+  }
+  .footer-bottom__mario-docs span {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+  }
+}
+
+/* header */
+.mario-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, black 25%, rgba(255, 255, 255, 0) 100%);
+}
+.mario-header .mario-header__container {
+  width: 100%;
+  height: 100px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .mario-header .mario-header__container {
+    height: 70px;
+    padding: 5px 0;
+    position: relative;
+  }
+}
+
+.mario-header__logo {
+  width: 151px;
+  height: 100%;
+  flex-shrink: 0;
+}
+.mario-header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .mario-header__logo {
+    width: 112px;
+  }
+}
+
+.current-menu-item {
+  border-bottom: 1px solid #fa8100;
+}
+
+.mario-header__burger-btn-mob {
+  display: none;
+  width: 44px;
+  height: 32px;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+}
+.mario-header__burger-btn-mob span {
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background: #fa8100;
+  transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+.mario-header__burger-btn-mob.active-burger-btn {
+  transition: transform 0.3s;
+}
+.mario-header__burger-btn-mob.active-burger-btn:hover {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+.mario-header__burger-btn-mob.active-burger-btn + .mario-header__header-navigation {
+  display: flex;
+  visibility: visible;
+}
+.mario-header__burger-btn-mob.active-burger-btn span:first-child {
+  transform: translate(0, 14px) rotate(-45deg);
+  transition: transform 0.3s;
+}
+.mario-header__burger-btn-mob.active-burger-btn span:nth-child(2) {
+  transform: translate(40px, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+.mario-header__burger-btn-mob.active-burger-btn span:last-child {
+  transform: translate(0, -15px) rotate(45deg);
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .mario-header__burger-btn-mob {
+    display: flex;
+  }
+}
+
+.mario-header__header-navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+.mario-header__header-navigation > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: auto;
+  padding: 0 5% 0 0;
+}
+.mario-header__header-navigation > ul > li {
+  padding: 9px 8px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s;
+}
+.mario-header__header-navigation > ul > li:hover {
+  border-color: #fa8100;
+  transition: border-bottom-color 0.3s;
+}
+.mario-header__header-navigation > ul > li > a {
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.mario-header__header-navigation .mario-header__site-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: opacity 0.3s;
+}
+.mario-header__header-navigation .mario-header__site-language > a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+.mario-header__header-navigation .mario-header__site-language > a.dropdown-open-lang + ul {
+  display: flex;
+}
+.mario-header__header-navigation .mario-header__site-language > ul {
+  display: none;
+  flex-direction: column;
+  width: 50px;
+  list-style: none;
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #fa8100;
+  border-radius: 2px;
+}
+.mario-header__header-navigation .mario-header__site-language > ul > li {
+  width: 100%;
+  height: 40px;
+  padding: 8px 5px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+.mario-header__header-navigation .mario-header__site-language > ul > li:hover {
+  background: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+.mario-header__header-navigation .mario-header__site-language > ul > li:hover > a {
+  color: #fa8100;
+  transition: color 0.3s;
+}
+.mario-header__header-navigation .mario-header__site-language > ul > li a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: color 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation .mario-header__site-language {
+    opacity: 0;
+  }
+  .mario-header__header-navigation .mario-header__site-language > a {
+    font-size: 32px;
+  }
+  .mario-header__header-navigation .mario-header__site-language > a + ul {
+    width: 80px;
+  }
+  .mario-header__header-navigation .mario-header__site-language > a + ul > li > a {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation {
+    visibility: hidden;
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    height: calc(100vh - 70px);
+    top: 70px;
+    background: black;
+    border-top: 2px solid #fa8100;
+  }
+  .mario-header__header-navigation > ul {
+    position: absolute;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+  .mario-header__header-navigation > ul > li {
+    margin: 3% 0;
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.4s;
+  }
+  .mario-header__header-navigation > ul > li a {
+    font-size: 32px;
+  }
+  .mario-header__header-navigation .mario-header__site-language {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+  .mario-header__header-navigation .mario-header__site-language > ul {
+    top: auto;
+    bottom: 130%;
+  }
+}
+
+@keyframes navFading {
+  0% {
+    right: 50%;
+    left: 50%;
+    top: 70px;
+    border-radius: 0 0 50% 0;
+    overflow: hidden;
+  }
+  100% {
+    height: calc(100vh - 70px);
+  }
+}
+@keyframes navFadingReverse {
+  0% {
+    height: calc(100vh - 70px);
+    visibility: visible;
+  }
+  100% {
+    right: 50%;
+    left: 50%;
+    top: 70px;
+    border-radius: 0 0 50% 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+@keyframes fadeingTopLi {
+  0% {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeingTopLiReverse {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+}
+/* main page */
+.mario-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+}
+
+.mario-main__video-banner {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.mario-main__video-banner > .container {
+  z-index: 3;
+  margin-bottom: 8%;
+}
+.mario-main__video-banner h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 96px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.mario-main__video-banner .video-banner__video-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.mario-main__video-banner .video-banner__video-container::before {
+  content: "";
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, black 82%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .mario-main__video-banner {
+    align-items: center;
+    height: 560px;
+  }
+  .mario-main__video-banner > .container {
+    margin-bottom: 0;
+  }
+  .mario-main__video-banner > .container > h1 {
+    font-size: 60px;
+    line-height: 68px;
+    max-width: 86%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mario-main__video-banner > .container > h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.mario-main__mario-features {
+  width: 100%;
+  background: #000000;
+}
+
+.mario-features__container {
+  width: 100%;
+}
+.mario-features__container > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.mario-features__container > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 170px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.mario-features__container > ul > li > div {
+  width: 89px;
+  height: 89px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #4b4b4b;
+}
+.mario-features__container > ul > li > div > img {
+  height: 48px;
+  object-fit: contain;
+}
+.mario-features__container > ul > li > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: normal;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.mario-main__mario-products-type {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mario-products-type__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mario-products-type__single-type {
+  position: relative;
+  padding: 0 15px;
+  box-sizing: border-box;
+  width: 50%;
+  height: 952px;
+}
+.mario-products-type__single-type > .mario-main__video-banner {
+  height: 100%;
+  position: absolute;
+  padding: 0 0 48px 76px;
+  justify-content: flex-start;
+}
+.mario-products-type__single-type > .mario-main__video-banner > .video-banner__video-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.mario-products-type__single-type > .mario-main__video-banner > .video-banner__video-container::before {
+  content: none;
+}
+
+.mario-products-type__title-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+}
+.mario-products-type__title-side > h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 72px;
+  line-height: 82px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */
