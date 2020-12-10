@@ -13,6 +13,9 @@ $orange-color: #fa8100;
 
 html, body {
   height: 100%;
+  min-height: 100%;
+  flex-grow: 1;
+  scroll-behavior: smooth;
 }
 
 
@@ -60,6 +63,16 @@ h1, h2, h3, h4, h5, h6, p, ul {
   margin: 0 auto;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -67,10 +80,8 @@ body {
   width: 100%;
   position: static;
   overflow-y: auto;
+  background: $black-color;
 
-  &::-webkit-scrollbar {
-    width: 0;
-  }
 
   &.scroll-hidden {
     overflow: hidden;
@@ -639,6 +650,7 @@ body {
 
     > .container {
       margin-bottom: 0;
+
       > h1 {
         font-size: 60px;
         line-height: 68px;
@@ -716,30 +728,127 @@ body {
   width: 100%;
   //height: 50px;
   box-sizing: border-box;
+  min-height: 952px;
+  max-height: 952px;
+  height: 100%;
+  flex-grow: 1;
+  margin-top: 90px;
+  position: relative;
+
+  @media screen and (max-width: 968px) {
+    max-height: none;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-height: 1070px;
+    margin-top: 40px;
+  }
 }
+
 .mario-products-type__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100%;
+  margin-top: 50px;
+
+  @media screen and (max-width: 968px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    margin-top: 80px;
+
+  }
+}
+
+.mario-products-type__right-side {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+
+  .mario-products-type__single-type {
+    width: 100%;
+    min-height: 50%;
+    height: 100%;
+
+    .mario-main__video-banner {
+      bottom: 15px;
+    }
+
+    &:last-child {
+      .mario-main__video-banner {
+        align-items: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    width: 100%;
+    padding-top: 30px;
+    height: auto;
+
+    .mario-products-type__single-type {
+      height: 480px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .mario-products-type__single-type {
+
+      height: 320px;
+
+      .mario-main__video-banner {
+        align-items: flex-end;
+      }
+
+      .mario-products-type__title-side h2 {
+        font-size: 48px;
+        line-height: 56px;
+      }
+
+      .mario-products-type__title-side p {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      .mario-products-type__title-side .mario-products__quality-icons {
+        margin-top: 60px;
+      }
+    }
+  }
 }
 
 .mario-products-type__single-type {
   position: relative;
   padding: 0 15px;
   box-sizing: border-box;
+  max-height: 952px;
+  height: 100%;
   width: 50%;
-  height: 952px;
 
   &:hover {
 
   }
+
   > .mario-main__video-banner {
     height: 100%;
     position: absolute;
-    padding: 0 0 48px 76px;
     justify-content: flex-start;
+    box-sizing: border-box;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    bottom: 0;
 
-     > .video-banner__video-container {
+    > .video-banner__video-container {
       width: 100%;
       position: absolute;
       top: 0;
@@ -757,14 +866,45 @@ body {
 
     }
   }
+
+  @media screen and (max-width: 968px) {
+    min-height: 480px;
+    height: 480px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: 320px;
+    height: 320px;
+
+    .mario-main__video-banner {
+      align-items: flex-end;
+    }
+
+    .mario-products-type__title-side h2 {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    .mario-products-type__title-side p {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .mario-products-type__title-side .mario-products__quality-icons {
+      margin-top: 60px;
+    }
+  }
 }
 
 .mario-products-type__title-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   z-index: 2;
+  padding: 0 0 5% 9%;
+  box-sizing: border-box;
 
   > h2 {
     font-family: $main-font;
@@ -772,6 +912,440 @@ body {
     line-height: 82px;
     color: $white-color;
     font-weight: bold;
+  }
+
+  > p {
+    font-family: $main-font;
+    color: $white-color;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 38px;
+  }
+
+  .mario-products__quality-icons {
+    width: 250px;
+    height: 42px;
+    margin-top: 100px;
+
+    > ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+
+      > li {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+
+        > img {
+
+        }
+      }
+    }
+  }
+}
+
+.mario-main__mario-safety {
+  width: 100%;
+  background: linear-gradient(180deg, white 100%, rgba(0, 0, 0, 0.0) 100%);
+  height: 800px;
+  position: relative;
+  @media screen and (max-width: 1024px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 578px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 425px) {
+    height: 350px;
+  }
+
+
+  & > .mario-safety__bg-dark {
+    background: rgba(0, 0, 0, 1);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    opacity: 0.0;
+    transition: opacity 0.1s;
+    backdrop-filter: blur(20px);
+  }
+
+  > .container {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    > h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      font-size: 260px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.03);
+      font-family: $main-font;
+
+      @media screen and (max-width: 1440px) {
+        font-size: 205px;
+      }
+
+      @media screen and (max-width: 1080px) {
+        font-size: 180px;
+        top: 40%;
+      }
+
+      @media screen and (max-width: 978px) {
+        font-size: 147px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 112px;
+      }
+
+      @media screen and (max-width: 578px) {
+        font-size: 92px;
+        top: 44%;
+      }
+      @media screen and (max-width: 478px) {
+        font-size: 80px;
+        top: 37%;
+      }
+      @media screen and (max-width: 412px) {
+        font-size: 70px;
+        top: 23%;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 60px;
+      }
+    }
+
+    > .mario-safety__text-block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 765px;
+      padding-top: 130px;
+
+      > h2 {
+        font-family: $main-font;
+        font-size: 48px;
+        line-height: 56px;
+        color: $black-color;
+        font-weight: bold;
+      }
+
+      > p {
+        font-family: $main-font;
+        color: $p-color;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        margin: 50px 0;
+        width: 80%;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-top: 90px;
+        > h2 {
+          font-size: 36px;
+          line-height: 44px;
+          text-align: center;
+        }
+        > p {
+          font-size: 14px;
+          line-height: 20px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 578px) {
+        > h2 {
+          font-size: 28px;
+          line-height: 34px;
+        }
+        > p {
+          font-size: 12px;
+          line-height: 16px;
+          margin: 20px 0 0;
+        }
+      }
+      @media screen and (max-width: 475px) {
+        padding-top: 20px;
+      }
+      @media screen and (max-width: 425px) {
+        padding-top: 20px;
+
+        > h2 {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.mario-main__mario-innovation {
+  height: 1000px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    height: 700px;
+  }
+  @media screen and (max-width: 475px) {
+    height: 550px;
+  }
+
+  .mario-main__video-banner {
+    height: 100%;
+    align-items: center;
+
+    .container {
+      margin-bottom: 0;
+
+      > h2 {
+        font-family: $main-font;
+        font-size: 48px;
+        line-height: 56px;
+        color: $white-color;
+        font-weight: bold;
+        max-width: 900px;
+      }
+
+      > p {
+        font-family: $main-font;
+        color: $white-color;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        margin: 50px 0;
+        max-width: 800px;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-top: 90px;
+        > h2 {
+          font-size: 36px;
+          line-height: 44px;
+          text-align: center;
+        }
+        > p {
+          font-size: 14px;
+          line-height: 20px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 578px) {
+        > h2 {
+          font-size: 28px;
+          line-height: 34px;
+        }
+        > p {
+          font-size: 12px;
+          line-height: 16px;
+          margin: 20px 0 0;
+        }
+      }
+      @media screen and (max-width: 475px) {
+        padding-top: 20px;
+      }
+      @media screen and (max-width: 425px) {
+        padding-top: 20px;
+
+        > h2 {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  .video-banner__video-container::before {
+    content: none;
+  }
+}
+
+.mario-main__picture-bg-banner {
+  width: 100%;
+  height: 1000px;
+  background: url("../img/stock-photo-young-beautiful-woman-sitting-in-bathroom-in-expensive-bathtub-bath-drinking-champagne-looking-at-1094264396.jpg") no-repeat left top;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      @include h1-title;
+      color: $white-color;
+      text-align: center;
+      max-width: 75%;
+    }
+
+
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 750px;
+    .container h1 {
+      font-size: 60px;
+      line-height: 68px;
+      max-width: 86%;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    height: 500px;
+    .container h1 {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+}
+
+.mario-main__partner-block {
+  width: 100%;
+  height: 1151px;
+
+  > .partner-block__container {
+    height: 100%;
+    padding: 40px 15px;
+    box-sizing: border-box;
+  }
+
+  .partner-block__half-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
+.partner-block__container {
+  max-width: 1730px;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.partner-block__single-block {
+  width: calc(50% - 20px);
+  height: calc((933 / 1111) * 100%);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.partner-block__single-block--text {
+    padding: 5% 4%;
+    box-sizing: border-box;
+    background: #383838;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+
+    .partner-block__text-part {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+
+      .mario-button {
+        margin-top: auto;
+      }
+      h3 {
+        font-family: $main-font;
+        color: #a1a1a6;
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: bold;
+        margin: 30px 0 20px;
+      }
+
+      p {
+        font-family: $main-font;
+        color: #a1a1a6;
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      .partner-block__text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 12%;
+
+        .text-container__amount-transaction {
+          width: 50%;
+          p:first-child {
+            font-family: $main-font;
+            color: $white-color;
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: bold;
+
+            > strong {
+              font-size: 120px;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+.mario-button {
+  width: 100%;
+  max-width: 397px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: $white-color;
+  border: 3px solid $white-color;
+  background: transparent;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    color: $black-color;
+    background: $white-color;
+    transition: background-color 0.3s, color 0.3s;
+
   }
 }
 

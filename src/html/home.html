@@ -11,7 +11,7 @@
 <header class="mario-header">
     <div class="container">
         <div class="mario-header__container">
-            <a href="#" class="mario-header__logo">
+            <a href="" class="mario-header__logo">
                 <img class="lazyload" data-src="../img/logo-mario-white.png" alt="Mario">
             </a>
             <div class="mario-header__burger-btn-mob">
@@ -99,11 +99,122 @@
                     </div>
                     <div class="mario-products-type__title-side">
                         <h2>Електричні</h2>
+                        <p>рушникосушарки</p>
+                        <div class="mario-products__quality-icons">
+                            <ul>
+                                <li><img src="../img/quality-svg.svg" alt=""></li>
+                                <li><img src="../img/quality-svg-2.svg" alt=""></li>
+                                <li><img src="../img/quality-svg-3.svg" alt=""></li>
+                                <li><img src="../img/quality-svg-4.svg" alt=""></li>
+                                <li><img src="../img/quality-svg-5.svg" alt=""></li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
+            <div class="mario-products-type__right-side">
+                <div class="mario-products-type__single-type">
+                    <section class="mario-main__video-banner" style="z-index: 2">
+                        <div class="video-banner__video-container">
+                            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
+                                   src="../video/videoplayback.mp4"
+                                   muted="" loop="" playsinline="" data-loaded="true"></video>
+                        </div>
+                        <div class="mario-products-type__title-side">
+                            <h2>Водяні</h2>
+                            <p>рушникосушарки</p>
+                            <div class="mario-products__quality-icons">
+                                <ul>
+                                    <li><img src="../img/quality-svg.svg" alt=""></li>
+                                    <li><img src="../img/quality-svg-2.svg" alt=""></li>
+                                    <li><img src="../img/quality-svg-3.svg" alt=""></li>
+                                    <li><img src="../img/quality-svg-4.svg" alt=""></li>
+                                    <li><img src="../img/quality-svg-5.svg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="mario-products-type__single-type">
+                    <section class="mario-main__video-banner" style="z-index: 2">
+                        <div class="video-banner__video-container">
+                            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
+                                   src="../video/videoplayback.mp4"
+                                   muted="" loop="" playsinline="" data-loaded="true"></video>
+                        </div>
+                        <div class="mario-products-type__title-side">
+                            <h2>Аксесуари</h2>
+                            <p>до рушникосушарки</p>
+
+                        </div>
+                    </section>
+                </div>
+
+            </div>
         </div>
 
+    </section>
+    <section class="mario-main__mario-safety">
+        <div class="mario-safety__bg-dark"></div>
+        <div class="container">
+            <h1>надійність</h1>
+            <div class="mario-safety__text-block">
+                <h2>Mario стремится обеспечить абсолютную надежность и работоспособность продукта.</h2>
+                <p>Сьогодні потужне підприємство «Маріо» розташовується на площі близько 10 000 кв. метрів, має точне
+                    спеціалізоване обладнання, програмоване кваліфікованим персоналом, великі складські приміщення і
+                    високий рівень постійного контролю якості всіх виробів на виробництві.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mario-main__mario-innovation">
+        <section class="mario-main__video-banner" style="z-index: 2">
+            <div class="video-banner__video-container">
+                <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/large.mp4"
+                       muted="" loop="" playsinline="" data-loaded="true"></video>
+            </div>
+            <div class="container">
+                <h2>Мы являемся новаторами в области электрических полотенцесушителей</h2>
+                <p>Надаємо консультації менеджерів для збільшення продажів товару у вашому регіоні. Звичайно, це в наших
+                    інтересах, адже ваші доходи - це і наші доходи</p>
+            </div>
+
+        </section>
+    </section>
+    <section class="mario-main__picture-bg-banner">
+        <div class="container">
+            <h1>Сделай ванную зоной своего комфорта</h1>
+        </div>
+    </section>
+    <section class="mario-main__partner-block">
+        <div class="partner-block__container">
+            <div class="partner-block__half-container">
+                <div class="partner-block__single-block">
+                    <img class="lazyload" data-src="../img/partners-bg.jpg" alt="Picture">
+                </div>
+                <div class="partner-block__single-block partner-block__single-block--text">
+                    <section class="partner-block__text-part">
+                        <h3>As a financial institution, a key element that really inspired us to go with iPad was the
+                            fact that security was already integrated into the device</h3>
+                        <p>Eric Marineau</p>
+                        <p>Director, Mobile Centre of Excellence</p>
+                        <div class="partner-block__text-container">
+                            <div class="text-container__amount-transaction">
+                                <p><strong>2</strong>k</p>
+                                <p>loans transacted annually</p>
+                            </div>
+                            <div class="text-container__amount-transaction">
+                                <p><strong>16</strong>k</p>
+                                <p>loans transacted annually</p>
+                            </div>
+
+                        </div>
+                        <a class="mario-button" href="#">Як стати партнером?</a>
+                    </section>
+                </div>
+
+            </div>
+        </div>
     </section>
 </main>
 <footer class="mario-footer">
@@ -184,16 +295,102 @@
         })
     })
     let headerMario = [...document.querySelectorAll('.mario-header')][0];
+
+
+    let afterBlock = [...document.querySelectorAll('.mario-main__mario-safety')][0];
+    let videoBlock = [...document.querySelectorAll('.mario-main__mario-innovation')][0];
+    let videoVideo = [...document.querySelectorAll('.mario-main__mario-innovation video')][0];
+    let safetyP = [...document.querySelectorAll('.mario-main__mario-safety p')][0];
+    let afterBlockBg = [...document.querySelectorAll('.mario-safety__bg-dark')][0];
+
     let currentBgHeader = '';
-    window.onload = function () {
-        let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-        let boxLeft = 750 - scrollTop;
-        let percentGrad = boxLeft / 10;
-        headerMario.style.background = `linear-gradient(180deg, rgba(0,0,0,1) ${100 - percentGrad}%, rgba(255,255,255,0) 100%)`;
-        currentBgHeader = headerMario.style.background;
+    let currentBgAfter = '0.0';
+
+
+    function isInViewport() {
+        let rect = afterBlock.getBoundingClientRect();
+        let vB = videoBlock.getBoundingClientRect();
+        let h = afterBlock.scrollHeight;
+
+        function getVideoBlock() {
+            let vB = videoBlock.getBoundingClientRect();
+
+            if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
+                if (vB.top < 500 && -400 < vB.top) {
+                    videoVideo.play();
+
+                } else {
+                    videoVideo.pause();
+
+                }
+            } else if (document.body.clientWidth < 578) {
+                if (vB.top < 400 && -400 < vB.top) {
+                    videoVideo.play();
+
+                } else {
+                    videoVideo.pause();
+
+                }
+            } else {
+                if (vB.top < 500 && -500 < vB.top) {
+                    videoVideo.play();
+
+                } else {
+                    videoVideo.pause();
+
+                }
+            }
+
+        }
+
+        if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
+            if (rect.top < 150) {
+                let opacityBg = (-rect.top + 250) / h;
+                afterBlockBg.style.opacity = opacityBg;
+                safetyP.style.opacity = 1 - opacityBg;
+
+            } else {
+                afterBlockBg.style.opacity = '0';
+                safetyP.style.opacity = '1';
+            }
+            getVideoBlock();
+        } else if (document.body.clientWidth < 578) {
+            if (rect.top < 100) {
+                let opacityBg = (-rect.top + 100) / h;
+                afterBlockBg.style.opacity = opacityBg;
+                safetyP.style.opacity = 1 - opacityBg;
+
+            } else {
+                afterBlockBg.style.opacity = '0';
+                safetyP.style.opacity = '1';
+            }
+            getVideoBlock();
+        } else {
+            if (rect.top < 250) {
+                let opacityBg = (-rect.top + 250) / h;
+                afterBlockBg.style.opacity = opacityBg;
+                safetyP.style.opacity = 1 - opacityBg;
+
+            } else {
+                afterBlockBg.style.opacity = '0';
+                safetyP.style.opacity = '1';
+            }
+            getVideoBlock();
+        }
+
     }
 
+    window.onscroll =
+        window.onload = function () {
+            let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+            let boxLeft = 750 - scrollTop;
+            let percentGrad = boxLeft / 10;
+            headerMario.style.background = `linear-gradient(180deg, rgba(0,0,0,1) ${100 - percentGrad}%, rgba(255,255,255,0) 100%)`;
+            currentBgHeader = headerMario.style.background;
+        }
+
     window.onscroll = function () {
+        isInViewport();
         let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
         let boxLeft = 750 - scrollTop;
         let percentGrad = boxLeft / 10;
@@ -205,18 +402,38 @@
     let headerList = [...document.querySelectorAll('.mario-header__header-navigation > ul > li')];
     let headerLanguage = [...document.querySelectorAll('.mario-header__site-language > a ')][0];
     let headerLanguageCont = [...document.querySelectorAll('.mario-header__site-language')][0];
+    let headerBurgerBtn = [...document.querySelectorAll('.mario-header__burger-btn-mob')][0];
     let headerNav = [...document.querySelectorAll('.mario-header__header-navigation')][0];
     let burgerBtn = [...document.querySelectorAll('.mario-header__burger-btn-mob')][0];
-
+    let currentHeight = document.body.clientHeight;
     window.addEventListener('resize', () => {
         if (document.body.clientWidth > 768) {
             headerList.forEach((li) => {
                 li.style.opacity = '1';
             })
+            document.body.classList.remove('scroll-hidden');
+            headerMario.style.background = currentBgHeader;
         } else if (document.body.clientWidth < 768) {
-            headerList.forEach((li) => {
-                li.style.opacity = '0';
-            })
+            if (headerBurgerBtn.classList.contains('active-burger-btn')) {
+                document.body.classList.add('scroll-hidden');
+                headerMario.style.background = 'black';
+
+                if (currentHeight !== document.body.clientHeight || currentHeight === document.body.clientHeight) {
+
+                } else {
+
+                    headerList.forEach((li) => {
+                        li.style.opacity = '0';
+                    })
+                }
+            } else {
+                headerMario.style.background = currentBgHeader;
+                headerList.forEach((li) => {
+                    li.style.opacity = '0';
+                })
+            }
+
+
         }
     })
 
