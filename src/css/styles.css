@@ -852,6 +852,11 @@ body .mario-footer .mario-footer__footer-top {
   margin-top: 90px;
   position: relative;
 }
+@media screen and (max-width: 1400px) {
+  .mario-main__mario-products-type {
+    height: 580px;
+  }
+}
 @media screen and (max-width: 968px) {
   .mario-main__mario-products-type {
     max-height: none;
@@ -860,7 +865,6 @@ body .mario-footer .mario-footer__footer-top {
 }
 @media screen and (max-width: 768px) {
   .mario-main__mario-products-type {
-    max-height: 1070px;
     margin-top: 40px;
   }
 }
@@ -1018,7 +1022,7 @@ body .mario-footer .mario-footer__footer-top {
 .mario-products-type__title-side .mario-products__quality-icons {
   width: 250px;
   height: 42px;
-  margin-top: 100px;
+  margin-top: 25%;
 }
 .mario-products-type__title-side .mario-products__quality-icons > ul {
   display: flex;
@@ -1561,8 +1565,11 @@ body .mario-footer .mario-footer__footer-top {
 .anim-fading-out {
   opacity: 0;
   visibility: hidden;
-  transform: translate(0, 80px);
-  transition: transform 0.6s, visibility 0.6s, opacity 0.6s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadingOutTop {
@@ -1570,6 +1577,9 @@ body .mario-footer .mario-footer__footer-top {
     opacity: 0;
     visibility: hidden;
     transform: translate(0, 80px);
+  }
+  50% {
+    opacity: 0.2;
   }
   100% {
     opacity: 1;

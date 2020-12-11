@@ -826,14 +826,16 @@ body {
   flex-grow: 1;
   margin-top: 90px;
   position: relative;
-
+  @media screen and (max-width: 1400px) {
+    height: 580px;
+  }
   @media screen and (max-width: 968px) {
     max-height: none;
     height: auto;
   }
 
   @media screen and (max-width: 768px) {
-    max-height: 1070px;
+
     margin-top: 40px;
   }
 }
@@ -844,6 +846,7 @@ body {
   flex-wrap: wrap;
   height: 100%;
   margin-top: 50px;
+
 
   @media screen and (max-width: 968px) {
     flex-direction: column;
@@ -1017,7 +1020,7 @@ body {
   .mario-products__quality-icons {
     width: 250px;
     height: 42px;
-    margin-top: 100px;
+    margin-top: 25%;
 
     > ul {
       display: flex;
@@ -1604,8 +1607,14 @@ body {
 .anim-fading-out {
   opacity: 0;
   visibility: hidden;
-  transform: translate(0, 80px);
-  transition: transform 0.6s, visibility 0.6s, opacity 0.6s;
+  //transform: translate(0, 40px);
+  //transition: transform 0.8s, visibility 0.8s, opacity 0.8s;
+  //animation: fadingOutTop 0.6s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadingOutTop {
@@ -1614,10 +1623,13 @@ body {
     visibility: hidden;
     transform: translate(0, 80px);
   }
+  50% {
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
     visibility: visible;
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
 }
 
