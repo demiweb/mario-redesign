@@ -73,7 +73,7 @@
                         </div>
                         <p>Гарантия на товар 50 лет</p>
                     </li>
-                    <li >
+                    <li>
                         <div>
                             <img class="lazyload" data-src="../img/arrow.svg" alt="Recycling">
                         </div>
@@ -98,7 +98,7 @@
                                src="../video/0050-0200.mp4"
                                muted="" loop="" playsinline="" data-loaded="true"></video>
                     </div>
-                    <div class="mario-products-type__title-side">
+                    <div class="mario-products-type__title-side anim-fading-out">
                         <h2>Електричні</h2>
                         <p>рушникосушарки</p>
                         <div class="mario-products__quality-icons">
@@ -121,7 +121,7 @@
                                    src="../video/videoplayback.mp4"
                                    muted="" loop="" playsinline="" data-loaded="true"></video>
                         </div>
-                        <div class="mario-products-type__title-side">
+                        <div class="mario-products-type__title-side anim-fading-out">
                             <h2>Водяні</h2>
                             <p>рушникосушарки</p>
                             <div class="mario-products__quality-icons">
@@ -143,7 +143,7 @@
                                    src="../video/videoplayback.mp4"
                                    muted="" loop="" playsinline="" data-loaded="true"></video>
                         </div>
-                        <div class="mario-products-type__title-side">
+                        <div class="mario-products-type__title-side anim-fading-out">
                             <h2>Аксесуари</h2>
                             <p>до рушникосушарки</p>
 
@@ -160,8 +160,10 @@
         <div class="container">
             <h1>надійність</h1>
             <div class="mario-safety__text-block">
-                <h2>Mario стремится обеспечить абсолютную надежность и работоспособность продукта.</h2>
-                <p>Сьогодні потужне підприємство «Маріо» розташовується на площі близько 10 000 кв. метрів, має точне
+                <h2 class="anim-fading-out">Mario стремится обеспечить абсолютную надежность и работоспособность
+                    продукта.</h2>
+                <p class="anim-fading-out">Сьогодні потужне підприємство «Маріо» розташовується на площі близько 10 000
+                    кв. метрів, має точне
                     спеціалізоване обладнання, програмоване кваліфікованим персоналом, великі складські приміщення і
                     високий рівень постійного контролю якості всіх виробів на виробництві.</p>
             </div>
@@ -175,8 +177,8 @@
                        muted="" loop="" playsinline="" data-loaded="true"></video>
             </div>
             <div class="container">
-                <h2>Мы являемся новаторами в области электрических полотенцесушителей</h2>
-                <p>Надаємо консультації менеджерів для збільшення продажів товару у вашому регіоні. Звичайно, це в наших
+                <h2 class="anim-fading-out">Мы являемся новаторами в области электрических полотенцесушителей</h2>
+                <p class="anim-fading-out">Надаємо консультації менеджерів для збільшення продажів товару у вашому регіоні. Звичайно, це в наших
                     інтересах, адже ваші доходи - це і наші доходи</p>
             </div>
 
@@ -184,29 +186,29 @@
     </section>
     <section class="mario-main__picture-bg-banner">
         <div class="container">
-            <h1>Сделай ванную зоной своего комфорта</h1>
+            <h1 class="anim-fading-out">Сделай ванную зоной своего комфорта</h1>
         </div>
     </section>
     <section class="mario-main__partner-block">
         <div class="partner-block__container">
             <div class="partner-block__half-container">
                 <div class="partner-block__single-block">
-                    <img class="lazyload" data-src="../img/partners-bg.jpg" alt="Picture">
+                    <img class="lazyload img-parall" data-src="../img/partners-bg.jpg" alt="Picture">
                 </div>
                 <div class="partner-block__single-block partner-block__single-block--text">
                     <section class="partner-block__text-part">
-                        <h3>As a financial institution, a key element that really inspired us to go with iPad was the
+                        <h3 class="anim-fading-out">As a financial institution, a key element that really inspired us to go with iPad was the
                             fact that security was already integrated into the device</h3>
-                        <p>Eric Marineau</p>
-                        <p>Director, Mobile Centre of Excellence</p>
+                        <p class="anim-fading-out">Eric Marineau</p>
+                        <p class="anim-fading-out">Director, Mobile Centre of Excellence</p>
                         <div class="partner-block__text-container">
                             <div class="text-container__amount-transaction">
-                                <p><strong>2</strong>k</p>
-                                <p>loans transacted annually</p>
+                                <p class="anim-fading-out"><strong>2</strong>k</p>
+                                <p class="anim-fading-out">loans transacted annually</p>
                             </div>
                             <div class="text-container__amount-transaction">
-                                <p><strong>16</strong>k</p>
-                                <p>loans transacted annually</p>
+                                <p class="anim-fading-out"><strong>16</strong>k</p>
+                                <p class="anim-fading-out">loans transacted annually</p>
                             </div>
 
                         </div>
@@ -295,6 +297,28 @@
 </footer>
 <script>
 
+    let imgPar = [...document.querySelectorAll('.img-parall')];
+
+    function parallaxImg() {
+        imgPar.forEach((img) => {
+            let spaceBellow = window.innerHeight - img.getBoundingClientRect().bottom + img.offsetHeight;
+
+            let topDistance = img.getBoundingClientRect().top + img.offsetHeight;
+
+            let imgHeight = img.offsetHeight;
+
+            let percent = spaceBellow / 80;
+
+            if (0 < spaceBellow && topDistance > 150) {
+                console.log('picture visible')
+
+                img.style.transform = `translate(0, ${percent}%)`
+            }
+
+        })
+    }
+
+
 
     const videosBlock = [...document.querySelectorAll('.mario-products-type__single-type')];
     let allAnimFade = [...document.querySelectorAll(".anim-fading-out")];
@@ -302,11 +326,11 @@
     function checkWidthToBottom() {
         allAnimFade.forEach((el, i) => {
             let spaceBellow = window.innerHeight - el.getBoundingClientRect().bottom + el.offsetHeight;
-            console.log(spaceBellow + 'do niza okna');
-            if (spaceBellow > 60) {
+            let topDistance = el.getBoundingClientRect().top + el.offsetHeight;
+            if (60 < spaceBellow && topDistance > 250 ) {
                 el.style.animation = 'fadingOutTop 0.8s linear';
-                el.style.animationDelay = `${(150 * i)}ms`
-                let timeOut = 800 + (150 * i);
+                el.style.animationDelay = `${(25 * i)}ms`
+                let timeOut = 800 + (20 * i);
                 setTimeout(() => {
                     el.classList.remove('anim-fading-out');
 
@@ -318,6 +342,7 @@
 
     window.addEventListener('load', () => {
         checkWidthToBottom();
+        parallaxImg();
     })
 
     videosBlock.forEach(videoBlock => {
@@ -385,21 +410,30 @@
         }
 
         if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
-            if (rect.top < 150) {
-                let opacityBg = (-rect.top + 250) / h;
-                afterBlockBg.style.opacity = opacityBg;
-                safetyP.style.opacity = 1 - opacityBg;
-
+            if (rect.top < 80) {
+                let opacityBg = ((-rect.top + 80) / h) * 1.4;
+                if (opacityBg > 1) {
+                    afterBlockBg.style.opacity = '1';
+                    safetyP.style.opacity = '0';
+                } else {
+                    afterBlockBg.style.opacity = opacityBg;
+                    safetyP.style.opacity = 1 - opacityBg;
+                }
             } else {
                 afterBlockBg.style.opacity = '0';
                 safetyP.style.opacity = '1';
             }
             getVideoBlock();
         } else if (document.body.clientWidth < 578) {
-            if (rect.top < 100) {
-                let opacityBg = (-rect.top + 100) / h;
-                afterBlockBg.style.opacity = opacityBg;
-                safetyP.style.opacity = 1 - opacityBg;
+            if (rect.top < 25) {
+                let opacityBg = ((-rect.top + 100) / h) * 1.6;
+                if (opacityBg > 1) {
+                    afterBlockBg.style.opacity = '1';
+                    safetyP.style.opacity = '0';
+                } else {
+                    afterBlockBg.style.opacity = opacityBg;
+                    safetyP.style.opacity = 1 - opacityBg;
+                }
 
             } else {
                 afterBlockBg.style.opacity = '0';
@@ -407,10 +441,16 @@
             }
             getVideoBlock();
         } else {
-            if (rect.top < 250) {
-                let opacityBg = (-rect.top + 250) / h;
-                afterBlockBg.style.opacity = opacityBg;
-                safetyP.style.opacity = 1 - opacityBg;
+            if (rect.top < -220) {
+                let opacityBg = ((-rect.top) / h) * 1.6;
+                if (opacityBg > 1) {
+                    afterBlockBg.style.opacity = '1';
+                    safetyP.style.opacity = '0';
+                } else {
+                    afterBlockBg.style.opacity = opacityBg;
+                    safetyP.style.opacity = 1 - opacityBg;
+                }
+
 
             } else {
                 afterBlockBg.style.opacity = '0';
@@ -433,6 +473,7 @@
     window.onscroll = function () {
         isInViewport();
         checkWidthToBottom();
+        parallaxImg();
         let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
         let boxLeft = 750 - scrollTop;
         let percentGrad = boxLeft / 10;

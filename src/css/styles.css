@@ -1288,7 +1288,7 @@ body .mario-footer .mario-footer__footer-top {
 .mario-main__picture-bg-banner {
   width: 100%;
   height: 1000px;
-  background: url("../img/stock-photo-young-beautiful-woman-sitting-in-bathroom-in-expensive-bathtub-bath-drinking-champagne-looking-at-1094264396.jpg") no-repeat left top;
+  background: url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -1417,10 +1417,14 @@ body .mario-footer .mario-footer__footer-top {
 .partner-block__single-block {
   width: calc(50% - 20px);
   height: calc((933 / 1111) * 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .partner-block__single-block img {
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   object-fit: cover;
 }
 .partner-block__single-block.partner-block__single-block--text {
