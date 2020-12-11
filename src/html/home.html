@@ -301,7 +301,7 @@
 
     window.addEventListener('scroll', () => {
         allAnimFade.forEach((el) => {
-            let spaceBellow = window.innerHeight - allAnimFade.getBoundingClientRect().bottom;
+            let spaceBellow = window.innerHeight - el.getBoundingClientRect().bottom;
             console.log(spaceBellow+ 'do niza okna');
             if (spaceBellow < 100) {
                 el.style.opacity = '1';
