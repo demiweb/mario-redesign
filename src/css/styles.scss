@@ -1066,10 +1066,10 @@ body {
 
   & > .mario-safety__bg-dark {
     background: rgba(0, 0, 0, 1);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
     position: absolute;
     opacity: 0.0;
     transition: opacity 0.1s;
@@ -1289,10 +1289,10 @@ body {
   transition: opacity 0.01s;
   & > .mario-safety__bg-dark {
     background: rgba(0, 0, 0, 1);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
     position: absolute;
     opacity: 0.0;
     transition: opacity 0.1s;

@@ -1067,10 +1067,10 @@ body .mario-footer .mario-footer__footer-top {
 }
 .mario-main__mario-safety > .mario-safety__bg-dark {
   background: black;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
   position: absolute;
   opacity: 0;
   transition: opacity 0.1s;
@@ -1300,10 +1300,10 @@ body .mario-footer .mario-footer__footer-top {
 }
 .mario-main__picture-bg-banner > .mario-safety__bg-dark {
   background: black;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
   position: absolute;
   opacity: 0;
   transition: opacity 0.1s;
