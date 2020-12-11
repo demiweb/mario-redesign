@@ -1353,7 +1353,7 @@ body .mario-footer .mario-footer__footer-top {
   overflow: hidden;
 }
 .mario-main__partner-block .partner-block__half-container .partner-block__partners-logos::before, .mario-main__partner-block .partner-block__half-container .partner-block__partners-logos::after {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 75%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 75%);
   content: "";
   height: 100px;
   position: absolute;
