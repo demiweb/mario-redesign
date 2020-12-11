@@ -47,7 +47,7 @@
                    autoplay="" muted="" loop="" playsinline="" data-loaded="true"></video>
         </div>
         <div class="container">
-            <h1 style="z-index: 10;">Тепло сімейного бізнесу. Вашій родині.</h1>
+            <h1 class="anim-fading-out" style="z-index: 10;">Тепло сімейного бізнесу. Вашій родині.</h1>
         </div>
 
     </section>
@@ -79,7 +79,7 @@
                         </div>
                         <p>Экологичное производство</p>
                     </li>
-                    <li>
+                    <li >
                         <div>
                             <img class="lazyload" data-src="../img/wire.svg" alt="Wire">
                         </div>
@@ -171,7 +171,7 @@
     <section class="mario-main__mario-innovation">
         <section class="mario-main__video-banner" style="z-index: 2">
             <div class="video-banner__video-container">
-                <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/large.mp4"
+                <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/0001-0200.mp4"
                        muted="" loop="" playsinline="" data-loaded="true"></video>
             </div>
             <div class="container">
@@ -297,7 +297,24 @@
 
 
     const videosBlock = [...document.querySelectorAll('.mario-products-type__single-type')];
+    let allAnimFade = [...document.querySelectorAll(".anim-fading-out")];
 
+    window.addEventListener('scroll', () => {
+        allAnimFade.forEach((el) => {
+            let spaceBellow = window.innerHeight - allAnimFade.getBoundingClientRect().bottom;
+            console.log(spaceBellow+ 'do niza okna');
+            if (spaceBellow < 100) {
+                el.style.opacity = '1';
+                el.style.transform = 'translate(0, 0)';
+                el.style.visibility = 'visible';
+                // console.log('hello')
+            }
+        })
+        // let space = window.innerHeight - allAnimFade.offsetTop + allAnimFade.offsetHeight;
+        // let spaceBellow = window.innerHeight - allAnimFade.getBoundingClientRect().bottom;
+        // console.log(space + 'do niza');
+        // console.log(spaceBellow + 'do okna')
+    })
 
     videosBlock.forEach(videoBlock => {
         let video = [...videoBlock.querySelectorAll('video')][0];

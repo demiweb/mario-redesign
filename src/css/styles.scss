@@ -12,10 +12,10 @@ $white-color: #ffffff;
 $orange-color: #fa8100;
 
 html, body {
-  height: 100%;
+  //height: 100%;
   min-height: 100%;
-  flex-grow: 1;
-  scroll-behavior: smooth;
+  //flex-grow: 1;
+  //scroll-behavior: smooth;
 }
 
 
@@ -389,7 +389,7 @@ body {
     display: inline-block;
     width: 100%;
     height: 2px;
-    background: $orange-color;
+    background: $white-color;
     transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
   }
 
@@ -821,11 +821,8 @@ body {
 
 .mario-main__mario-products-type {
   width: 100%;
-  //height: 50px;
   box-sizing: border-box;
-  min-height: 952px;
-  max-height: 952px;
-  height: 100%;
+  height: 952px;
   flex-grow: 1;
   margin-top: 90px;
   position: relative;
@@ -1603,4 +1600,26 @@ body {
 
   }
 }
+
+.anim-fading-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 80px);
+  transition: transform 0.6s, visibility 0.6s, opacity 0.6s;
+}
+
+@keyframes fadingOutTop {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,0);
+  }
+}
+
+
 
