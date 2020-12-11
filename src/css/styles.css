@@ -852,9 +852,9 @@ body .mario-footer .mario-footer__footer-top {
   margin-top: 90px;
   position: relative;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1660px) {
   .mario-main__mario-products-type {
-    height: 580px;
+    height: 600px;
   }
 }
 @media screen and (max-width: 968px) {
