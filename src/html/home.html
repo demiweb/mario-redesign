@@ -42,7 +42,8 @@
 <main class="mario-main">
     <section class="mario-main__video-banner" style="z-index: 2">
         <div class="video-banner__video-container">
-            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/videoplayback.mp4"
+            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
+                   src="../video/videoplayback%20(online-video-cutter.com).mp4"
                    autoplay="" muted="" loop="" playsinline="" data-loaded="true"></video>
         </div>
         <div class="container">
@@ -212,9 +213,26 @@
                         <a class="mario-button" href="#">Як стати партнером?</a>
                     </section>
                 </div>
-
+                <div class="partner-block__partners-logos" id="marqueeline-logos">
+                    <ul>
+                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
+                        <li><img src="../img/epicentrk_logo.png" alt="Епицентр"></li>
+                        <li><img src="../img/logo.png" alt="Новая Линия"></li>
+                        <li><img src="../img/thumbnail2x_Leroy_Merlin.png" alt="Леруа Мерлен"></li>
+                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
+                        <li><img src="../img/epicentrk_logo.png" alt="Епицентр"></li>
+                        <li><img src="../img/logo.png" alt="Новая Линия"></li>
+                        <li><img src="../img/thumbnail2x_Leroy_Merlin.png" alt="Леруа Мерлен"></li>
+                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
+                        <li><img src="../img/epicentrk_logo.png" alt="Епицентр"></li>
+                        <li><img src="../img/logo.png" alt="Новая Линия"></li>
+                        <li><img src="../img/thumbnail2x_Leroy_Merlin.png" alt="Леруа Мерлен"></li>
+                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </section>
 </main>
 <footer class="mario-footer">
@@ -276,6 +294,8 @@
 
 </footer>
 <script>
+
+
     const videosBlock = [...document.querySelectorAll('.mario-products-type__single-type')];
 
 
@@ -324,7 +344,7 @@
 
                 }
             } else if (document.body.clientWidth < 578) {
-                if (vB.top < 400 && -400 < vB.top) {
+                if (vB.top < 400 && -300 < vB.top) {
                     videoVideo.play();
 
                 } else {

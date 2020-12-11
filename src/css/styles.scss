@@ -185,6 +185,27 @@ body {
     }
   }
 
+  @media screen and (max-width: 768px) {
+    margin: 15px 0;
+
+
+    h4 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    ul {
+      li {
+        a {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 475px) {
+    padding: 0;
+  }
+
   &.footer-top__list-container--contacts {
     li {
       margin: 9px 0;
@@ -196,6 +217,20 @@ body {
         strong {
           font-size: 30px;
         }
+      }
+
+      @media screen and (max-width: 768px) {
+
+        p {
+          font-size: 14px;
+          line-height: 18px;
+
+          strong {
+            font-size: 24px;
+            line-height: 28px;
+          }
+        }
+
       }
     }
   }
@@ -235,10 +270,16 @@ body {
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 0 0 15px;
+    margin: 0 5px;
+
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
     span {
       width: 100%;
       height: 1px;
-      margin: 15px 0;
+      margin: 10px 0;
     }
   }
 }
@@ -269,12 +310,21 @@ body {
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    padding: 15px 0 0;
+    padding: 0 0;
+    margin: 0 5px;
     span {
       width: 100%;
       height: 1px;
       margin: 10px 0;
     }
+    a {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  @media screen and (max-width: 471px) {
+    padding: 15px 0 0;
   }
 }
 
@@ -296,7 +346,7 @@ body {
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 768px) {
-      height: 70px;
+      height: 55px;
       padding: 5px 0;
       position: relative;
     }
@@ -328,8 +378,8 @@ body {
 
 .mario-header__burger-btn-mob {
   display: none;
-  width: 44px;
-  height: 32px;
+  width: 34px;
+  height: 24px;
   justify-content: space-between;
   flex-direction: column;
   cursor: pointer;
@@ -338,7 +388,7 @@ body {
   span {
     display: inline-block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background: $orange-color;
     transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
   }
@@ -357,7 +407,7 @@ body {
     }
 
     span:first-child {
-      transform: translate(0, 14px) rotate(-45deg);
+      transform: translate(0, 11px) rotate(-45deg);
       transition: transform 0.3s;
 
     }
@@ -370,7 +420,7 @@ body {
     }
 
     span:last-child {
-      transform: translate(0, -15px) rotate(45deg);
+      transform: translate(0, -11px) rotate(45deg);
       transition: transform 0.3s;
     }
   }
@@ -482,14 +532,15 @@ body {
     @media screen and (max-width: 768px) {
       opacity: 0;
       > a {
-        font-size: 32px;
+        font-size: 24px;
 
         & + ul {
-          width: 80px;
+          width: 56px;
+
 
           > li {
             > a {
-              font-size: 32px;
+              font-size: 24px;
             }
           }
         }
@@ -502,25 +553,34 @@ body {
     position: absolute;
     left: -15px;
     right: -15px;
-    height: calc(100vh - 70px);
-    top: 70px;
+    height: calc(100vh - 55px);
+    top: 55px;
     background: black;
     border-top: 2px solid $orange-color;
     > ul {
       position: absolute;
       flex-direction: column;
+      width: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 0;
 
       > li {
-        margin: 3% 0;
+        margin: 0;
         opacity: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         transition: transform 0.6s, opacity 0.4s;
+        padding: 4px 0 3px;
+        height: 38px;
+
 
         a {
-          font-size: 32px;
+          font-size: 26px;
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -541,25 +601,23 @@ body {
   0% {
     right: 50%;
     left: 50%;
-    top: 70px;
-    border-radius: 0 0 50% 0;
+    top: 55px;
     overflow: hidden;
   }
   100% {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 55px);
   }
 }
 
 @keyframes navFadingReverse {
   0% {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 55px);
     visibility: visible;
   }
   100% {
     right: 50%;
     left: 50%;
-    top: 70px;
-    border-radius: 0 0 50% 0;
+    top: 55px;
     overflow: hidden;
     visibility: hidden;
   }
@@ -640,8 +698,6 @@ body {
       bottom: 0;
       right: 0;
     }
-
-
   }
 
   @media screen and (max-width: 768px) {
@@ -660,11 +716,14 @@ body {
   }
 
   @media screen and (max-width: 425px) {
+
+    height: 480px;
     > .container {
+      margin-bottom: 50px;
 
       > h1 {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 30px;
+        line-height: 38px;
       }
     }
   }
@@ -719,6 +778,42 @@ body {
         font-weight: normal;
         color: $white-color;
         margin: 20px 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      > li {
+        max-width: 160px;
+        padding: 0 8px;
+
+        > div {
+          width: 80px;
+          height: 80px;
+
+          > img {
+            height: 42px;
+          }
+        }
+
+        > p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    @media screen and (max-width: 385px) {
+      > li {
+        max-width: 130px;
+        padding: 0 6px;
+
+        > div {
+          width: 65px;
+          height: 65px;
+
+          > img {
+            height: 36px;
+          }
+        }
       }
     }
   }
@@ -809,13 +904,13 @@ body {
       }
 
       .mario-products-type__title-side h2 {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 36px;
+        line-height: 48px;
       }
 
       .mario-products-type__title-side p {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 18px;
+        line-height: 24px;
       }
 
       .mario-products-type__title-side .mario-products__quality-icons {
@@ -882,13 +977,13 @@ body {
     }
 
     .mario-products-type__title-side h2 {
-      font-size: 48px;
-      line-height: 56px;
+      font-size: 36px;
+      line-height: 48px;
     }
 
     .mario-products-type__title-side p {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 18px;
+      line-height: 24px;
     }
 
     .mario-products-type__title-side .mario-products__quality-icons {
@@ -1106,7 +1201,7 @@ body {
     height: 700px;
   }
   @media screen and (max-width: 475px) {
-    height: 550px;
+    height: 500px;
   }
 
   .mario-main__video-banner {
@@ -1214,10 +1309,10 @@ body {
   }
 
   @media screen and (max-width: 425px) {
-    height: 500px;
+    height: 450px;
     .container h1 {
-      font-size: 48px;
-      line-height: 56px;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 }
@@ -1237,8 +1332,86 @@ body {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    .partner-block__partners-logos {
+      width: 100%;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 75%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+
+      &::before {
+        left: 0;
+        top: 0;
+      }
+
+      > ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        animation: scroll 10s linear infinite;
+
+        > li {
+          width: 200px;
+          min-width: 200px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 32px;
+          box-sizing: border-box;
+
+
+          > img {
+
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-start;
+
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+}
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
 
   }
+
+  100% {
+    transform: translateX(-800px);
+  }
+
 }
 
 .partner-block__container {
@@ -1279,6 +1452,7 @@ body {
       .mario-button {
         margin-top: auto;
       }
+
       h3 {
         font-family: $main-font;
         color: #a1a1a6;
@@ -1304,6 +1478,7 @@ body {
 
         .text-container__amount-transaction {
           width: 50%;
+
           p:first-child {
             font-family: $main-font;
             color: $white-color;
@@ -1319,6 +1494,77 @@ body {
       }
     }
 
+
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 580px;
+    margin: 15px 0;
+    &.partner-block__single-block--text {
+      .partner-block__text-part {
+        h3 {
+          font-size: 26px;
+          line-height: 32px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        .partner-block__text-container {
+          padding-top: 8%;
+
+          .text-container__amount-transaction {
+            p:first-child {
+              font-size: 42px;
+              line-height: 48px;
+
+              > strong {
+                font-size: 78px;
+                line-height: 86px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 475px) {
+    width: 100%;
+    height: 480px;
+    &.partner-block__single-block--text {
+      .partner-block__text-part {
+        h3 {
+          font-size: 22px;
+          line-height: 28px;
+          margin: 15px 0 10px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .partner-block__text-container {
+          padding-top: 5%;
+
+          .text-container__amount-transaction {
+            p:first-child {
+              font-size: 34px;
+              line-height: 42px;
+
+              > strong {
+                font-size: 62px;
+                line-height: 70px;
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -1345,6 +1591,15 @@ body {
     color: $black-color;
     background: $white-color;
     transition: background-color 0.3s, color 0.3s;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    align-self: center;
+    max-width: 360px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 24px;
 
   }
 }
