@@ -444,7 +444,7 @@ body .mario-footer .mario-footer__footer-top {
 }
 
 .current-menu-item {
-  border-bottom: 1px solid #fa8100;
+  border-bottom: 1px solid #fa8100 !important;
 }
 
 .mario-header__burger-btn-mob {
@@ -879,7 +879,9 @@ body .mario-footer .mario-footer__footer-top {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
-  margin-top: 50px;
+  max-width: 1730px;
+  width: 100%;
+  margin: 50px auto 0;
 }
 @media screen and (max-width: 968px) {
   .mario-products-type__container {
@@ -890,7 +892,7 @@ body .mario-footer .mario-footer__footer-top {
 @media screen and (max-width: 768px) {
   .mario-products-type__container {
     height: auto;
-    margin-top: 80px;
+    margin: 80px auto 0;
   }
 }
 
@@ -905,6 +907,7 @@ body .mario-footer .mario-footer__footer-top {
   width: 100%;
   min-height: 50%;
   height: 100%;
+  text-decoration: none;
 }
 .mario-products-type__right-side .mario-products-type__single-type .mario-main__video-banner {
   bottom: 15px;
@@ -949,6 +952,7 @@ body .mario-footer .mario-footer__footer-top {
   max-height: 952px;
   height: 100%;
   width: 50%;
+  text-decoration: none;
 }
 .mario-products-type__single-type > .mario-main__video-banner {
   height: 100%;

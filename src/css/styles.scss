@@ -380,7 +380,7 @@ body {
 
 
 .current-menu-item {
-  border-bottom: 1px solid $orange-color;
+  border-bottom: 1px solid $orange-color !important;
 }
 
 .mario-header__burger-btn-mob {
@@ -852,7 +852,9 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
-  margin-top: 50px;
+  max-width: 1730px;
+  width: 100%;
+  margin: 50px  auto 0;
 
 
   @media screen and (max-width: 968px) {
@@ -862,8 +864,7 @@ body {
 
   @media screen and (max-width: 768px) {
     height: auto;
-    margin-top: 80px;
-
+    margin: 80px  auto 0;
   }
 }
 
@@ -878,6 +879,7 @@ body {
     width: 100%;
     min-height: 50%;
     height: 100%;
+    text-decoration: none;
 
     .mario-main__video-banner {
       bottom: 15px;
@@ -934,7 +936,7 @@ body {
   max-height: 952px;
   height: 100%;
   width: 50%;
-
+text-decoration: none;
   &:hover {
 
   }
