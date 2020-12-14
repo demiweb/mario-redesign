@@ -24,7 +24,7 @@
                     <li><a href="#">Продукція</a></li>
                     <li><a href="#">Для партнерів</a></li>
                     <li><a href="#">Підтримка</a></li>
-                    <li><a href="#">Контакти</a></li>
+                    <li class="current-menu-item"><a href="#">Контакти</a></li>
                     <li><a href="#">Де купити?</a></li>
                 </ul>
 
@@ -39,207 +39,286 @@
         </div>
     </div>
 </header>
-<main class="mario-main">
-    <section class="mario-main__video-banner" style="z-index: 2">
-        <div class="video-banner__video-container">
-            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
-                   src="../video/home.mp4"
-                   autoplay="" muted="" loop="" playsinline="" data-loaded="true"></video>
-        </div>
+<main class="mario-main main-contacts">
+
+    <section class="mario-contacts">
         <div class="container">
-            <h1 class="anim-fading-out" style="z-index: 10;">Тепло сімейного бізнесу. Вашій родині.</h1>
-        </div>
-
-    </section>
-    <section class="mario-main__mario-features">
-        <div class="container">
-            <div class="mario-features__container">
-                <ul class="anim-fading-out">
-                    <li>
-                        <div>
-                            <img class="lazyload" data-src="../img/medal.svg" alt="Medal">
-                        </div>
-                        <p>Высококачественное сырье</p>
-                    </li>
-                    <li>
-                        <div>
-                            <img class="lazyload" data-src="../img/checklist.svg" alt="Checklist">
-                        </div>
-                        <p>Большой ассортимент продукции</p>
-                    </li>
-                    <li>
-                        <div>
-                            <img class="lazyload" data-src="../img/contract.svg" alt="Contract">
-                        </div>
-                        <p>Гарантия на товар 50 лет</p>
-                    </li>
-                    <li>
-                        <div>
-                            <img class="lazyload" data-src="../img/arrow.svg" alt="Recycling">
-                        </div>
-                        <p>Экологичное производство</p>
-                    </li>
-                    <li>
-                        <div>
-                            <img class="lazyload" data-src="../img/wire.svg" alt="Wire">
-                        </div>
-                        <p>Контроль баланса мощности</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="mario-main__mario-products-type">
-        <div class="mario-products-type__container">
-            <a href="#" class="mario-products-type__single-type anim-fading-out">
-                <section class="mario-main__video-banner" style="z-index: 2">
-                    <div class="video-banner__video-container">
-                        <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
-                               src="../video/0050-0200.mp4"
-                               muted="" loop="" playsinline="" data-loaded="true"></video>
-                    </div>
-                    <div class="mario-products-type__title-side">
-                        <h2>Електричні</h2>
-                        <p>рушникосушарки</p>
-                        <div class="mario-products__quality-icons">
-                            <ul>
-                                <li><img src="../img/quality-svg.svg" alt=""></li>
-                                <li><img src="../img/quality-svg-2.svg" alt=""></li>
-                                <li><img src="../img/quality-svg-3.svg" alt=""></li>
-                                <li><img src="../img/quality-svg-4.svg" alt=""></li>
-                                <li><img src="../img/quality-svg-5.svg" alt=""></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </a>
-            <div class="mario-products-type__right-side">
-                <a href="#" class="mario-products-type__single-type anim-fading-out">
-                    <section class="mario-main__video-banner" style="z-index: 2">
-                        <div class="video-banner__video-container">
-                            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
-                                   src="../video/videoplayback.mp4"
-                                   muted="" loop="" playsinline="" data-loaded="true"></video>
-                        </div>
-                        <div class="mario-products-type__title-side">
-                            <h2>Водяні</h2>
-                            <p>рушникосушарки</p>
-                            <div class="mario-products__quality-icons">
-                                <ul>
-                                    <li><img src="../img/quality-svg.svg" alt=""></li>
-                                    <li><img src="../img/quality-svg-2.svg" alt=""></li>
-                                    <li><img src="../img/quality-svg-3.svg" alt=""></li>
-                                    <li><img src="../img/quality-svg-4.svg" alt=""></li>
-                                    <li><img src="../img/quality-svg-5.svg" alt=""></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </a>
-                <a href="#" class="mario-products-type__single-type anim-fading-out">
-                    <section class="mario-main__video-banner" style="z-index: 2">
-                        <div class="video-banner__video-container">
-                            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
-                                   src="../video/videoplayback.mp4"
-                                   muted="" loop="" playsinline="" data-loaded="true"></video>
-                        </div>
-                        <div class="mario-products-type__title-side">
-                            <h2>Аксесуари</h2>
-                            <p>до рушникосушарки</p>
-
-                        </div>
-                    </section>
-                </a>
-
-            </div>
-        </div>
-
-    </section>
-    <section class="mario-main__mario-safety">
-        <div class="mario-safety__bg-dark"></div>
-        <div class="container">
-            <h3>надійність</h3>
-            <div class="mario-safety__text-block">
-                <h2 class="anim-fading-out">Mario - з італійської перекладається, як Михайло, а сімейні мануфактури - це
-                    основа італійського виробництва.</h2>
-                <p class="anim-fading-out">Сьогодні потужне підприємство «Маріо» розташовується на площі близько 10 000
-                    кв. метрів, має точне
-                    спеціалізоване обладнання, програмоване кваліфікованим персоналом, великі складські приміщення і
-                    високий рівень постійного контролю якості всіх виробів на виробництві.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="mario-main__mario-innovation">
-        <section class="mario-main__video-banner" style="z-index: 2">
-            <div class="video-banner__video-container">
-                <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/0001-0200.mp4"
-                       muted="" loop="" playsinline="" data-loaded="true"></video>
-            </div>
-            <div class="container">
-                <h2 class="anim-fading-out">Мы являемся новаторами в области электрических полотенцесушителей</h2>
-                <p class="anim-fading-out">Надаємо консультації менеджерів для збільшення продажів товару у вашому
-                    регіоні. Звичайно, це в наших
-                    інтересах, адже ваші доходи - це і наші доходи</p>
-                <a class="mario-button" href="#">Докладніше</a>
-            </div>
-
-        </section>
-    </section>
-    <section class="mario-main__picture-bg-banner" style="z-index: 1">
-        <div class="mario-safety__bg-dark"></div>
-        <div class="container">
-            <h3 class="anim-fading-out">Сделай ванную зоной своего комфорта</h3>
-        </div>
-    </section>
-    <section class="mario-main__partner-block" style="z-index: 1;">
-        <div class="partner-block__container">
-            <div class="partner-block__half-container">
-                <div class="partner-block__single-block anim-fading-out">
-                    <img class="lazyload img-parall" data-src="../img/partners-bg.jpg" alt="Picture">
-                </div>
-                <div class="partner-block__single-block partner-block__single-block--text anim-fading-out">
-                    <section class="partner-block__text-part">
-                        <h3 class="anim-fading-out">As a financial institution, a key element that really inspired us to
-                            go with iPad was the
-                            fact that security was already integrated into the device</h3>
-                        <p class="anim-fading-out">Eric Marineau</p>
-                        <p class="anim-fading-out">Director, Mobile Centre of Excellence</p>
-                        <div class="partner-block__text-container">
-                            <div class="text-container__amount-transaction">
-                                <p class="anim-fading-out"><strong>2</strong>k</p>
-                                <p class="anim-fading-out">loans transacted annually</p>
-                            </div>
-                            <div class="text-container__amount-transaction">
-                                <p class="anim-fading-out"><strong>16</strong>k</p>
-                                <p class="anim-fading-out">loans transacted annually</p>
-                            </div>
-
-                        </div>
-                        <a class="mario-button" href="#">Як стати партнером?</a>
-                    </section>
-                </div>
-                <div class="partner-block__partners-logos" id="marqueeline-logos">
+            <div class="mario-contacts__container">
+                <nav class="item-page__breadcrumbs">
                     <ul>
-                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
-                        <li><img src="../img/epicentrk_logo.png" alt="Епицентр"></li>
-                        <li><img src="../img/logo.png" alt="Новая Линия"></li>
-                        <li><img src="../img/thumbnail2x_Leroy_Merlin.png" alt="Леруа Мерлен"></li>
-                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
-                        <li><img src="../img/epicentrk_logo.png" alt="Епицентр"></li>
-                        <li><img src="../img/logo.png" alt="Новая Линия"></li>
-                        <li><img src="../img/thumbnail2x_Leroy_Merlin.png" alt="Леруа Мерлен"></li>
-                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
-                        <li><img src="../img/epicentrk_logo.png" alt="Епицентр"></li>
-                        <li><img src="../img/logo.png" alt="Новая Линия"></li>
-                        <li><img src="../img/thumbnail2x_Leroy_Merlin.png" alt="Леруа Мерлен"></li>
-                        <li><img src="../img/normal__agromat-logo-17.png" alt="Агромат"></li>
+                        <li><a href="./home.html">Главная</a></li>
+                        <li><span>Контакти</span></li>
                     </ul>
+                </nav>
+                <div class="mario-contacts__contacts-header">
+                    <h1>Контакти</h1>
+                    <svg height="180px" stroke="white" stroke-width="1" class="text-line">
+                        <text  height="250px" x="200" y="220" fill="black">Mario</text>
+                    </svg>
+                </div>
+                <div class="mario-manufacture">
+                    <div class="mario-manufacture__single-block mario-manufacture__single-block--text-block">
+                        <h3>Завод “Маріо”</h3>
+                        <p>+38(098) 474-05-39</p>
+                        <p>+38(093) 640-44-53</p>
+                        <p><small>Вінницька обл., Україна 22300 Сосонське шосе, 4-В, смт. Літин</small></p>
+                        <ul>
+                            <li><a href="#"><img class="lazyload" data-src="../img/facebook.svg" alt="Facebook"></a></li>
+                            <li><a href="#"><img class="lazyload" data-src="../img/instagram.svg" alt="Instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="mario-manufacture__single-block">
+                        <img src="../img/118823269_3222944784462035_6233236131970275949_o.jpg" alt="">
+                    </div>
+                    <div class="mario-manufacture__single-block mario-manufacture__single-block--text-block">
+                        <h3>Інтернет магазин</h3>
+                        <p>+38(098) 474-05-39</p>
+                        <p>+38(093) 640-44-53</p>
+                        <p><small>Вінницька обл., Україна 22300 Сосонське шосе, 4-В, смт. Літин</small></p>
+                        <a href="#">Перейти в інтернет магазин</a>
+                    </div>
+                    <div class="mario-manufacture__single-block">
+                        <img src="../img/57335.jpg" alt="">
+
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
+    <section class="mario-contacts__mario-team">
+        <div class="container">
+            <div class="mario-team__container">
+                <h2>Наші представники</h2>
+
+                <div class="mario-team__team-members">
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                                <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                                <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                                <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                                <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                                <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__double-block">
+                        <p>Мы поддерживаем друг друга не потому, что мы в одной команде.
+                            Мы поддерживаем друг друга,
+                            и поэтому <strong>мы команда.</strong></p>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                            <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                            <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                            <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                            <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                    <div class="team-members__mario-member">
+                        <div class="mario-member__img">
+                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        </div>
+                        <div class="mario-member__info">
+                            <h3>Сергій</h3>
+                            <p>Менеджер з продажів</p>
+                            <p><small>+38(093) 640-44-53</small></p>
+                            <p><small>rm5@mario.ua</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mario-contacts__mario-vacancies">
+        <div class="container">
+            <div class="mario-vacancies__container">
+                <div class="mario-vacancies__single-vacancy">
+                    <h3>Регіональний менеджер з продажу</h3>
+                    <p><small>Київ, Україна</small></p>
+                    <p><strong>Обов'язки:</strong> Вхід та контроль розміщення продукції в роздрібних ТТ. Виконання плану продаж. Контроль дебіторської заборгованості. Доставка продукції.</p>
+                    <p><strong>Пропонуємо:</strong> Офіційне працевлаштування, оплачувана відпустка, лікарняні та державні свята;</p>
+                    <ul>
+                        <li>пн-пт 9:00−18: 00;</li>
+                        <li>Навчання продажам, тренінги;</li>
+                        <li>Місце роботи в комфортному офісі;</li>
+                        <li>Заробітки від 1000 $.</li>
+                    </ul>
+
+                    <div>
+                        <button>Детальніше</button>
+                        <a href="#">Відгукнутися</a>
+                    </div>
+                </div>
+                <div class="mario-vacancies__single-vacancy">
+                    <h3>Регіональний менеджер з продажу</h3>
+                    <p><small>Київ, Україна</small></p>
+                    <p><strong>Обов'язки:</strong> Вхід та контроль розміщення продукції в роздрібних ТТ. Виконання плану продаж. Контроль дебіторської заборгованості. Доставка продукції.</p>
+                    <p><strong>Пропонуємо:</strong> Офіційне працевлаштування, оплачувана відпустка, лікарняні та державні свята;</p>
+                    <ul>
+                        <li>пн-пт 9:00−18: 00;</li>
+                        <li>Навчання продажам, тренінги;</li>
+                        <li>Місце роботи в комфортному офісі;</li>
+                        <li>Заробітки від 1000 $.</li>
+                    </ul>
+
+                    <div>
+                        <button>Детальніше</button>
+                        <a href="#">Відгукнутися</a>
+                    </div>
+                </div>
+                <div class="mario-vacancies__single-vacancy">
+                    <h3>Регіональний менеджер з продажу</h3>
+                    <p><small>Київ, Україна</small></p>
+                    <p><strong>Обов'язки:</strong> Вхід та контроль розміщення продукції в роздрібних ТТ. Виконання плану продаж. Контроль дебіторської заборгованості. Доставка продукції.</p>
+                    <p><strong>Пропонуємо:</strong> Офіційне працевлаштування, оплачувана відпустка, лікарняні та державні свята;</p>
+                    <ul>
+                        <li>пн-пт 9:00−18: 00;</li>
+                        <li>Навчання продажам, тренінги;</li>
+                        <li>Місце роботи в комфортному офісі;</li>
+                        <li>Заробітки від 1000 $.</li>
+                    </ul>
+
+                    <div>
+                        <button>Детальніше</button>
+                        <a href="#">Відгукнутися</a>
+                    </div>
+                </div>
+                <div class="mario-vacancies__single-vacancy">
+                    <h3>Регіональний менеджер з продажу</h3>
+                    <p><small>Київ, Україна</small></p>
+                    <p><strong>Обов'язки:</strong> Вхід та контроль розміщення продукції в роздрібних ТТ. Виконання плану продаж. Контроль дебіторської заборгованості. Доставка продукції.</p>
+                    <p><strong>Пропонуємо:</strong> Офіційне працевлаштування, оплачувана відпустка, лікарняні та державні свята;</p>
+                    <ul>
+                        <li>пн-пт 9:00−18: 00;</li>
+                        <li>Навчання продажам, тренінги;</li>
+                        <li>Місце роботи в комфортному офісі;</li>
+                        <li>Заробітки від 1000 $.</li>
+                    </ul>
+
+                    <div>
+                        <button>Детальніше</button>
+                        <a href="#">Відгукнутися</a>
+                    </div>
+                </div>
+                <div class="mario-vacancies__single-vacancy">
+                    <h3>Регіональний менеджер з продажу</h3>
+                    <p><small>Київ, Україна</small></p>
+                    <p><strong>Обов'язки:</strong> Вхід та контроль розміщення продукції в роздрібних ТТ. Виконання плану продаж. Контроль дебіторської заборгованості. Доставка продукції.</p>
+                    <p><strong>Пропонуємо:</strong> Офіційне працевлаштування, оплачувана відпустка, лікарняні та державні свята;</p>
+                    <ul>
+                        <li>пн-пт 9:00−18: 00;</li>
+                        <li>Навчання продажам, тренінги;</li>
+                        <li>Місце роботи в комфортному офісі;</li>
+                        <li>Заробітки від 1000 $.</li>
+                    </ul>
+
+                    <div>
+                        <button>Детальніше</button>
+                        <a href="#">Відгукнутися</a>
+                    </div>
+                </div>
+                <div class="mario-vacancies__single-vacancy">
+                    <h3>Регіональний менеджер з продажу</h3>
+                    <p><small>Київ, Україна</small></p>
+                    <p><strong>Обов'язки:</strong> Вхід та контроль розміщення продукції в роздрібних ТТ. Виконання плану продаж. Контроль дебіторської заборгованості. Доставка продукції.</p>
+                    <p><strong>Пропонуємо:</strong> Офіційне працевлаштування, оплачувана відпустка, лікарняні та державні свята;</p>
+                    <ul>
+                        <li>пн-пт 9:00−18: 00;</li>
+                        <li>Навчання продажам, тренінги;</li>
+                        <li>Місце роботи в комфортному офісі;</li>
+                        <li>Заробітки від 1000 $.</li>
+                    </ul>
+
+                    <div>
+                        <button>Детальніше</button>
+                        <a href="#">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 <footer class="mario-footer">
     <section class="mario-footer__footer-top">
@@ -333,26 +412,17 @@
             let imgHeight = img.offsetHeight;
 
             let percent = spaceBellow / 80;
-            let percentOpacity = 1 / 1000;
-            console.log(percentOpacity);
-            let opacityBlock =  topDistance * percentOpacity;
-            console.log(opacityBlock);
             if (window.innerWidth > 768) {
                 if (0 < spaceBellow && topDistance > 1000) {
                     // console.log(spaceBellow + ' do nizu ' + topDistance + ' vverhu')
                     imgBathTop[0].style.position = 'sticky';
-                    imgBathTop[0].style.opacity = `${-2 + (opacityBlock * 2)}`;
                     // console.log(window.innerWidth + 'shirina okna')
 
                 } else if (topDistance < -50) {
                     imgBathTop[0].style.position = 'static';
-                    imgBathTop[0].style.opacity = '1';
-
                 }
             } else {
                 imgBathTop[0].style.position = 'static';
-                imgBathTop[0].style.opacity = '1';
-
             }
         })
     }
