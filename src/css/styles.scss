@@ -3,8 +3,8 @@
 
 $main-font: 'Raleway', sans-serif;
 $p-color: #4b4b4b;
-$p-font-size: 18px;
-$h2-size: 72px;
+$p-font-size: 14px;
+$h2-size: 56px;
 $h4-size: 48px;
 $h1-size: 80px;
 $black-color: #000000;
@@ -101,6 +101,7 @@ body {
 
     .mario-footer__footer-top {
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     @media screen and (max-width: 768px) {
@@ -124,8 +125,8 @@ body {
 }
 
 .footer-top__logo-container {
-  width: 256px;
-  height: 126px;
+  width: 100px;
+
   text-decoration: none;
   flex-shrink: 0;
 
@@ -135,7 +136,7 @@ body {
   }
 
   @media screen and (max-width: 768px) {
-    width: 224px;
+    width: 105px;
 
   }
   @media screen and (max-width: 475px) {
@@ -242,10 +243,16 @@ body {
   @include flex-center;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
   }
+
+  @media screen and (max-width: 475px) {
+   flex-direction: column;
+
+  }
+
 
 }
 
@@ -335,18 +342,18 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 0) 100%);
+  background: rgba(29, 29, 31, 0.72) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
 
   .mario-header__container {
     width: 100%;
-    height: 100px;
+    height: 55px;
     padding: 15px 0;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 768px) {
-      height: 55px;
       padding: 5px 0;
       position: relative;
     }
@@ -357,7 +364,7 @@ body {
 
 .mario-header__logo {
   width: 151px;
-  height: 100%;
+  height: 45px;
   flex-shrink: 0;
 
   img {
@@ -763,7 +770,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid $p-color;
 
         > img {
           height: 48px;
@@ -1066,8 +1072,8 @@ body {
 
   & > .mario-safety__bg-dark {
     background: rgba(0, 0, 0, 1);
-    left: -1px;
-    right: -1px;
+    left: 0;
+    right: 0;
     top: -1px;
     bottom: -1px;
     position: absolute;
@@ -1139,14 +1145,16 @@ body {
         font-family: $main-font;
         font-size: 48px;
         line-height: 56px;
-        color: $black-color;
+        color: transparent;
         font-weight: bold;
+        background-image: linear-gradient(to right bottom, #061538, #ac732d);
+        -webkit-background-clip: text;
       }
 
       > p {
         font-family: $main-font;
         color: $p-color;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 24px;
         font-weight: normal;
         margin: 50px 0;
@@ -1200,6 +1208,10 @@ body {
   position: sticky;
   top: 0;
 
+  @media screen and (max-width: 1602px) {
+    height: 650px;
+  }
+
   @media screen and (max-width: 768px) {
     height: 700px;
   }
@@ -1218,9 +1230,11 @@ body {
         font-family: $main-font;
         font-size: 48px;
         line-height: 56px;
-        color: $white-color;
         font-weight: bold;
-        max-width: 900px;
+        max-width: 600px;
+        color: transparent;
+        background-image: linear-gradient(to right bottom, #5f8fff, #ff8100);
+        -webkit-background-clip: text;
       }
 
       > p {
@@ -1230,8 +1244,9 @@ body {
         line-height: 24px;
         font-weight: normal;
         margin: 50px 0;
-        max-width: 800px;
+        max-width: 600px;
       }
+
 
       @media screen and (max-width: 768px) {
         padding-top: 90px;
@@ -1287,10 +1302,11 @@ body {
   display: flex;
   align-items: center;
   transition: opacity 0.01s;
+
   & > .mario-safety__bg-dark {
     background: rgba(0, 0, 0, 1);
-    left: -1px;
-    right: -1px;
+    left: 0;
+    right: 0;
     top: -1px;
     bottom: -1px;
     position: absolute;
@@ -1298,6 +1314,7 @@ body {
     transition: opacity 0.1s;
     backdrop-filter: blur(20px);
   }
+
   .container {
     display: flex;
     justify-content: center;
@@ -1312,6 +1329,7 @@ body {
 
 
   }
+
   @media screen and (max-width: 1660px) {
     height: 650px;
   }
@@ -1592,16 +1610,16 @@ body {
 
 .mario-button {
   width: 100%;
-  max-width: 397px;
-  height: 60px;
+  max-width: 380px;
+  height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   font-family: $main-font;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 26px;
   color: $white-color;
   border: 3px solid $white-color;
   background: transparent;

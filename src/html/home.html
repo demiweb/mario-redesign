@@ -43,7 +43,7 @@
     <section class="mario-main__video-banner" style="z-index: 2">
         <div class="video-banner__video-container">
             <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
-                   src="../video/videoplayback%20(online-video-cutter.com).mp4"
+                   src="../video/home.mp4"
                    autoplay="" muted="" loop="" playsinline="" data-loaded="true"></video>
         </div>
         <div class="container">
@@ -160,8 +160,8 @@
         <div class="container">
             <h1>надійність</h1>
             <div class="mario-safety__text-block">
-                <h2 class="anim-fading-out">Mario стремится обеспечить абсолютную надежность и работоспособность
-                    продукта.</h2>
+                <h2 class="anim-fading-out">Mario - з італійської перекладається, як Михайло, а сімейні мануфактури - це
+                    основа італійського виробництва.</h2>
                 <p class="anim-fading-out">Сьогодні потужне підприємство «Маріо» розташовується на площі близько 10 000
                     кв. метрів, має точне
                     спеціалізоване обладнання, програмоване кваліфікованим персоналом, великі складські приміщення і
@@ -178,8 +178,10 @@
             </div>
             <div class="container">
                 <h2 class="anim-fading-out">Мы являемся новаторами в области электрических полотенцесушителей</h2>
-                <p class="anim-fading-out">Надаємо консультації менеджерів для збільшення продажів товару у вашому регіоні. Звичайно, це в наших
+                <p class="anim-fading-out">Надаємо консультації менеджерів для збільшення продажів товару у вашому
+                    регіоні. Звичайно, це в наших
                     інтересах, адже ваші доходи - це і наші доходи</p>
+                <a class="mario-button" href="#">Докладніше</a>
             </div>
 
         </section>
@@ -198,7 +200,8 @@
                 </div>
                 <div class="partner-block__single-block partner-block__single-block--text anim-fading-out">
                     <section class="partner-block__text-part">
-                        <h3 class="anim-fading-out">As a financial institution, a key element that really inspired us to go with iPad was the
+                        <h3 class="anim-fading-out">As a financial institution, a key element that really inspired us to
+                            go with iPad was the
                             fact that security was already integrated into the device</h3>
                         <p class="anim-fading-out">Eric Marineau</p>
                         <p class="anim-fading-out">Director, Mobile Centre of Excellence</p>
@@ -242,9 +245,7 @@
     <section class="mario-footer__footer-top">
         <div class="container">
             <div class="footer-top__container">
-                <a class="footer-top__logo-container" href="#">
-                    <img class="lazyload" data-src="../img/mario-logo.png" alt="Logo">
-                </a>
+
                 <div class="footer-top__list-container">
                     <h4>Продукція</h4>
                     <ul>
@@ -282,7 +283,9 @@
                     <span></span>
                     <p>2020 © Усі права захищені</p>
                 </div>
-
+                <a class="footer-top__logo-container" href="#">
+                    <img class="lazyload" data-src="../img/mario-logo.png" alt="Logo">
+                </a>
                 <div class="footer-bottom__mario-docs">
                     <a href="#">Політика конфіденційності</a>
                     <span></span>
@@ -310,16 +313,17 @@
 
             let imgHeight = img.offsetHeight;
 
-            let percent = spaceBellow / 80;
+            let percent = spaceBellow / 35;
 
             if (0 < spaceBellow && topDistance > 150) {
-                console.log('picture visible')
+                // console.log('picture visible')
 
                 img.style.transform = `translate(0, ${percent}%)`
             }
 
         })
     }
+
     function hiddingTopBath() {
         imgBath.forEach((img) => {
             let spaceBellow = window.innerHeight - img.getBoundingClientRect().bottom + img.offsetHeight;
@@ -329,18 +333,20 @@
             let imgHeight = img.offsetHeight;
 
             let percent = spaceBellow / 80;
+            if (window.innerWidth > 768) {
+                if (0 < spaceBellow && topDistance > 1000) {
+                    // console.log(spaceBellow + ' do nizu ' + topDistance + ' vverhu')
+                    imgBathTop[0].style.position = 'sticky';
+                    // console.log(window.innerWidth + 'shirina okna')
 
-            if (0 < spaceBellow && topDistance > 1000) {
-                console.log(spaceBellow + ' do nizu ' + topDistance + ' vverhu')
-                imgBathTop[0].style.position = 'sticky';
-
-            } else if (topDistance < 900 ) {
+                } else if (topDistance < -50) {
+                    imgBathTop[0].style.position = 'static';
+                }
+            } else {
                 imgBathTop[0].style.position = 'static';
             }
-
         })
     }
-
 
 
     const videosBlock = [...document.querySelectorAll('.mario-products-type__single-type')];
@@ -350,7 +356,7 @@
         allAnimFade.forEach((el, i) => {
             let spaceBellow = window.innerHeight - el.getBoundingClientRect().bottom + el.offsetHeight;
             let topDistance = el.getBoundingClientRect().top + el.offsetHeight;
-            if (60 < spaceBellow && topDistance > 250 ) {
+            if (60 < spaceBellow && topDistance > 250) {
                 el.style.animation = 'fadingOutTop 0.8s linear';
                 el.style.animationDelay = `${(25 * i)}ms`
                 let timeOut = 800 + (20 * i);
@@ -384,7 +390,6 @@
             video.pause()
         })
     })
-    let headerMario = [...document.querySelectorAll('.mario-header')][0];
 
 
     let afterBlock = [...document.querySelectorAll('.mario-main__mario-safety')][0];
@@ -435,7 +440,7 @@
 
         }
 
-        function getBgDark () {
+        function getBgDark() {
             let rect = afterBath.getBoundingClientRect();
             if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
                 if (rect.top < 22) {
@@ -537,8 +542,7 @@
             let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
             let boxLeft = 750 - scrollTop;
             let percentGrad = boxLeft / 10;
-            headerMario.style.background = `linear-gradient(180deg, rgba(0,0,0,1) ${100 - percentGrad}%, rgba(255,255,255,0) 100%)`;
-            currentBgHeader = headerMario.style.background;
+
         }
 
     window.onscroll = function () {
@@ -549,8 +553,7 @@
         let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
         let boxLeft = 750 - scrollTop;
         let percentGrad = boxLeft / 10;
-        headerMario.style.background = `linear-gradient(180deg, rgba(0,0,0,1) ${100 - percentGrad}%, rgba(255,255,255,0) 100%)`;
-        currentBgHeader = headerMario.style.background;
+
     }
 
 
@@ -567,11 +570,9 @@
                 li.style.opacity = '1';
             })
             document.body.classList.remove('scroll-hidden');
-            headerMario.style.background = currentBgHeader;
         } else if (document.body.clientWidth < 768) {
             if (headerBurgerBtn.classList.contains('active-burger-btn')) {
                 document.body.classList.add('scroll-hidden');
-                headerMario.style.background = 'black';
 
                 if (currentHeight !== document.body.clientHeight || currentHeight === document.body.clientHeight) {
 
@@ -582,7 +583,6 @@
                     })
                 }
             } else {
-                headerMario.style.background = currentBgHeader;
                 headerList.forEach((li) => {
                     li.style.opacity = '0';
                 })
@@ -652,10 +652,8 @@
                 li.style.animation = '';
                 headerLanguageCont.style.opacity = '0';
             })
-            headerMario.style.background = currentBgHeader;
         } else {
             liVisibility();
-            headerMario.style.background = 'black';
         }
 
 
