@@ -3,6 +3,7 @@
 
 $main-font: 'Raleway', sans-serif;
 $p-color: #4b4b4b;
+$bread-crumb: #afafaf;
 $p-font-size: 14px;
 $h2-size: 56px;
 $h4-size: 48px;
@@ -10,12 +11,16 @@ $h1-size: 80px;
 $black-color: #000000;
 $white-color: #ffffff;
 $orange-color: #fa8100;
+$contacts-bg: #181818;
 
 html, body {
   //height: 100%;
   min-height: 100%;
   //flex-grow: 1;
   //scroll-behavior: smooth;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }
 
 
@@ -249,7 +254,7 @@ body {
   }
 
   @media screen and (max-width: 475px) {
-   flex-direction: column;
+    flex-direction: column;
 
   }
 
@@ -366,9 +371,11 @@ body {
   width: 151px;
   height: 45px;
   flex-shrink: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   img {
-    width: 100%;
     height: 100%;
     object-fit: contain;
   }
@@ -854,7 +861,7 @@ body {
   height: 100%;
   max-width: 1730px;
   width: 100%;
-  margin: 50px  auto 0;
+  margin: 50px auto 0;
 
 
   @media screen and (max-width: 968px) {
@@ -864,7 +871,7 @@ body {
 
   @media screen and (max-width: 768px) {
     height: auto;
-    margin: 80px  auto 0;
+    margin: 80px auto 0;
   }
 }
 
@@ -880,6 +887,7 @@ body {
     min-height: 50%;
     height: 100%;
     text-decoration: none;
+    box-shadow: 0 7px 35px #2e2e2ecc;
 
     .mario-main__video-banner {
       bottom: 15px;
@@ -936,7 +944,9 @@ body {
   max-height: 952px;
   height: 100%;
   width: 50%;
-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 7px 35px #2e2e2ecc;
+
   &:hover {
 
   }
@@ -1674,6 +1684,88 @@ text-decoration: none;
     transform: translate(0, 0);
   }
 }
+
+/* contacts page */
+
+.item-page__breadcrumbs {
+  padding-top: 60px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 28px 0;
+
+  > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+
+    > li a {
+      color: $white-color;
+      text-decoration: none;
+      font-family: $main-font;
+      font-size: 13px;
+      line-height: 14px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    > li:last-child span {
+      text-decoration: none;
+      font-family: $main-font;
+      font-size: 13px;
+      line-height: 14px;
+      color: $bread-crumb;
+    }
+
+    > li:first-child:before {
+      content: none;
+    }
+
+    > li:before {
+      content: '-';
+      padding: 0 4px;
+      color: $white-color;
+    }
+  }
+}
+
+.item-page__breadcrumbs ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+//.item-page__breadcrumbs ul li a {
+//  color: var(--second-font-color);
+//  text-decoration: none;
+//  font-family: var(--main-font);
+//  font-size: 13px;
+//  line-height: 14px;
+//}
+//
+//.item-page__breadcrumbs ul li a:hover {
+//  text-decoration: underline;
+//}
+//
+//.item-page__breadcrumbs ul li:last-child a {
+//  color: var(--color-breadcrumb);
+//}
+//
+//.item-page__breadcrumbs ul li:first-child:before {
+//  content: none;
+//}
+//
+//.item-page__breadcrumbs ul li:before {
+//  content: '-';
+//  padding: 0 4px;
+//  color: var(--second-font-color)
+//
+//}
 
 
 
