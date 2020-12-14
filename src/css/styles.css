@@ -1088,7 +1088,7 @@ body .mario-footer .mario-footer__footer-top {
   justify-content: center;
   align-items: center;
 }
-.mario-main__mario-safety > .container > h1 {
+.mario-main__mario-safety > .container > h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1099,46 +1099,46 @@ body .mario-footer .mario-footer__footer-top {
   font-family: "Raleway", sans-serif;
 }
 @media screen and (max-width: 1440px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 205px;
   }
 }
 @media screen and (max-width: 1080px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 180px;
     top: 40%;
   }
 }
 @media screen and (max-width: 978px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 147px;
   }
 }
 @media screen and (max-width: 768px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 112px;
   }
 }
 @media screen and (max-width: 578px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 92px;
     top: 44%;
   }
 }
 @media screen and (max-width: 478px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 80px;
     top: 37%;
   }
 }
 @media screen and (max-width: 412px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 70px;
     top: 23%;
   }
 }
 @media screen and (max-width: 375px) {
-  .mario-main__mario-safety > .container > h1 {
+  .mario-main__mario-safety > .container > h3 {
     font-size: 60px;
   }
 }
@@ -1327,7 +1327,7 @@ body .mario-footer .mario-footer__footer-top {
   justify-content: center;
   align-items: center;
 }
-.mario-main__picture-bg-banner .container h1 {
+.mario-main__picture-bg-banner .container h3 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 80px;
@@ -1342,7 +1342,7 @@ body .mario-footer .mario-footer__footer-top {
   }
 }
 @media screen and (max-width: 768px) {
-  .mario-main__picture-bg-banner .container h1 {
+  .mario-main__picture-bg-banner .container h3 {
     font-size: 60px;
     line-height: 68px;
     max-width: 86%;
@@ -1352,7 +1352,7 @@ body .mario-footer .mario-footer__footer-top {
   .mario-main__picture-bg-banner {
     height: 450px;
   }
-  .mario-main__picture-bg-banner .container h1 {
+  .mario-main__picture-bg-banner .container h3 {
     font-size: 32px;
     line-height: 38px;
   }

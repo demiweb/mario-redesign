@@ -1091,7 +1091,7 @@ body {
     align-items: center;
 
 
-    > h1 {
+    > h3 {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1320,7 +1320,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    h1 {
+    h3 {
       @include h1-title;
       color: $white-color;
       text-align: center;
@@ -1335,7 +1335,7 @@ body {
   }
   @media screen and (max-width: 768px) {
 
-    .container h1 {
+    .container h3 {
       font-size: 60px;
       line-height: 68px;
       max-width: 86%;
@@ -1344,7 +1344,7 @@ body {
 
   @media screen and (max-width: 425px) {
     height: 450px;
-    .container h1 {
+    .container h3 {
       font-size: 32px;
       line-height: 38px;
     }
