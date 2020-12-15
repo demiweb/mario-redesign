@@ -1911,6 +1911,14 @@ body .mario-footer .mario-footer__footer-top {
   padding: 5%;
   background: #000000;
 }
+.mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block + .mario-manufacture__single-block {
+  filter: grayscale(100%);
+  transition: filter 0.6s;
+}
+.mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block:hover + .mario-manufacture__single-block {
+  filter: grayscale(0);
+  transition: filter 0.6s;
+}
 .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block h3 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;

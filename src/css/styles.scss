@@ -1998,6 +1998,16 @@ body {
       padding: 5%;
       background: $black-color;
 
+      & + .mario-manufacture__single-block {
+        filter: grayscale(100%);
+        transition: filter 0.6s;
+      }
+      &:hover + .mario-manufacture__single-block {
+        filter: grayscale(0);
+        transition: filter 0.6s;
+
+      }
+
       h3 {
         font-family: $main-font;
         font-weight: bold;
