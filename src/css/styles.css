@@ -2334,7 +2334,7 @@ body .mario-footer .mario-footer__footer-top {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 15px;
+  right: 18px;
   background: white;
 }
 .mario-vacancies__single-vacancy > div button {
@@ -2376,6 +2376,7 @@ body .mario-footer .mario-footer__footer-top {
   line-height: 28px;
   border-bottom: 2px solid #fa8100;
   position: relative;
+  background: #ffffff;
 }
 .mario-vacancies__single-vacancy > div a::after {
   content: "";
@@ -2442,15 +2443,15 @@ body .mario-footer .mario-footer__footer-top {
     min-height: 232px;
   }
 }
-.mario-vacancies__single-vacancy.vacancy-more {
-  max-height: 445px;
-  min-height: 445px;
-}
 @media screen and (max-width: 568px) {
   .mario-vacancies__single-vacancy.vacancy-more {
     max-height: 475px;
     min-height: 475px;
   }
+}
+
+.blur-js {
+  transition: opacity 0.1ms, filter 0.1ms;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -2524,7 +2524,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 15px;
+    right: 18px;
     background: white;
     button {
       background: none;
@@ -2569,6 +2569,7 @@ body {
       line-height: 28px;
       border-bottom: 2px solid $orange-color;
       position: relative;
+      background: $white-color;
 
       &::after {
         content: '';
@@ -2642,16 +2643,16 @@ body {
     min-height: 232px;
   }
 
-  &.vacancy-more {
-    max-height: 445px;
-    min-height: 445px;
-  }
   @media screen and (max-width: 568px) {
     &.vacancy-more {
       max-height: 475px;
       min-height: 475px;
     }
   }
+}
+
+.blur-js {
+  transition: opacity 0.1ms, filter 0.1ms;
 }
 
 
