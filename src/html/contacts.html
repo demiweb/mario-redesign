@@ -52,8 +52,8 @@
                 </nav>
                 <div class="mario-contacts__contacts-header">
                     <h1>Контакти</h1>
-                    <svg height="180px" stroke="white" stroke-width="1" class="text-line">
-                        <text  height="250px" x="200" y="220" fill="black">Mario</text>
+                    <svg stroke="white" stroke-width="1" class="text-line">
+                        <text  height="250px" x="20" y="220" fill="black">Mario</text>
                     </svg>
                 </div>
                 <div class="mario-manufacture">
@@ -212,6 +212,8 @@
     </section>
     <section class="mario-contacts__mario-vacancies">
         <div class="container">
+            <h2>Наші вакансії</h2>
+
             <div class="mario-vacancies__container">
                 <div class="mario-vacancies__single-vacancy">
                     <h3>Регіональний менеджер з продажу</h3>
@@ -378,6 +380,25 @@
 
 
 </footer>
+
+<script>
+    let allOpenMoreButtons = [...document.querySelectorAll('.mario-vacancies__single-vacancy > div button')];
+
+    allOpenMoreButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            btn.closest('.mario-vacancies__single-vacancy').classList.toggle('vacancy-more');
+            if (btn.closest('.mario-vacancies__single-vacancy').classList.contains('vacancy-more')) {
+                btn.innerHTML = 'Приховати';
+                btn.classList.add('opened')
+            } else {
+                btn.innerHTML = 'Детальніше'
+                btn.classList.remove('opened')
+
+            }
+        })
+    })
+
+</script>
 <script>
 
     let imgPar = [...document.querySelectorAll('.img-parall')];

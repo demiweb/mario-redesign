@@ -1702,14 +1702,107 @@ body .mario-footer .mario-footer__footer-top {
 .mario-contacts__container .mario-contacts__contacts-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .mario-contacts__container .mario-contacts__contacts-header svg {
+  max-width: 900px;
   width: 100%;
-  flex-grow: 1;
   overflow: hidden;
+  height: 180px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  align-self: flex-end;
+}
+@media screen and (max-width: 1602px) {
+  .mario-contacts__container .mario-contacts__contacts-header svg {
+    max-width: 720px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    font-size: 260px;
+  }
+}
+@media screen and (max-width: 1162px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 145px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg {
+    height: 185px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    font-size: 220px;
+  }
+}
+@media screen and (max-width: 968px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 120px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    font-size: 200px;
+  }
+}
+@media screen and (max-width: 908px) {
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    font-size: 180px;
+  }
+}
+@media screen and (max-width: 854px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 90px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg {
+    height: 200px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    font-size: 160px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 80px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    font-size: 140px;
+  }
+}
+@media screen and (max-width: 715px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 80px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    height: 210px;
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 200px;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg {
+    width: 350px;
+    align-self: center;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    height: 250px;
+    transform: translate(0, -100px);
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mario-contacts__container .mario-contacts__contacts-header {
+    height: 180px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg {
+    width: 290px;
+  }
+  .mario-contacts__container .mario-contacts__contacts-header svg text {
+    height: 250px;
+    transform: translate(-10px, -120px);
+    font-size: 100px;
+  }
 }
 .mario-contacts__container .mario-contacts__contacts-header h1 {
   font-family: "Raleway", sans-serif;
@@ -1722,17 +1815,31 @@ body .mario-footer .mario-footer__footer-top {
   text-align: left;
   padding-right: 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
+  .mario-contacts__container .mario-contacts__contacts-header > h1 {
+    font-size: 68px;
+    line-height: 74px;
+  }
+}
+@media screen and (max-width: 1060px) {
   .mario-contacts__container .mario-contacts__contacts-header > h1 {
     font-size: 60px;
     line-height: 68px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-contacts__container .mario-contacts__contacts-header > h1 {
+    font-size: 52px;
+    line-height: 60px;
     max-width: 86%;
+    padding-right: 0;
+    text-align: center;
   }
 }
 @media screen and (max-width: 425px) {
   .mario-contacts__container .mario-contacts__contacts-header > h1 {
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 36px;
+    line-height: 52px;
   }
 }
 
@@ -1744,6 +1851,11 @@ body .mario-footer .mario-footer__footer-top {
   font-weight: bold;
   font-style: normal;
   font-size: 300px;
+}
+@media screen and (max-width: 768px) {
+  .text-line text {
+    animation-duration: 10s;
+  }
 }
 
 @keyframes dash {
@@ -1766,6 +1878,7 @@ body .mario-footer .mario-footer__footer-top {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
 }
 .mario-manufacture .mario-manufacture__single-block {
   width: 50%;
@@ -1775,6 +1888,7 @@ body .mario-footer .mario-footer__footer-top {
 }
 .mario-manufacture .mario-manufacture__single-block > img {
   width: 110%;
+  height: 110%;
   object-fit: cover;
 }
 .mario-manufacture .mario-manufacture__single-block > a {
@@ -1794,7 +1908,7 @@ body .mario-footer .mario-footer__footer-top {
   transition: border-bottom-color 0.3s;
 }
 .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block {
-  padding: 55px;
+  padding: 5%;
   background: #000000;
 }
 .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block h3 {
@@ -1850,6 +1964,43 @@ body .mario-footer .mario-footer__footer-top {
 }
 .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block:first-child p {
   color: #595959;
+}
+@media screen and (max-width: 1602px) {
+  .mario-manufacture .mario-manufacture__single-block {
+    height: 360px;
+  }
+  .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block h3 {
+    padding: 0 0 30px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block p > small {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .mario-manufacture .mario-manufacture__single-block {
+    width: 100%;
+    height: 290px;
+  }
+  .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block h3 {
+    padding: 0 0 20px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .mario-manufacture .mario-manufacture__single-block.mario-manufacture__single-block--text-block p > small {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .mario-contacts__mario-team {
@@ -2031,7 +2182,7 @@ body .mario-footer .mario-footer__footer-top {
   .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__mario-member {
     width: 50%;
   }
-  .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__mario-member:nth-child(5) {
+  .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__mario-member:nth-child(5), .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__mario-member:last-child {
     width: 100%;
   }
   .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__mario-member > .mario-member__img img {
@@ -2040,6 +2191,10 @@ body .mario-footer .mario-footer__footer-top {
   }
   .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__double-block {
     width: 100%;
+  }
+  .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__double-block p {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 @media screen and (max-width: 475px) {
@@ -2050,6 +2205,13 @@ body .mario-footer .mario-footer__footer-top {
   .mario-contacts__mario-team .mario-team__container .mario-team__team-members .mario-member__info {
     opacity: 1 !important;
     visibility: visible !important;
+  }
+  .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__double-block {
+    width: 100%;
+  }
+  .mario-contacts__mario-team .mario-team__container .mario-team__team-members .team-members__double-block p {
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 
@@ -2069,21 +2231,59 @@ body .mario-footer .mario-footer__footer-top {
   width: 100%;
   background: #ffffff;
 }
+.mario-contacts__mario-vacancies .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mario-contacts__mario-vacancies .container h2 {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
 
 .mario-vacancies__container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  column-count: 3;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  max-height: 800px;
+}
+@media screen and (max-width: 1102px) {
+  .mario-vacancies__container {
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    max-height: none;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-vacancies__container {
+    column-count: 1;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+  }
 }
 
 .mario-vacancies__single-vacancy {
   width: 100%;
   max-width: 415px;
-  margin: 0 auto;
+  margin: 0 auto 8%;
   border-top: 1px solid #bcbcbc;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  max-height: 232px;
+  min-height: 232px;
+  transition: min-height 0.4s;
+}
+.mario-vacancies__single-vacancy.vacancy-more {
+  max-height: 470px;
+  min-height: 470px;
+  transition: max-height 0.4s, min-height 0.4s;
 }
 .mario-vacancies__single-vacancy h3 {
   font-family: "Raleway", sans-serif;
@@ -2098,7 +2298,7 @@ body .mario-footer .mario-footer__footer-top {
   color: #000000;
   font-size: 16px;
   line-height: 22px;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 .mario-vacancies__single-vacancy p:nth-child(2) {
   margin: 0;
@@ -2131,6 +2331,11 @@ body .mario-footer .mario-footer__footer-top {
 .mario-vacancies__single-vacancy > div {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 15px;
+  background: white;
 }
 .mario-vacancies__single-vacancy > div button {
   background: none;
@@ -2156,6 +2361,12 @@ body .mario-footer .mario-footer__footer-top {
   right: -15px;
   top: 8px;
   transform: rotate(45deg);
+  transition: 0.3s;
+}
+.mario-vacancies__single-vacancy > div button.opened::after {
+  transform: rotate(-135deg);
+  transition: 0.3s;
+  top: 14px;
 }
 .mario-vacancies__single-vacancy > div a {
   text-decoration: none;
@@ -2177,6 +2388,69 @@ body .mario-footer .mario-footer__footer-top {
   right: -15px;
   top: 10px;
   transform: rotate(-45deg);
+}
+@media screen and (max-width: 1270px) {
+  .mario-vacancies__single-vacancy h3 {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .mario-vacancies__single-vacancy p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1102px) {
+  .mario-vacancies__single-vacancy {
+    max-width: 460px;
+    max-height: 252px;
+    min-height: 252px;
+  }
+  .mario-vacancies__single-vacancy.vacancy-more {
+    max-height: 485px;
+    min-height: 485px;
+    transition: max-height 0.4s, min-height 0.4s;
+  }
+  .mario-vacancies__single-vacancy h3 {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .mario-vacancies__single-vacancy p {
+    font-size: 14px;
+    margin: 45px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-vacancies__single-vacancy h3 {
+    font-size: 16px;
+    white-space: normal;
+  }
+  .mario-vacancies__single-vacancy p {
+    font-size: 12px;
+    margin: 35px 0;
+  }
+  .mario-vacancies__single-vacancy ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .mario-vacancies__single-vacancy ul li {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-vacancies__single-vacancy {
+    max-height: 232px;
+    min-height: 232px;
+  }
+}
+.mario-vacancies__single-vacancy.vacancy-more {
+  max-height: 445px;
+  min-height: 445px;
+}
+@media screen and (max-width: 568px) {
+  .mario-vacancies__single-vacancy.vacancy-more {
+    max-height: 475px;
+    min-height: 475px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
