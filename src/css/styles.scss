@@ -104,7 +104,10 @@ body {
 
   main.main-product-page {
     background: white;
+  }
 
+  main.main-support-page {
+    background: white;
   }
 
   .mario-footer {
@@ -4255,6 +4258,7 @@ body {
       height: 156px;
       width: 120px;
     }
+
     img {
       height: 100%;
       width: 100%;
@@ -4335,6 +4339,172 @@ body {
   }
 }
 
+// support page styles
+
+.main-support-page {
+  background: #1c1c1c !important;
+}
+
+.mario-support-page {
+  align-items: center;
+
+  .video-banner__video-container::before {
+    content: none;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    h1 {
+      margin: 45px 0;
+    }
+
+    p {
+      font-family: $main-font;
+      color: $white-color;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: bold;
+      text-align: center;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 1060px) {
+      p {
+        font-size: 16px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      h1 {
+        margin: 25px 0;
+      }
+      p {
+        font-size: 14px;
+        width: 80%;
+      }
+    }
+    @media screen and (max-width: 568px) {
+      p {
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1602px) {
+    height: 550px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+
+
+}
+
+.mario-support-page__conditions-delivery {
+  width: 100%;
+}
+
+.conditions-delivery__container {
+  width: 100%;
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 60px;
+}
+
+.conditions-delivery__block {
+  background: url("../img/novaposhta.png") no-repeat center;
+  background-size: cover;
+  height: 650px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8%;
+  box-sizing: border-box;
+
+  h2 {
+    font-family: $main-font;
+    font-size: 48px;
+    line-height: 64px;
+    color: $black-color;
+    font-weight: bold;
+  }
+
+  p {
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 24px;
+    color: $black-color;
+    font-weight: normal;
+    text-align: center;
+    width: 70%;
+    margin: 25px 0;
+  }
+
+  &:last-child {
+    background: url("../img/mario-pay-bg.png") no-repeat center;
+
+    h2 {
+      color: $white-color;
+    }
+
+    p {
+      color: $white-color;
+    }
+
+    > div {
+      justify-content: center;
+    }
+  }
+}
+
+.conditions-delivery__delivery-partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 287px;
+  width: 100%;
+  margin: 15px 0;
+
+  > p {
+    color: $orange-color !important;
+    font-weight: bold;
+    border-bottom: 1px solid $orange-color;
+    width: auto;
+    position: relative;
+    margin: 10px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid $orange-color;
+      border-bottom: 2px solid $orange-color;
+      transform: translate(0, -50%) rotate(-45deg);
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+}
+
+.conditions-delivery__block:hover {
+  .conditions-delivery__delivery-partners {
+    > p::after {
+      transform: translate(15px, -50%) rotate(-45deg);
+      transition: transform 0.4s ease-in-out;
+
+    }
+  }
+}
 
 
 
