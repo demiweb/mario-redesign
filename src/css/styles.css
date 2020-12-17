@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway/Raleway-Black.eot");
@@ -2232,7 +2233,7 @@ body .mario-footer .mario-footer__footer-top {
     line-height: 48px !important;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 475px) {
   h2 {
     font-size: 28px !important;
     line-height: 38px !important;
@@ -2924,6 +2925,77 @@ body .mario-footer .mario-footer__footer-top {
   }
 }
 
+.main-product-page .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #f46f16;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.main-product-page .btn--comb {
+  right: 0;
+  top: 13%;
+  height: 39px !important;
+  min-width: 39px;
+  max-width: 39px;
+  width: 39px;
+  border: 2px solid #fa8100;
+  color: #f46f16;
+  border-radius: 25px;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+  overflow: hidden;
+  transition: min-width 0.5s, max-width 0.5s, background-color 0.3s;
+}
+.main-product-page .btn .icon {
+  font-size: 1.3em;
+}
+.main-product-page .btn--comb .icon {
+  font-size: 1.2em;
+  margin-left: 0;
+}
+.main-product-page .icon {
+  display: inline-block;
+  fill: #fa8100;
+  font-size: inherit;
+}
+.main-product-page .btn--comb > span {
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  top: 0.1em;
+  text-decoration: none;
+  transition: transform 0.3s, max-width 0.3s, margin 0.3s;
+  transition: transform 0.3s, max-width 0.3s, margin 0.3s, -webkit-transform 0.3s;
+}
+.main-product-page .btn--comb:hover {
+  background-color: #f46f16;
+  border-color: #f46f16;
+  color: #fff;
+  min-width: 200px;
+  max-width: 200px;
+  transition: min-width 0.5s, max-width 0.5s, background-color 0.3s;
+}
+.main-product-page .btn--comb:hover .icon {
+  fill: #ffffff;
+}
+.main-product-page .btn--comb:hover span {
+  max-height: none;
+  max-width: 300px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
 .mario-product-page {
   width: 100%;
   padding-top: 55px;
@@ -3019,22 +3091,15 @@ body .mario-footer .mario-footer__footer-top {
   width: 100px;
 }
 .product-header__links-block a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #fa8100;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
+  margin: 0 5px;
 }
 
-.product-header__side svg {
+.product-header__side > svg {
   stroke: #bbbbbb;
   width: 100%;
   height: 200px;
 }
-.product-header__side svg text {
+.product-header__side > svg text {
   fill: transparent;
   font-size: 10vw;
   width: 100%;
@@ -3170,7 +3235,7 @@ body .mario-footer .mario-footer__footer-top {
   overflow: hidden;
   flex-direction: row;
 }
-.mario-product-description__container > div div {
+.mario-product-description__container > div > div {
   width: 50%;
   height: 650px;
   display: flex;
@@ -3179,10 +3244,10 @@ body .mario-footer .mario-footer__footer-top {
   box-sizing: border-box;
   justify-content: center;
 }
-.mario-product-description__container > div div span {
+.mario-product-description__container > div > div span {
   display: flex;
 }
-.mario-product-description__container > div div a {
+.mario-product-description__container > div > div span > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3193,7 +3258,10 @@ body .mario-footer .mario-footer__footer-top {
   flex-shrink: 0;
   margin-right: 20px;
 }
-.mario-product-description__container > div div h3 {
+.mario-product-description__container > div > div span > div svg {
+  fill: #fa8100;
+}
+.mario-product-description__container > div > div h3 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -3201,7 +3269,7 @@ body .mario-footer .mario-footer__footer-top {
   font-weight: bold;
   display: inline-block;
 }
-.mario-product-description__container > div div > p {
+.mario-product-description__container > div > div > p {
   font-family: "Raleway", sans-serif;
   color: #595959;
   font-size: 18px;
@@ -3211,10 +3279,10 @@ body .mario-footer .mario-footer__footer-top {
   max-width: 80%;
 }
 @media screen and (max-width: 768px) {
-  .mario-product-description__container > div div h3 {
+  .mario-product-description__container > div > div h3 {
     font-size: 24px;
   }
-  .mario-product-description__container > div div > p {
+  .mario-product-description__container > div > div > p {
     font-size: 14px;
     line-height: 20px;
     width: 100%;
@@ -3222,10 +3290,10 @@ body .mario-footer .mario-footer__footer-top {
   }
 }
 @media screen and (max-width: 578px) {
-  .mario-product-description__container > div div h3 {
+  .mario-product-description__container > div > div h3 {
     font-size: 16px;
   }
-  .mario-product-description__container > div div > p {
+  .mario-product-description__container > div > div > p {
     font-size: 12px !important;
     line-height: 16px;
     margin: 30px 0;
@@ -3241,6 +3309,9 @@ body .mario-footer .mario-footer__footer-top {
     margin: 15px 0;
     height: 380px;
     align-items: center;
+  }
+  .mario-product-description__container > div > div:last-child {
+    height: 200px;
   }
   .mario-product-description__container > div > div p {
     text-align: center;
@@ -3261,10 +3332,16 @@ body .mario-footer .mario-footer__footer-top {
     height: 320px;
   }
 }
+@media screen and (max-width: 768px) {
+  .mario-product-description__container {
+    padding-bottom: 30px;
+  }
+}
 
 .mario-product-page__mario-available-size {
   width: 100%;
   background: #ffffff;
+  margin: 30px 0;
 }
 
 .mario-available-size__container {
@@ -3272,6 +3349,12 @@ body .mario-footer .mario-footer__footer-top {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .mario-available-size__container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .mario-available-size__img-container {
@@ -3284,6 +3367,12 @@ body .mario-footer .mario-footer__footer-top {
 .mario-available-size__img-container img {
   height: 100%;
   object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .mario-available-size__img-container {
+    width: 70%;
+    height: 450px;
+  }
 }
 
 .mario-available-size__description {
@@ -3310,7 +3399,52 @@ body .mario-footer .mario-footer__footer-top {
   height: 1px;
   background: #b1b1b1;
 }
+.mario-available-size__description > span {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.mario-available-size__description > span > a {
+  border-bottom: 2px solid #fa8100;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 3px 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  margin: 0 5px;
+  transition: border-bottom-color 0.3s;
+}
+.mario-available-size__description > span > a:hover {
+  border-color: transparent;
+  transition: border-bottom-color 0.3s;
+}
+@media screen and (max-width: 1400px) {
+  .mario-available-size__description > span {
+    width: 75%;
+  }
+  .mario-available-size__description > span > a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mario-available-size__description > span {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
+  .mario-available-size__description {
+    width: 100%;
+    margin: 30px 0;
+  }
+  .mario-available-size__description .mario-available-size__description-details {
+    margin: 20px 0;
+    padding: 0 12px;
+  }
   .mario-available-size__description > p {
     font-size: 14px;
     line-height: 20px;
@@ -3318,11 +3452,18 @@ body .mario-footer .mario-footer__footer-top {
     margin: 20px 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 578px) {
   .mario-available-size__description > p {
     font-size: 12px !important;
     line-height: 16px;
     margin: 30px 0;
+  }
+  .mario-available-size__description > span {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mario-available-size__description > span > a {
+    width: auto;
   }
 }
 
@@ -3350,6 +3491,14 @@ body .mario-footer .mario-footer__footer-top {
 }
 .mario-available-size__title a:nth-child(2) {
   margin-left: auto;
+}
+@media screen and (max-width: 475px) {
+  .mario-available-size__title {
+    flex-direction: column;
+  }
+  .mario-available-size__title > a {
+    margin: 5px auto;
+  }
 }
 
 .mario-available-size__description-details {
@@ -3383,6 +3532,7 @@ body .mario-footer .mario-footer__footer-top {
 }
 .mario-available-size__description-details > div > h4:nth-child(2) {
   width: 35%;
+  text-align: center;
 }
 .mario-available-size__description-details > div > p {
   width: 25%;
@@ -3394,9 +3544,347 @@ body .mario-footer .mario-footer__footer-top {
   margin: 30px 0;
   font-weight: normal;
   position: relative;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.mario-available-size__description-details > div > p:first-child {
+  text-align: left;
 }
 .mario-available-size__description-details > div > p:nth-child(2) {
   width: 35%;
+}
+.mario-available-size__description-details > div > a {
+  border-bottom: 2px solid #fa8100;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 3px 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  margin-left: auto;
+  transition: border-bottom-color 0.3s;
+}
+.mario-available-size__description-details > div > a:hover {
+  border-color: transparent;
+  transition: border-bottom-color 0.3s;
+}
+@media screen and (max-width: 1400px) {
+  .mario-available-size__description-details > div > h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .mario-available-size__description-details > div > a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .mario-available-size__description-details > div > h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .mario-available-size__description-details > div > p {
+    font-size: 12px;
+  }
+  .mario-available-size__description-details > div > a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-available-size__description-details > div > h4 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .mario-available-size__description-details > div > h4:nth-child(2) {
+    width: 30%;
+  }
+  .mario-available-size__description-details > div > p {
+    font-size: 10px;
+  }
+  .mario-available-size__description-details > div > p:nth-child(2) {
+    width: 30%;
+  }
+  .mario-available-size__description-details > div > a {
+    font-size: 10px;
+  }
+}
+
+.mario-available-size__mario-product-set {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+.mario-available-size__mario-product-set h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .mario-available-size__mario-product-set {
+    margin: 15px 0;
+  }
+}
+
+.mario-product-set__all-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.mario-product-set__single-item {
+  width: 180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mario-product-set__single-item > div {
+  height: 168px;
+  width: 148px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.mario-product-set__single-item > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.mario-product-set__single-item p {
+  margin: 20px 0;
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+}
+@media screen and (max-width: 768px) {
+  .mario-product-set__single-item {
+    width: 142px;
+  }
+  .mario-product-set__single-item > div {
+    width: 130px;
+    height: 146px;
+  }
+}
+.mario-product-set__single-item p {
+  font-size: 12px;
+}
+
+.main-product-page .mario-main__picture-bg-banner {
+  height: auto !important;
+  background: linear-gradient(0deg, #141414 80%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
+  background-size: cover, 100%;
+  align-items: flex-start;
+}
+.main-product-page .mario-main__picture-bg-banner .container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main-product-page .mario-main__picture-bg-banner .container > h3 {
+  margin: 50px 0;
+}
+@media screen and (max-width: 968px) {
+  .main-product-page .mario-main__picture-bg-banner {
+    background: linear-gradient(0deg, #141414 81%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-product-page .mario-main__picture-bg-banner {
+    background: linear-gradient(0deg, #141414 70%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
+  }
+}
+@media screen and (max-width: 568px) {
+  .main-product-page .mario-main__picture-bg-banner {
+    background: linear-gradient(0deg, #141414 74%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
+  }
+}
+
+.mario-product-page__mario-same-products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 40px 0;
+}
+@media screen and (max-width: 968px) {
+  .mario-product-page__mario-same-products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-product-page__mario-same-products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mario-same-products__single-item {
+  width: 100%;
+  position: relative;
+  min-height: 385px;
+  text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  .mario-same-products__single-item {
+    min-height: 355px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-same-products__single-item {
+    min-height: 325px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-same-products__single-item {
+    min-height: 240px;
+  }
+}
+.mario-same-products__single-item.active {
+  position: relative;
+}
+.mario-same-products__single-item.active .mario-same-products__item-front {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 4px 3px black;
+}
+.mario-same-products__single-item.active .mario-same-products__item-front::after {
+  content: "Ти зараз тут";
+  position: absolute;
+  background: #fa8100;
+  top: 0;
+  left: 10px;
+  width: 108px;
+  height: 25px;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.mario-same-products__single-item.active .mario-same-products__item-back {
+  box-shadow: 0 0 4px 3px black;
+}
+.mario-same-products__single-item.active .mario-same-products__item-back::after {
+  content: "Ти зараз тут";
+  position: absolute;
+  background: #fa8100;
+  top: 0;
+  left: 10px;
+  width: 108px;
+  height: 25px;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.mario-same-products__item-back, .mario-same-products__item-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  backface-visibility: hidden;
+  transition: transform 0.8s ease-in-out, box-shadow 0.3s;
+  border-radius: 4px;
+  padding: 30px 15px 15px;
+  box-sizing: border-box;
+}
+.mario-same-products__item-back .mario-same-products__img-container, .mario-same-products__item-front .mario-same-products__img-container {
+  height: 227px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 568px) {
+  .mario-same-products__item-back .mario-same-products__img-container, .mario-same-products__item-front .mario-same-products__img-container {
+    height: 156px;
+    width: 120px;
+  }
+}
+.mario-same-products__item-back .mario-same-products__img-container img, .mario-same-products__item-front .mario-same-products__img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.mario-same-products__item-back p, .mario-same-products__item-front p {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .mario-same-products__item-back p, .mario-same-products__item-front p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-same-products__item-back p, .mario-same-products__item-front p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-same-products__item-back p, .mario-same-products__item-front p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.mario-same-products__item-back {
+  transform: rotateY(180deg);
+  background: url("../img/layer-same-item-bg.png") no-repeat center;
+  background-size: cover;
+}
+.mario-same-products__item-back > div {
+  background: #000000;
+  color: #fa8100;
+  height: 32px;
+  border-radius: 16px;
+  width: 154px;
+  border: 1px solid #fa8100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+.mario-same-products__single-item:hover .mario-same-products__item-back {
+  transform: rotateY(360deg);
+  box-shadow: 0 0 4px 3px black;
+  transition: box-shadow 0.3s, transform 0.8s ease-in-out;
+}
+.mario-same-products__single-item:hover .mario-same-products__item-front {
+  transform: rotateY(180deg);
+  transition: box-shadow 0.3s, transform 0.8s ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */
