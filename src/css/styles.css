@@ -3730,6 +3730,7 @@ body .mario-footer .mario-footer__footer-top {
   width: 100%;
   position: relative;
   min-height: 385px;
+  perspective: 1000px;
   text-decoration: none;
 }
 @media screen and (max-width: 1024px) {
