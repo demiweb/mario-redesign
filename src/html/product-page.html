@@ -154,7 +154,7 @@
                 <div class="reverse">
                     <div class="anim-fading-out"><img class="lazyload" data-src="../img/3082062.jpg" alt=""></div>
                     <div class="anim-fading-out">
-                        <span><h3>Нержавіюча сталь AISI304</h3></span>
+                        <span><div><img class="lazyload" data-src="../img/pdf-file.svg" alt=""></div><h3>Нержавіюча сталь AISI304</h3></span>
                         <p>Кваліфікований персонал - запорука успіху будь-якої справи. Компанія «Маріо» надає навчання
                             Ваших співробітників продукту, специфіку його продажів, а також проводить екскурсії на
                             підприємстві для повного розуміння циклу виробництва і підтвердження якості своєї продукції
@@ -166,7 +166,7 @@
                     <div class="anim-fading-out"><img class="lazyload" data-src="../img/Exhibition_Mockup_1.jpg" alt="">
                     </div>
                     <div class="anim-fading-out">
-                        <span><h3>Можливість комбінованного підключення</h3></span>
+                        <span><div><img class="lazyload" data-src="../img/pdf-file.svg" alt=""></div><h3>Можливість комбінованного підключення</h3></span>
                         <p>Головний інструмент привернення уваги потенційного споживача на торговій точці - ефективна
                             бренд-зона. Залежно від площі, обсягів продажів, специфіки Вашого підприємства, «Маріо»
                             забезпечить Вас оптимальним і функціональним набором устаткування і POS-матеріалів</p>
@@ -239,12 +239,17 @@
                     <p>Рушникосушарка Класік HP-I заводу-виробника Маріо, висотою 1100 мм, шириною 520 мм.</p>
                     <div class="mario-available-size__description-details">
                         <div><h4>Розмір (ШхВ/Д)</h4><h4>Номінальна потужність </h4><h4>Кількість ребер, шт </h4></div>
+                        <div>
+                            <p>830x600/800</p>
+                            <p>135</p>
+                            <p>8</p>
+                            <a href="#">В магазин</a>
+                        </div>
                         <div><p>830x600/800</p>
                             <p>135</p>
-                            <p>8</p><a href="#">В магазин</a></div>
-                        <div><p>830x600/800</p>
-                            <p>135</p>
-                            <p>8</p><a href="#">В магазин</a></div>
+                            <p>8</p>
+                            <a href="#">В магазин</a>
+                        </div>
 
                     </div>
                     <span><a href="#">Завантажити технічну документацію</a><a
@@ -467,213 +472,12 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../scripts/slick.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('.product-photo-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            speed: 600,
-            cssEase: 'ease-in-out',
-            autoplaySpeed: 4500,
-            infinite: true,
-            vertical: true,
-            verticalSwiping: true,
-            dots: true,
-            arrows: false,
-            dotsClass: 'slick-dots product-slider-dots',
-            pauseOnHover: false,
-            touchMove: false,
-            swipe: false,
-        });
-    });
-</script>
-<script>
-    let allOpenMoreButtons = [...document.querySelectorAll('.mario-vacancies__single-vacancy > div button')];
-
-    allOpenMoreButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            btn.closest('.mario-vacancies__single-vacancy').classList.toggle('vacancy-more');
-            if (btn.closest('.mario-vacancies__single-vacancy').classList.contains('vacancy-more')) {
-                btn.innerHTML = 'Приховати';
-                btn.classList.add('opened')
-            } else {
-                btn.innerHTML = 'Детальніше'
-                btn.classList.remove('opened')
-
-            }
-        })
-    })
-
-</script>
-<script>
+<script type="text/javascript" src="../scripts/productSlider.js"></script>
+<script type="text/javascript" src="../scripts/openReadMore.js"></script>
+<script type="text/javascript" src="../scripts/animationScript.js"></script>
+<script type="text/javascript" src="../scripts/headerAnimation.js"></script>
+<script type="text/javascript" src="../scripts/homePageScript.js"></script>
 
 
-    let allAnimFade = [...document.querySelectorAll(".anim-fading-out")];
-    let allBLurFade = [...document.querySelectorAll(".blur-js")];
-
-    function checkWidthToBottom() {
-        allAnimFade.forEach((el, i) => {
-            let spaceBellow = window.innerHeight - el.getBoundingClientRect().bottom + el.offsetHeight;
-            let topDistance = el.getBoundingClientRect().top + el.offsetHeight;
-            if (60 < spaceBellow && topDistance > 250) {
-                el.style.animation = 'fadingOutTop 0.8s linear';
-                el.style.animationDelay = `${(25 * i)}ms`
-                let timeOut = 800 + (15 * i);
-                setTimeout(() => {
-                    el.classList.remove('anim-fading-out');
-
-                }, timeOut)
-
-            }
-        })
-
-        allBLurFade.forEach((blur, k) => {
-            let spaceBellow = window.innerHeight - blur.getBoundingClientRect().bottom + blur.offsetHeight;
-            let topDistance = blur.getBoundingClientRect().top + blur.offsetHeight;
-            console.log(topDistance);
-            if (topDistance < 560 && topDistance > 0) {
-                let partPercent = 53;
-                let opacityPercent = 1;
-                let percent = (topDistance / partPercent) / 10;
-
-                blur.style.filter = `blur(3px)`;
-                blur.style.opacity = `${percent}`;
-
-            } else {
-                blur.style.filter = `blur(0px)`;
-                blur.style.opacity = `1`;
-
-
-            }
-        })
-
-    }
-
-    window.addEventListener('load', () => {
-        checkWidthToBottom();
-    })
-
-
-    window.onscroll =
-        window.onload = function () {
-            let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-            let boxLeft = 750 - scrollTop;
-            let percentGrad = boxLeft / 10;
-
-        }
-
-    window.onscroll = function () {
-        checkWidthToBottom();
-        let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-        let boxLeft = 750 - scrollTop;
-        let percentGrad = boxLeft / 10;
-
-    }
-
-
-    let headerList = [...document.querySelectorAll('.mario-header__header-navigation > ul > li')];
-    let headerLanguage = [...document.querySelectorAll('.mario-header__site-language > a ')][0];
-    let headerLanguageCont = [...document.querySelectorAll('.mario-header__site-language')][0];
-    let headerBurgerBtn = [...document.querySelectorAll('.mario-header__burger-btn-mob')][0];
-    let headerNav = [...document.querySelectorAll('.mario-header__header-navigation')][0];
-    let burgerBtn = [...document.querySelectorAll('.mario-header__burger-btn-mob')][0];
-    let currentHeight = document.body.clientHeight;
-    window.addEventListener('resize', () => {
-        if (document.body.clientWidth > 768) {
-            headerList.forEach((li) => {
-                li.style.opacity = '1';
-            })
-            document.body.classList.remove('scroll-hidden');
-        } else if (document.body.clientWidth < 768) {
-            if (headerBurgerBtn.classList.contains('active-burger-btn')) {
-                document.body.classList.add('scroll-hidden');
-
-                if (currentHeight !== document.body.clientHeight || currentHeight === document.body.clientHeight) {
-
-                } else {
-
-                    headerList.forEach((li) => {
-                        li.style.opacity = '0';
-                    })
-                }
-            } else {
-                headerList.forEach((li) => {
-                    li.style.opacity = '0';
-                })
-            }
-
-
-        }
-    })
-
-    function liVisibility() {
-        headerList.forEach((li, i) => {
-            li.style.transform = 'translate(0, 25px)';
-            li.style.opacity = '0';
-
-            li.style.animation = '';
-            if (!burgerBtn.classList.contains('active-burger-btn')) {
-                li.style.opacity = '0';
-                li.style.animation = '';
-                headerLanguageCont.style.opacity = '0';
-
-
-            } else {
-                setTimeout(() => {
-
-                    li.style.opacity = '1';
-                    let time = 100 * (i + 1);
-                    li.style.transform = 'translate(0, 25px)';
-                    li.style.opacity = '0';
-                    setTimeout(() => {
-                        li.style.animation = 'fadeingTopLi 0.6s ease-in-out';
-                        headerLanguageCont.style.opacity = '1';
-                    }, time);
-
-                    setTimeout(() => {
-                        li.style.transform = 'translate(0, 0)';
-                        li.style.opacity = '1';
-                        li.style.animation = '';
-                    }, time)
-
-                }, 400)
-            }
-
-
-        })
-
-    }
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.dropdown-open-lang')) {
-            headerLanguage.classList.remove('dropdown-open-lang');
-        } else {
-        }
-    })
-    headerLanguage.addEventListener('click', () => {
-        headerLanguage.classList.toggle('dropdown-open-lang');
-    })
-
-    burgerBtn.addEventListener('click', () => {
-        burgerBtn.classList.toggle('active-burger-btn');
-        document.body.classList.toggle('scroll-hidden');
-        headerNav.style.animation = 'navFading 0.4s linear'
-
-        if (!burgerBtn.classList.contains('active-burger-btn')) {
-            headerNav.style.animation = 'navFadingReverse 0.4s linear';
-            headerList.forEach((li) => {
-                li.style.opacity = '0';
-                li.style.animation = '';
-                headerLanguageCont.style.opacity = '0';
-            })
-        } else {
-            liVisibility();
-        }
-
-
-    })
-</script>
 </body>
 </html>

@@ -110,6 +110,10 @@ body {
     background: white;
   }
 
+  main.main-warranty-page {
+    background: white;
+  }
+
   .mario-footer {
     flex-shrink: 0;
     width: 100%;
@@ -3323,7 +3327,6 @@ body {
   width: 100%;
   padding-top: 55px;
   background: $contacts-bg;
-
 }
 
 .mario-product-page__container {
@@ -3918,7 +3921,8 @@ body {
     }
 
     > h4 {
-      width: 25%;
+      //max-width: 25%;
+      flex-grow: 2;
       padding-left: 10px;
       box-sizing: border-box;
       font-family: "Raleway", sans-serif;
@@ -3929,13 +3933,14 @@ body {
       margin: 30px 0;
 
       &:nth-child(2) {
-        width: 35%;
+        //width: 35%;
         text-align: center;
+        flex-grow: 1;
       }
     }
 
     > p {
-      width: 25%;
+      //width: 25%;
       text-align: center;
       font-family: "Raleway", sans-serif;
       color: #595959;
@@ -3946,13 +3951,16 @@ body {
       position: relative;
       padding-left: 10px;
       box-sizing: border-box;
+      flex-grow: 2;
 
       &:first-child {
         text-align: left;
+        flex-grow: 1;
       }
 
       &:nth-child(2) {
-        width: 35%;
+        //width: 35%;
+        flex-grow: 2;
       }
 
     }
@@ -4016,15 +4024,17 @@ body {
         text-align: center;
 
         &:nth-child(2) {
-          width: 30%;
+          //width: 30%;
         }
       }
 
       > p {
         font-size: 10px;
+        text-align: center !important;
 
         &:nth-child(2) {
-          width: 30%;
+          //width: 30%;
+          flex-grow: 3;
         }
       }
 
@@ -4587,13 +4597,15 @@ body {
           transition: transform 0.4s ease-in-out;
         }
       }
-      >.product-delivery-rules_bg {
+
+      > .product-delivery-rules_bg {
         transform-origin: 50% 50%;
         transform: scale(1.1, 1.1) translate(-20px, 0);
         transition: transform 0.6s;
 
       }
     }
+
     &.product-delivery-rules__block--reverse {
       background: url("../img/OCDAIG0.png") no-repeat center, $white-color;
       background-size: 100%;
@@ -4603,7 +4615,7 @@ body {
         > div {
           padding-left: 0 !important;
         }
-        
+
       }
       @media screen and (max-width: 568px) {
         background-size: 210%;
@@ -4617,6 +4629,7 @@ body {
         }
 
       }
+
       &:hover {
         background-size: 110%;
         transition: background-size 0.6s, background-position 0.6s;
@@ -4629,16 +4642,18 @@ body {
         }
 
       }
+
       > div {
         padding-left: 50%;
         box-sizing: border-box;
+
         p {
           max-width: 100%;
         }
       }
     }
 
-    >.product-delivery-rules_bg {
+    > .product-delivery-rules_bg {
       z-index: 1;
       position: absolute;
       overflow: hidden;
@@ -4648,10 +4663,12 @@ body {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+
       img {
         height: 100%;
         width: 100%;
       }
+
       @media screen and (max-width: 768px) {
         right: -650px;
 
@@ -4666,6 +4683,7 @@ body {
         }
       }
     }
+
     > div {
       z-index: 2;
       display: flex;
@@ -4673,6 +4691,7 @@ body {
       align-items: flex-start;
       justify-content: space-between;
       flex-grow: 1;
+
       h2 {
         font-family: $main-font;
         color: $black-color;
@@ -4689,19 +4708,21 @@ body {
         font-weight: normal;
         max-width: 60%;
       }
+
       @media screen and (max-width: 768px) {
         p {
           font-size: 16px;
         }
-        
+
       }
-      
+
       @media screen and (max-width: 568px) {
         p {
           font-size: 14px;
           max-width: 100%;
         }
       }
+
       span {
         color: $black-color;
         font-weight: bold;
@@ -4737,7 +4758,6 @@ body {
   background: $black-color;
   text-decoration: none;
   min-height: 350px;
-
 
 
   > section {
@@ -4808,6 +4828,7 @@ body {
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     margin: 10px 0;
   }
@@ -4819,7 +4840,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 45px 0;
-  
+
   @media screen and (max-width: 568px) {
     flex-direction: column;
     margin: 20px 0;
@@ -4833,7 +4854,7 @@ body {
   border: 2px solid $white-color;
   border-radius: 24px;
   background: transparent;
-  color: $orange-color;
+  color: $white-color;
   font-family: $main-font;
   font-size: 16px;
   line-height: 24px;
@@ -4844,6 +4865,7 @@ body {
   text-decoration: none;
 
 }
+
 button.mario-button {
   outline: none;
 }
@@ -4851,18 +4873,331 @@ button.mario-button {
 .mario-orange-btn {
   border-color: $orange-color;
   margin: 0 15px;
+  color: $orange-color;
+
   &:first-child {
     background: $orange-color;
     color: $white-color;
+
     &:hover {
       background: transparent;
       color: $orange-color;
     }
   }
+
   @media screen and (max-width: 568px) {
     margin: 15px 0;
   }
 }
+
+// warranty page
+
+
+.mario-warranty-page {
+  width: 100%;
+  padding-top: 55px;
+}
+
+.mario-warranty-page__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mario-warranty-page__warranty-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.warranty-header__side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.warranty__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  flex-grow: 1;
+  justify-content: center;
+
+  > h1 {
+    @include h1-title;
+    color: $white-color;
+
+    max-width: 80%;
+    margin: 0;
+    text-align: left;
+    padding-right: 50px;
+  }
+
+  p {
+    font-family: $main-font;
+    color: $white-color;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 30px 0;
+    max-width: 75%;
+  }
+
+  @media screen and (max-width: 1440px) {
+    > h1 {
+      font-size: 68px;
+      line-height: 74px;
+    }
+  }
+
+  @media screen and (max-width: 1060px) {
+    > h1 {
+      font-size: 60px;
+      line-height: 68px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    > h1 {
+      font-size: 52px;
+      line-height: 60px;
+      max-width: 86%;
+      padding-right: 0;
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+
+  }
+
+  @media screen and (max-width: 425px) {
+
+    > h1 {
+      font-size: 36px;
+      line-height: 52px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+  }
+}
+
+.mario-main__video-banner.mario-warranty-page {
+  align-items: flex-start;
+  display: flex;
+
+  .video-banner__video-container::before {
+    content: none;
+  }
+
+  .container {
+    margin-bottom: 0;
+    height: 100%;
+
+    > h3, > p, > ul {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.mario-warranty-content {
+  width: 100%;
+  padding-bottom: 140px;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 33%, rgba(255, 255, 255, 1) 33%);
+  @media screen and (max-width: 768px) {
+    padding-bottom: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(255, 255, 255, 1) 20%);
+
+  }
+
+}
+
+
+.mario-warranty-content__container {
+  width: 100%;
+
+}
+
+.mario-warranty-content__warranty-obligation {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  padding: 5% 4%;
+  box-sizing: border-box;
+  margin: 60px 0;
+  background: url("../img/warranty-obs.jpg") no-repeat center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    font-family: $main-font;
+    font-size: 48px;
+    line-height: 64px;
+    color: $white-color;
+    font-weight: bold;
+  }
+
+  p {
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white-color;
+    font-weight: normal;
+    max-width: 540px;
+    margin: 15px 0;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 135px;
+    height: 62px;
+    margin-top: auto;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 450px;
+    p {
+      font-size: 16px;
+
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    height: 420px;
+    div {
+      height: 48px;
+      width: 112px;
+    }
+    p {
+
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+.mario-warranty-content .container {
+  > h3, > p, > ul {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $main-font;
+    color: $black-color;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+
+  > h3 {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  > ul {
+    list-style: none;
+    padding: 15px 0;
+
+    > li {
+      margin: 12px 0;
+      position: relative;
+      padding-left: 17px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 7px;
+        height: 7px;
+        background: $orange-color;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  > p {
+    padding-left: 17px;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    > h3 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+     li, > p {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    > h3 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+     li, > p {
+      font-size: 14px;
+    }
+  }
+}
+
+.main-warranty-page {
+  .mario-main__partner-block {
+    height: auto;
+  }
+
+  .partner-block__single-block {
+    height: auto;
+    margin-top: -120px;
+
+    @media screen and (max-width: 768px) {
+      margin: 15px 0;
+      height: 580px;
+    }
+    @media screen and (max-width: 475px) {
+      height: 480px;
+    }
+  }
+
+}
+
 
 
 
