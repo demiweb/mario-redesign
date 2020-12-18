@@ -3962,9 +3962,15 @@ body .mario-footer .mario-footer__footer-top {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 60px;
 }
+@media screen and (max-width: 768px) {
+  .conditions-delivery__container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+}
 
 .conditions-delivery__block {
-  background: url("../img/novaposhta.png") no-repeat center;
+  background: url("../img/novaposhta.png") no-repeat bottom;
   background-size: cover;
   height: 650px;
   text-decoration: none;
@@ -4004,6 +4010,52 @@ body .mario-footer .mario-footer__footer-top {
 .conditions-delivery__block:last-child > div {
   justify-content: center;
 }
+@media screen and (max-width: 1250px) {
+  .conditions-delivery__block {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .conditions-delivery__block {
+    height: 450px;
+  }
+  .conditions-delivery__block p {
+    margin: 12px 0;
+    width: 100%;
+  }
+  .conditions-delivery__block .conditions-delivery__delivery-partners {
+    margin: 8px 0;
+    max-width: 240px;
+  }
+  .conditions-delivery__block .conditions-delivery__delivery-partners img {
+    height: 36px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conditions-delivery__block p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .conditions-delivery__block {
+    height: 380px;
+    background-position: right bottom;
+  }
+  .conditions-delivery__block p {
+    font-size: 14px;
+  }
+  .conditions-delivery__block:last-child {
+    background-position: right center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .conditions-delivery__block {
+    height: 340px;
+  }
+  .conditions-delivery__block p {
+    font-size: 12px;
+  }
+}
 
 .conditions-delivery__delivery-partners {
   display: flex;
@@ -4012,6 +4064,9 @@ body .mario-footer .mario-footer__footer-top {
   max-width: 287px;
   width: 100%;
   margin: 15px 0;
+}
+.conditions-delivery__delivery-partners > img {
+  height: 43px !important;
 }
 .conditions-delivery__delivery-partners > p {
   color: #fa8100 !important;
@@ -4037,6 +4092,292 @@ body .mario-footer .mario-footer__footer-top {
 .conditions-delivery__block:hover .conditions-delivery__delivery-partners > p::after {
   transform: translate(15px, -50%) rotate(-45deg);
   transition: transform 0.4s ease-in-out;
+}
+
+.mario-support-page__product-delivery-rules {
+  width: 100%;
+}
+
+.product-delivery-rules {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.product-delivery-rules a.product-delivery-rules__block {
+  padding: 4% 8%;
+  background: #f9f9fa;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.product-delivery-rules a.product-delivery-rules__block:hover > div span::after {
+  transform: translate(15px, -50%) rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
+.product-delivery-rules a.product-delivery-rules__block:hover > .product-delivery-rules_bg {
+  transform-origin: 50% 50%;
+  transform: scale(1.1, 1.1) translate(-20px, 0);
+  transition: transform 0.6s;
+}
+.product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse {
+  background: url("../img/OCDAIG0.png") no-repeat center, #ffffff;
+  background-size: 100%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+@media screen and (max-width: 768px) {
+  .product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse {
+    background-size: 175%;
+  }
+  .product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
+    padding-left: 0 !important;
+  }
+}
+@media screen and (max-width: 568px) {
+  .product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse {
+    background-size: 210%;
+  }
+  .product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
+    padding-left: 0 !important;
+  }
+  .product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse:hover {
+    background-size: 135%;
+    background-position: center bottom;
+  }
+}
+.product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse:hover {
+  background-size: 110%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+.product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse:hover > div span {
+  color: #fa8100;
+  transition: color 0.6s;
+}
+.product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
+  padding-left: 50%;
+  box-sizing: border-box;
+}
+.product-delivery-rules a.product-delivery-rules__block.product-delivery-rules__block--reverse > div p {
+  max-width: 100%;
+}
+.product-delivery-rules a.product-delivery-rules__block > .product-delivery-rules_bg {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  top: -130px;
+  right: -500px;
+  transition: transform 0.6s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.product-delivery-rules a.product-delivery-rules__block > .product-delivery-rules_bg img {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .product-delivery-rules a.product-delivery-rules__block > .product-delivery-rules_bg {
+    right: -650px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .product-delivery-rules a.product-delivery-rules__block > .product-delivery-rules_bg {
+    right: -850px;
+    top: -10px;
+  }
+  .product-delivery-rules a.product-delivery-rules__block > .product-delivery-rules_bg img {
+    width: 80%;
+    height: 80%;
+  }
+}
+.product-delivery-rules a.product-delivery-rules__block > div {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.product-delivery-rules a.product-delivery-rules__block > div h2 {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: bold;
+}
+.product-delivery-rules a.product-delivery-rules__block > div p {
+  font-family: "Raleway", sans-serif;
+  color: #595959;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: normal;
+  max-width: 60%;
+}
+@media screen and (max-width: 768px) {
+  .product-delivery-rules a.product-delivery-rules__block > div p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .product-delivery-rules a.product-delivery-rules__block > div p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+.product-delivery-rules a.product-delivery-rules__block > div span {
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 1px solid #fa8100;
+  width: auto;
+  position: relative;
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-family: "Raleway", sans-serif;
+}
+.product-delivery-rules a.product-delivery-rules__block > div span::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fa8100;
+  border-bottom: 2px solid #fa8100;
+  transform: translate(0, -50%) rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.product-delivery-rules__block {
+  width: 100%;
+  padding: 4% 0;
+  box-sizing: border-box;
+  background: #000000;
+  text-decoration: none;
+  min-height: 350px;
+}
+.product-delivery-rules__block > section {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+.product-delivery-rules__block > section .delivery-rules {
+  width: calc(100% / 3);
+  height: 100%;
+  border-right: 1px solid #525252;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+.product-delivery-rules__block > section .delivery-rules:last-child {
+  border: none;
+}
+.product-delivery-rules__block > section .delivery-rules > div {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 50%;
+}
+.product-delivery-rules__block > section .delivery-rules > div > img {
+  object-fit: contain;
+}
+.product-delivery-rules__block > section .delivery-rules h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 27px;
+  color: #ffffff;
+  text-align: center;
+  margin: 12px 0;
+}
+.product-delivery-rules__block > section .delivery-rules p {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  max-width: 280px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .product-delivery-rules__block > section {
+    flex-direction: column;
+  }
+  .product-delivery-rules__block > section .delivery-rules {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #525252;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-delivery-rules__block {
+    margin: 10px 0;
+  }
+}
+
+.product-delivery-rules__declared {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 0;
+}
+@media screen and (max-width: 568px) {
+  .product-delivery-rules__declared {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+}
+
+.mario-button {
+  width: 238px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  background: transparent;
+  color: #fa8100;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+button.mario-button {
+  outline: none;
+}
+
+.mario-orange-btn {
+  border-color: #fa8100;
+  margin: 0 15px;
+}
+.mario-orange-btn:first-child {
+  background: #fa8100;
+  color: #ffffff;
+}
+.mario-orange-btn:first-child:hover {
+  background: transparent;
+  color: #fa8100;
+}
+@media screen and (max-width: 568px) {
+  .mario-orange-btn {
+    margin: 15px 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
