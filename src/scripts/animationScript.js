@@ -23,7 +23,7 @@ function checkWidthToBottom() {
         let spaceBellow = window.innerHeight - blur.getBoundingClientRect().bottom + blur.offsetHeight;
         let topDistance = blur.getBoundingClientRect().top + blur.offsetHeight;
         console.log(topDistance);
-        if (topDistance < 560 && topDistance > 0) {
+        if (topDistance < 350 && topDistance > 0) {
             let partPercent = 53;
             let opacityPercent = 1;
             let percent = (topDistance / partPercent) / 10;
