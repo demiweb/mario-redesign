@@ -1,20 +1,33 @@
-let allP = [...document.querySelectorAll('.mario-warranty-content p')];
-let allLi = [...document.querySelectorAll('.mario-warranty-content li')];
-let allH = [...document.querySelectorAll('.mario-warranty-content h3')];
-let allH2 = [...document.querySelectorAll('.mario-warranty-content h2')];
-allP.forEach((p) => {
-    p.classList.add('anim-fading-out');
-    allAnimFade.push(p);
-});
-allH.forEach((p) => {
-    p.classList.add('anim-fading-out');
-    allAnimFade.push(p);
-});
-allH2.forEach((p) => {
-    p.classList.add('anim-fading-out');
-    allAnimFade.push(p);
-});
-allLi.forEach((p) => {
-    p.classList.add('anim-fading-out');
-    allAnimFade.push(p);
-})
+
+function warrantyAnim () {
+    let allP = [...document.querySelectorAll('main.main-payment-page p')];
+    let allLi = [...document.querySelectorAll('main.main-payment-page li')];
+    let allH = [...document.querySelectorAll('main.main-payment-page h3')];
+    let allH2 = [...document.querySelectorAll('main.main-payment-page h2')];
+    let allAnimFadeWarranty = [...document.querySelectorAll('.anim-fading-out')]
+    console.log(allH + 'allH');
+    // allAnimFadeWarranty.forEach((p) => {
+    //     p.classList.add('anim-fading-out');
+    //     allAnimFade.push(p);
+    // })
+    allP.forEach((p) => {
+        p.classList.add('anim-fading-out');
+        allAnimFade.push(p);
+    });
+    allH.forEach((p) => {
+        p.classList.add('anim-fading-out');
+        allAnimFade.push(p);
+
+
+    });
+    allH2.forEach((p) => {
+        p.classList.add('anim-fading-out');
+        allAnimFade.push(p);
+    });
+    allLi.forEach((p) => {
+        p.classList.add('anim-fading-out');
+        allAnimFade.push(p);
+    });
+    checkWidthToBottom();
+
+}
