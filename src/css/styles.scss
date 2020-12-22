@@ -117,6 +117,7 @@ body {
   .mario-footer {
     flex-shrink: 0;
     width: 100%;
+    z-index: 1;
     background: $black-color;
     @include flex-column;
 
@@ -1161,8 +1162,12 @@ body {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 765px;
       padding-top: 130px;
+      align-items: center;
+
+      > h2, > p {
+        max-width: 765px;
+      }
 
       > h2 {
         font-family: $main-font;
@@ -1237,9 +1242,11 @@ body {
 
   @media screen and (max-width: 768px) {
     height: 700px;
+    position: static;
   }
   @media screen and (max-width: 475px) {
     height: 690px;
+
     .mario-main__video-banner {
       height: 400px !important;
       position: relative;
@@ -1247,6 +1254,15 @@ body {
       > .container {
         position: absolute;
         top: 400px;
+
+        .mario-button {
+          border-color: $orange-color;
+          color: $black-color;
+
+          &:hover {
+            color: $white-color;
+          }
+        }
       }
     }
   }
@@ -1304,6 +1320,7 @@ body {
           font-size: 12px;
           line-height: 16px;
           margin: 20px 0;
+          color: $black-color;
         }
       }
       @media screen and (max-width: 475px) {
@@ -2144,6 +2161,7 @@ body {
   width: 100%;
   padding: 80px 0;
   box-sizing: border-box;
+  z-index: 2;
 
   .mario-team__container {
     width: 100%;
@@ -5496,6 +5514,7 @@ main.main-partnership-page {
   main h1 {
     font-size: 36px !important;
     line-height: 52px !important;
+    max-width: none !important;
   }
 }
 
@@ -6086,4 +6105,578 @@ main.main-partnership-page {
 
 }
 
+// about company page
+
+main.main-about-mario {
+  background: $white-color;
+}
+
+.mario-about {
+  width: 100%;
+  display: flex;
+  @media screen and (max-width: 425px) {
+    .mario-main__video-banner {
+      height: auto;
+    }
+  }
+}
+
+.mario-about-page {
+  align-items: flex-start;
+  display: flex;
+
+  .video-banner__video-container::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(#181818, 1) 82%);
+  }
+
+  .container {
+    padding-top: 55px;
+    margin-bottom: 0;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .mario-partnership__container {
+    flex-grow: 1;
+    height: 100%;
+  }
+}
+
+.mario-about__about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 80px;
+  flex-direction: column;
+
+  > h1 {
+    margin: 15px 0;
+  }
+
+  > p {
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    color: $white-color;
+    max-width: 670px;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    @media screen and (max-width: 568px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: auto 0 30px;
+  }
+}
+
+.mario-about__mario-brand {
+  width: 100%;
+  background: #181818;
+  padding: 60px 0;
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+  z-index: 2;
+}
+
+.mario-brand__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -220px;
+
+  > h2 {
+    font-family: $main-font;
+    @include h1-title;
+    color: $white-color;
+    text-align: center;
+    margin: 30px 0;
+    @media screen and (max-width: 768px) {
+      margin: 15px 0;
+    }
+  }
+
+  svg {
+    stroke: $white-color;
+    width: 100%;
+    max-width: 80%;
+    height: 275px;
+    margin: 0 auto;
+    stroke-width: 2px;
+
+
+    text {
+      fill: transparent;
+      font-size: 16vw;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    svg {
+      height: 220px;
+
+      text {
+        font-size: 18vw;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    svg {
+      height: 220px;
+
+      text {
+        font-size: 22vw;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0;
+    svg {
+      height: 200px;
+      max-width: none;
+
+      text {
+        font-size: 29vw;
+      }
+    }
+  }
+  @media screen and (max-width: 475px) {
+    svg {
+      height: 127px;
+      max-width: none;
+
+      text {
+        font-size: 30vw;
+      }
+    }
+  }
+}
+
+.mario-brand__mario-offer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 55px;
+
+  @media screen and (max-width: 768px) {
+    grid-gap: 20px;
+  }
+
+  @media screen and (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mario-offer_offer-card {
+  padding: 12% 7%;
+  box-sizing: border-box;
+  background: #f5f5f7;
+  box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > h3 {
+    font-family: $main-font;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    color: $black-color;
+
+    > span {
+      display: inline-block;
+      background: $black-color;
+      color: $white-color;
+    }
+  }
+
+  > p {
+    font-size: 18px;
+    color: #595959;
+    font-family: $main-font;
+    line-height: 24px;
+    font-weight: normal;
+    margin: 30px 0;
+  }
+
+  > span {
+    color: #86868b;
+    font-family: $main-font;
+    font-size: 120px;
+    font-weight: normal;
+    line-height: 132px;
+
+    &:last-child {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    > h3 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    > p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    > span {
+      font-size: 80px;
+      line-height: 92px;
+
+      &:last-child {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    > h3 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    > p {
+      margin: 15px 0;
+    }
+    > span {
+      font-size: 60px;
+      line-height: 68px;
+
+    }
+  }
+}
+
+.main-about-mario .mario-main__mario-safety {
+  padding-top: 100px;
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.main-about-mario .mario-about__values {
+  height: auto;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    > h3 {
+      top: 250px;
+      @media screen and (max-width: 768px) {
+        top: 100px;
+      }
+    }
+  }
+}
+
+.mario-about__mario-product-present {
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000 50%, #ffffff 50%);
+  padding: 60px 0;
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+    background: linear-gradient(to bottom, #000000 30%, #ffffff 30%);
+
+  }
+}
+
+.mario-product-present__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h3, > p {
+    font-family: $main-font;
+    color: $black-color;
+    text-align: center;
+    max-width: 720px;
+  }
+
+  > h3 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: bold;
+  }
+
+  > p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 30px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    > h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    > p {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 15px 0;
+    }
+  }
+  @media screen and (max-width: 568px) {
+    > h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+  }
+}
+
+.mario-product-present__img-container {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    max-width: 420px;
+  }
+
+}
+
+.main-about-mario {
+  .mario-contacts__mario-team {
+    background: $black-color;
+    z-index: 2;
+
+    .mario-team__container {
+      margin-bottom: -160px;
+
+      h2 {
+        color: $white-color;
+        text-align: center;
+        max-width: 850px;
+      }
+
+      > p {
+        font-family: $main-font;
+        color: $white-color;
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 600px;
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.mario-about__mario-values {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mario-values__single-value {
+  max-width: 960px;
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+  background-color: #bababa;
+  padding: 6% 15px 4% 6%;
+  box-sizing: border-box;
+  transition: height 0.4s, min-height 0.4s, padding 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    padding: 4% 15px 3% 4%;
+    &:hover {
+      padding-top: 3%;
+    }
+  }
+
+  &:hover {
+    padding-top: 4%;
+    transition: height 0.4s, min-height 0.4s, padding 0.4s;
+
+    > h4 {
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0.3s, opacity 0.3s;
+    }
+
+    > span {
+      transform: translate(5%, -50%);
+      transition: transform 0.4s;
+    }
+
+    > p {
+      max-height: 150px;
+      overflow: visible;
+      transition: max-height 0.6s;
+      @media screen and (max-width: 768px) {
+        max-height: 400px;
+        transition: max-height 1s;
+      }
+    }
+  }
+
+  > h4, > p, > span {
+    color: $white-color;
+    font-family: $main-font;
+
+  }
+
+  > h4 {
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1399 - 320)));
+    line-height: 36px;
+    font-weight: bold;
+    max-height: 36px;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.3s, opacity 0.3s, max-height 0.3s;
+
+    > small {
+      font-size: calc(16px + (24 - 18) * ((100vw - 320px) / (1399 - 320)));
+      font-weight: normal;
+    }
+  }
+
+  > span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0.15;
+    font-size: calc(60px + (150 - 60) * ((100vw - 320px) / (1399 - 320)));
+    font-weight: 700;
+    transform: translate(50%, -50%);
+    transition: transform 0.3s;
+  }
+
+  > p {
+    max-width: 460px;
+    font-size: calc(12px + (24 - 18) * ((100vw - 320px) / (1399 - 320)));
+    line-height: 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s;
+
+  }
+
+}
+
+.mario-values__single-value[data-values-stage="01"] {
+  background: url("../img/pipe-cutting-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+
+}
+
+.mario-values__single-value[data-values-stage="02"] {
+  background: url("../img/grinding-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="03"] {
+  background: url("../img/welding-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="04"] {
+  background: url("../img/pressure-check-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="05"] {
+  background: url("../img/welds-cleaning-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="06"] {
+  background: url("../img/electropolishing-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-about__about-mario-warranty {
+  width: 100%;
+}
+
+.about-mario-warranty {
+  max-width: 960px;
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-mario-warranty__text {
+  max-width: 50%;
+  width: 100%;
+
+  > span {
+    font-size: 150px;
+    font-family: $main-font;
+    color: transparent;
+    opacity: 1;
+    background: url('../img/metal-bg.png') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > span {
+      font-size: 48px;
+    }
+  }
+
+  > p {
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 24px;
+    color: $black-color;
+    font-weight: normal;
+    margin: 15px 0;
+  }
+
+  > img {
+    max-width: 153px;
+    max-height: 99px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-mario-warranty__img-container {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
 

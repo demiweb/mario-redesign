@@ -1,6 +1,8 @@
 let imgPar = [...document.querySelectorAll('.img-parall')];
-let imgBath = [...document.querySelectorAll('.mario-main__picture-bg-banner')];
+// let imgBath = [...document.querySelectorAll('.mario-main__picture-bg-banner')];
 let imgBathTop = [...document.querySelectorAll('.mario-main__mario-innovation')];
+let imgBath = [imgBathTop[0].nextElementSibling];
+
 
 function parallaxImg() {
     imgPar.forEach((img) => {
@@ -25,8 +27,10 @@ function hiddingTopBath() {
 
     imgBath.forEach((img) => {
         if (imgBathTop[0] === undefined) {
+            // console.log('rabotaet-script222')
 
         } else {
+            // console.log('rabotaet-script')
             let spaceBellow = window.innerHeight - img.getBoundingClientRect().bottom + img.offsetHeight;
 
             let topDistance = img.getBoundingClientRect().top + img.offsetHeight;
@@ -35,9 +39,9 @@ function hiddingTopBath() {
 
             let percent = spaceBellow / 80;
             let percentOpacity = 1 / 1000;
-            console.log(percentOpacity);
+            // console.log(percentOpacity);
             let opacityBlock = topDistance * percentOpacity;
-            console.log(opacityBlock);
+            // console.log(opacityBlock);
             if (window.innerWidth > 768) {
                 if (0 < spaceBellow && topDistance > 1000) {
                     // console.log(spaceBellow + ' do nizu ' + topDistance + ' vverhu')
@@ -45,7 +49,7 @@ function hiddingTopBath() {
                     imgBathTop[0].style.opacity = `${-2 + (opacityBlock * 2)}`;
                     // console.log(window.innerWidth + 'shirina okna')
 
-                } else if (topDistance < -50) {
+                } else if (topDistance < 600) {
                     imgBathTop[0].style.position = 'static';
                     imgBathTop[0].style.opacity = '1';
 
@@ -55,7 +59,8 @@ function hiddingTopBath() {
                 imgBathTop[0].style.opacity = '1';
 
             }
-        }})
+        }
+    })
 }
 
 
@@ -118,136 +123,142 @@ function isInViewport() {
 
     } else {
 
+        let rect = afterBlock.getBoundingClientRect();
+        // let vB = videoBlock.getBoundingClientRect();
+        let h = afterBlock.scrollHeight;
 
-    let rect = afterBlock.getBoundingClientRect();
-    let vB = videoBlock.getBoundingClientRect();
-    let h = afterBlock.scrollHeight;
-
-    function getVideoBlock() {
-        let vB = videoBlock.getBoundingClientRect();
-
-        if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
-            if (vB.top < 500 && -400 < vB.top) {
-                videoVideo.play();
+        function getVideoBlock() {
+            if (videoBlock === undefined) {
 
             } else {
-                videoVideo.pause();
+                let vB = videoBlock.getBoundingClientRect();
 
-            }
-        } else if (document.body.clientWidth < 578) {
-            if (vB.top < 400 && -300 < vB.top) {
-                videoVideo.play();
+                if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
+                    if (vB.top < 500 && -400 < vB.top) {
+                        videoVideo.play();
 
-            } else {
-                videoVideo.pause();
+                    } else {
+                        videoVideo.pause();
 
-            }
-        } else {
-            if (vB.top < 500 && -500 < vB.top) {
-                videoVideo.play();
+                    }
+                } else if (document.body.clientWidth < 578) {
+                    if (vB.top < 400 && -300 < vB.top) {
+                        videoVideo.play();
 
-            } else {
-                videoVideo.pause();
+                    } else {
+                        videoVideo.pause();
 
+                    }
+                } else {
+                    if (vB.top < 500 && -500 < vB.top) {
+                        videoVideo.play();
+
+                    } else {
+                        videoVideo.pause();
+
+                    }
+                }
             }
         }
 
-    }
+        function getBgDark() {
+            if (afterBath === undefined) {
 
-    function getBgDark() {
-        let rect = afterBath.getBoundingClientRect();
+            } else {
+                let rect = afterBath.getBoundingClientRect();
+                if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
+                    if (rect.top < 22) {
+                        let opacityBg = ((-rect.top + 80) / h) * 1.4;
+                        if (opacityBg > 1) {
+                            afterBlockBg2.style.opacity = '1';
+                        } else {
+                            afterBlockBg2.style.opacity = opacityBg;
+                        }
+                    } else {
+                        afterBlockBg2.style.opacity = '0';
+                    }
+                } else if (document.body.clientWidth < 578) {
+                    if (rect.top < -200) {
+                        let opacityBg = ((-rect.top) / h) * 1.2;
+                        if (opacityBg > 1) {
+                            afterBlockBg2.style.opacity = '1';
+                        } else {
+                            afterBlockBg2.style.opacity = opacityBg;
+                        }
+
+                    } else {
+                        afterBlockBg2.style.opacity = '0';
+                    }
+                } else {
+                    if (rect.top < -300) {
+                        let opacityBg = ((-rect.top) / h) * 1.6;
+                        if (opacityBg > 1) {
+                            afterBlockBg2.style.opacity = '1';
+                        } else {
+                            afterBlockBg2.style.opacity = opacityBg;
+                        }
+
+
+                    } else {
+                        afterBlockBg2.style.opacity = '0';
+                    }
+                }
+            }
+        }
+
+
         if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
-            if (rect.top < 22) {
-                let opacityBg = ((-rect.top + 80) / h) * 1.4;
+            if (rect.top < 80) {
+                let opacityBg = ((-rect.top + 30) / h) * 1.6;
                 if (opacityBg > 1) {
-                    afterBlockBg2.style.opacity = '1';
+                    afterBlockBg.style.opacity = '1';
+                    safetyP.style.opacity = '0';
                 } else {
-                    afterBlockBg2.style.opacity = opacityBg;
+                    afterBlockBg.style.opacity = opacityBg;
+                    safetyP.style.opacity = 1 - opacityBg;
                 }
             } else {
-                afterBlockBg2.style.opacity = '0';
+                afterBlockBg.style.opacity = '0';
+                safetyP.style.opacity = '1';
             }
+            getVideoBlock();
+            getBgDark();
         } else if (document.body.clientWidth < 578) {
-            if (rect.top < -200) {
-                let opacityBg = ((-rect.top) / h) * 1.2;
-                if (opacityBg > 1) {
-                    afterBlockBg2.style.opacity = '1';
-                } else {
-                    afterBlockBg2.style.opacity = opacityBg;
-                }
-
-            } else {
-                afterBlockBg2.style.opacity = '0';
-            }
-        } else {
-            if (rect.top < -300) {
+            if (rect.top < -105) {
                 let opacityBg = ((-rect.top) / h) * 1.6;
                 if (opacityBg > 1) {
-                    afterBlockBg2.style.opacity = '1';
+                    afterBlockBg.style.opacity = '1';
+                    safetyP.style.opacity = '0';
                 } else {
-                    afterBlockBg2.style.opacity = opacityBg;
+                    afterBlockBg.style.opacity = opacityBg;
+                    safetyP.style.opacity = 1 - opacityBg;
+                }
+
+            } else {
+                afterBlockBg.style.opacity = '0';
+                safetyP.style.opacity = '1';
+            }
+            getVideoBlock();
+            getBgDark();
+        } else {
+            if (rect.top < -320) {
+                let opacityBg = ((-rect.top-150) / h) * 1.6;
+                if (opacityBg > 1) {
+                    afterBlockBg.style.opacity = '1';
+                    safetyP.style.opacity = '0';
+                } else {
+                    afterBlockBg.style.opacity = opacityBg;
+                    safetyP.style.opacity = 1 - opacityBg;
                 }
 
 
             } else {
-                afterBlockBg2.style.opacity = '0';
+                afterBlockBg.style.opacity = '0';
+                safetyP.style.opacity = '1';
             }
+            getVideoBlock();
+            getBgDark();
         }
-    }
-
-
-    if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
-        if (rect.top < 80) {
-            let opacityBg = ((-rect.top + 80) / h) * 1.4;
-            if (opacityBg > 1) {
-                afterBlockBg.style.opacity = '1';
-                safetyP.style.opacity = '0';
-            } else {
-                afterBlockBg.style.opacity = opacityBg;
-                safetyP.style.opacity = 1 - opacityBg;
-            }
-        } else {
-            afterBlockBg.style.opacity = '0';
-            safetyP.style.opacity = '1';
-        }
-        getVideoBlock();
-        getBgDark();
-    } else if (document.body.clientWidth < 578) {
-        if (rect.top < 25) {
-            let opacityBg = ((-rect.top + 100) / h) * 1.6;
-            if (opacityBg > 1) {
-                afterBlockBg.style.opacity = '1';
-                safetyP.style.opacity = '0';
-            } else {
-                afterBlockBg.style.opacity = opacityBg;
-                safetyP.style.opacity = 1 - opacityBg;
-            }
-
-        } else {
-            afterBlockBg.style.opacity = '0';
-            safetyP.style.opacity = '1';
-        }
-        getVideoBlock();
-        getBgDark();
-    } else {
-        if (rect.top < -220) {
-            let opacityBg = ((-rect.top) / h) * 1.6;
-            if (opacityBg > 1) {
-                afterBlockBg.style.opacity = '1';
-                safetyP.style.opacity = '0';
-            } else {
-                afterBlockBg.style.opacity = opacityBg;
-                safetyP.style.opacity = 1 - opacityBg;
-            }
-
-
-        } else {
-            afterBlockBg.style.opacity = '0';
-            safetyP.style.opacity = '1';
-        }
-        getVideoBlock();
-        getBgDark();
-    }
     }
 }
 

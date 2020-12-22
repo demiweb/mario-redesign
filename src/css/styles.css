@@ -187,6 +187,7 @@ body main.main-warranty-page {
 body .mario-footer {
   flex-shrink: 0;
   width: 100%;
+  z-index: 1;
   background: #000000;
   display: flex;
   flex-direction: column;
@@ -1160,8 +1161,11 @@ body .mario-footer .mario-footer__footer-top {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 765px;
   padding-top: 130px;
+  align-items: center;
+}
+.mario-main__mario-safety > .container > .mario-safety__text-block > h2, .mario-main__mario-safety > .container > .mario-safety__text-block > p {
+  max-width: 765px;
 }
 .mario-main__mario-safety > .container > .mario-safety__text-block > h2 {
   font-family: "Raleway", sans-serif;
@@ -1237,6 +1241,7 @@ body .mario-footer .mario-footer__footer-top {
 @media screen and (max-width: 768px) {
   .mario-main__mario-innovation {
     height: 700px;
+    position: static;
   }
 }
 @media screen and (max-width: 475px) {
@@ -1250,6 +1255,13 @@ body .mario-footer .mario-footer__footer-top {
   .mario-main__mario-innovation .mario-main__video-banner > .container {
     position: absolute;
     top: 400px;
+  }
+  .mario-main__mario-innovation .mario-main__video-banner > .container .mario-button {
+    border-color: #fa8100;
+    color: #000000;
+  }
+  .mario-main__mario-innovation .mario-main__video-banner > .container .mario-button:hover {
+    color: #ffffff;
   }
 }
 .mario-main__mario-innovation .mario-main__video-banner {
@@ -1303,6 +1315,7 @@ body .mario-footer .mario-footer__footer-top {
     font-size: 12px;
     line-height: 16px;
     margin: 20px 0;
+    color: #000000;
   }
 }
 @media screen and (max-width: 475px) {
@@ -2016,6 +2029,7 @@ body .mario-footer .mario-footer__footer-top {
   width: 100%;
   padding: 80px 0;
   box-sizing: border-box;
+  z-index: 2;
 }
 .mario-contacts__mario-team .mario-team__container {
   width: 100%;
@@ -4904,6 +4918,7 @@ main.main-partnership-page {
   main h1 {
     font-size: 36px !important;
     line-height: 52px !important;
+    max-width: none !important;
   }
 }
 .mario-partnership__partnership-conditions {
@@ -5435,6 +5450,548 @@ main.main-partnership-page {
   .main-partnership-page .partner-block__single-block {
     height: 480px;
   }
+}
+
+main.main-about-mario {
+  background: #ffffff;
+}
+
+.mario-about {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 425px) {
+  .mario-about .mario-main__video-banner {
+    height: auto;
+  }
+}
+
+.mario-about-page {
+  align-items: flex-start;
+  display: flex;
+}
+.mario-about-page .video-banner__video-container::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #181818 82%);
+}
+.mario-about-page .container {
+  padding-top: 55px;
+  margin-bottom: 0;
+  flex-grow: 1;
+  height: 100%;
+}
+.mario-about-page .mario-partnership__container {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.mario-about__about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 80px;
+  flex-direction: column;
+}
+.mario-about__about-header > h1 {
+  margin: 15px 0;
+}
+.mario-about__about-header > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  max-width: 670px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .mario-about__about-header > p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-about__about-header > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-about__about-header {
+    margin: auto 0 30px;
+  }
+}
+
+.mario-about__mario-brand {
+  width: 100%;
+  background: #181818;
+  padding: 60px 0;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .mario-about__mario-brand {
+    padding: 30px 0;
+  }
+}
+
+.mario-brand__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -220px;
+}
+.mario-brand__container > h2 {
+  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 96px;
+  color: #ffffff;
+  text-align: center;
+  margin: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .mario-brand__container > h2 {
+    margin: 15px 0;
+  }
+}
+.mario-brand__container svg {
+  stroke: #ffffff;
+  width: 100%;
+  max-width: 80%;
+  height: 275px;
+  margin: 0 auto;
+  stroke-width: 2px;
+}
+.mario-brand__container svg text {
+  fill: transparent;
+  font-size: 16vw;
+  width: 100%;
+}
+@media screen and (max-width: 1300px) {
+  .mario-brand__container svg {
+    height: 220px;
+  }
+  .mario-brand__container svg text {
+    font-size: 18vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mario-brand__container svg {
+    height: 220px;
+  }
+  .mario-brand__container svg text {
+    font-size: 22vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-brand__container {
+    margin-bottom: 0;
+  }
+  .mario-brand__container svg {
+    height: 200px;
+    max-width: none;
+  }
+  .mario-brand__container svg text {
+    font-size: 29vw;
+  }
+}
+@media screen and (max-width: 475px) {
+  .mario-brand__container svg {
+    height: 127px;
+    max-width: none;
+  }
+  .mario-brand__container svg text {
+    font-size: 30vw;
+  }
+}
+
+.mario-brand__mario-offer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 55px;
+}
+@media screen and (max-width: 768px) {
+  .mario-brand__mario-offer {
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-brand__mario-offer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mario-offer_offer-card {
+  padding: 12% 7%;
+  box-sizing: border-box;
+  background: #f5f5f7;
+  box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mario-offer_offer-card > h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #000000;
+}
+.mario-offer_offer-card > h3 > span {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+}
+.mario-offer_offer-card > p {
+  font-size: 18px;
+  color: #595959;
+  font-family: "Raleway", sans-serif;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 30px 0;
+}
+.mario-offer_offer-card > span {
+  color: #86868b;
+  font-family: "Raleway", sans-serif;
+  font-size: 120px;
+  font-weight: normal;
+  line-height: 132px;
+}
+.mario-offer_offer-card > span:last-child {
+  font-size: 16px;
+  line-height: 22px;
+}
+@media screen and (max-width: 768px) {
+  .mario-offer_offer-card > h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .mario-offer_offer-card > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .mario-offer_offer-card > span {
+    font-size: 80px;
+    line-height: 92px;
+  }
+  .mario-offer_offer-card > span:last-child {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .mario-offer_offer-card > h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .mario-offer_offer-card > p {
+    margin: 15px 0;
+  }
+  .mario-offer_offer-card > span {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.main-about-mario .mario-main__mario-safety {
+  padding-top: 100px;
+}
+@media screen and (max-width: 768px) {
+  .main-about-mario .mario-main__mario-safety {
+    padding-top: 0;
+  }
+}
+
+.main-about-mario .mario-about__values {
+  height: auto;
+}
+.main-about-mario .mario-about__values .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main-about-mario .mario-about__values .container > h3 {
+  top: 250px;
+}
+@media screen and (max-width: 768px) {
+  .main-about-mario .mario-about__values .container > h3 {
+    top: 100px;
+  }
+}
+
+.mario-about__mario-product-present {
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000 50%, #ffffff 50%);
+  padding: 60px 0;
+}
+@media screen and (max-width: 768px) {
+  .mario-about__mario-product-present {
+    padding: 30px 0;
+    background: linear-gradient(to bottom, #000000 30%, #ffffff 30%);
+  }
+}
+
+.mario-product-present__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mario-product-present__container > h3, .mario-product-present__container > p {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  text-align: center;
+  max-width: 720px;
+}
+.mario-product-present__container > h3 {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: bold;
+}
+.mario-product-present__container > p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .mario-product-present__container > h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .mario-product-present__container > p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 15px 0;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-product-present__container > h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.mario-product-present__img-container {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mario-product-present__img-container img {
+  object-fit: contain;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .mario-product-present__img-container {
+    max-width: 420px;
+  }
+}
+
+.main-about-mario .mario-contacts__mario-team {
+  background: #000000;
+  z-index: 2;
+}
+.main-about-mario .mario-contacts__mario-team .mario-team__container {
+  margin-bottom: -160px;
+}
+.main-about-mario .mario-contacts__mario-team .mario-team__container h2 {
+  color: #ffffff;
+  text-align: center;
+  max-width: 850px;
+}
+.main-about-mario .mario-contacts__mario-team .mario-team__container > p {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 600px;
+  text-align: center;
+  margin: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .main-about-mario .mario-contacts__mario-team .mario-team__container {
+    margin-bottom: 0;
+  }
+}
+
+.mario-about__mario-values {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mario-values__single-value {
+  max-width: 960px;
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+  background-color: #bababa;
+  padding: 6% 15px 4% 6%;
+  box-sizing: border-box;
+  transition: height 0.4s, min-height 0.4s, padding 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .mario-values__single-value {
+    padding: 4% 15px 3% 4%;
+  }
+  .mario-values__single-value:hover {
+    padding-top: 3%;
+  }
+}
+.mario-values__single-value:hover {
+  padding-top: 4%;
+  transition: height 0.4s, min-height 0.4s, padding 0.4s;
+}
+.mario-values__single-value:hover > h4 {
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+.mario-values__single-value:hover > span {
+  transform: translate(5%, -50%);
+  transition: transform 0.4s;
+}
+.mario-values__single-value:hover > p {
+  max-height: 150px;
+  overflow: visible;
+  transition: max-height 0.6s;
+}
+@media screen and (max-width: 768px) {
+  .mario-values__single-value:hover > p {
+    max-height: 400px;
+    transition: max-height 1s;
+  }
+}
+.mario-values__single-value > h4, .mario-values__single-value > p, .mario-values__single-value > span {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+.mario-values__single-value > h4 {
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1399 - 320)));
+  line-height: 36px;
+  font-weight: bold;
+  max-height: 36px;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.3s, opacity 0.3s, max-height 0.3s;
+}
+.mario-values__single-value > h4 > small {
+  font-size: calc(16px + (24 - 18) * ((100vw - 320px) / (1399 - 320)));
+  font-weight: normal;
+}
+.mario-values__single-value > span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0.15;
+  font-size: calc(60px + (150 - 60) * ((100vw - 320px) / (1399 - 320)));
+  font-weight: 700;
+  transform: translate(50%, -50%);
+  transition: transform 0.3s;
+}
+.mario-values__single-value > p {
+  max-width: 460px;
+  font-size: calc(12px + (24 - 18) * ((100vw - 320px) / (1399 - 320)));
+  line-height: 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s;
+}
+
+.mario-values__single-value[data-values-stage="01"] {
+  background: url("../img/pipe-cutting-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="02"] {
+  background: url("../img/grinding-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="03"] {
+  background: url("../img/welding-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="04"] {
+  background: url("../img/pressure-check-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="05"] {
+  background: url("../img/welds-cleaning-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-values__single-value[data-values-stage="06"] {
+  background: url("../img/electropolishing-902x167-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.mario-about__about-mario-warranty {
+  width: 100%;
+}
+
+.about-mario-warranty {
+  max-width: 960px;
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-mario-warranty__text {
+  max-width: 50%;
+  width: 100%;
+}
+.about-mario-warranty__text > span {
+  font-size: 150px;
+  font-family: "Raleway", sans-serif;
+  color: transparent;
+  opacity: 1;
+  background: url("../img/metal-bg.png") no-repeat center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about-mario-warranty__text > span > span {
+  font-size: 48px;
+}
+.about-mario-warranty__text > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: normal;
+  margin: 15px 0;
+}
+.about-mario-warranty__text > img {
+  max-width: 153px;
+  max-height: 99px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-mario-warranty__img-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-mario-warranty__img-container img {
+  height: 100%;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -5,7 +5,6 @@ function warrantyAnim () {
     let allH = [...document.querySelectorAll('main.main-payment-page h3')];
     let allH2 = [...document.querySelectorAll('main.main-payment-page h2')];
     let allAnimFadeWarranty = [...document.querySelectorAll('.anim-fading-out')]
-    console.log(allH + 'allH');
     // allAnimFadeWarranty.forEach((p) => {
     //     p.classList.add('anim-fading-out');
     //     allAnimFade.push(p);

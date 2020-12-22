@@ -2,11 +2,10 @@ let allAnimFade = [...document.querySelectorAll(".anim-fading-out")];
 let allBLurFade = [...document.querySelectorAll(".blur-js")];
 
 function checkWidthToBottom() {
-    console.log('ejlloepta');
     allAnimFade.forEach((el, i) => {
         let spaceBellow = window.innerHeight - el.getBoundingClientRect().bottom + el.offsetHeight;
         let topDistance = el.getBoundingClientRect().top + el.offsetHeight;
-        console.log(topDistance + 'topDistacne');
+        // console.log(topDistance + 'topDistacne');
         if (60 < spaceBellow && topDistance > 0) {
             el.style.animation = 'fadingOutTop 0.8s linear';
             el.style.animationDelay = `${(25 * i)}ms`
@@ -22,13 +21,13 @@ function checkWidthToBottom() {
     allBLurFade.forEach((blur, k) => {
         let spaceBellow = window.innerHeight - blur.getBoundingClientRect().bottom + blur.offsetHeight;
         let topDistance = blur.getBoundingClientRect().top + blur.offsetHeight;
-        console.log(topDistance);
-        if (topDistance < 350 && topDistance > 0) {
-            let partPercent = 53;
+        // console.log(topDistance);
+        if (topDistance < 250 && topDistance > 0) {
+            let partPercent = 25;
             let opacityPercent = 1;
             let percent = (topDistance / partPercent) / 10;
 
-            blur.style.filter = `blur(3px)`;
+            blur.style.filter = `blur(2px)`;
             blur.style.opacity = `${percent}`;
 
         } else {
@@ -42,7 +41,6 @@ function checkWidthToBottom() {
 }
 
 window.addEventListener('load', () => {
-    console.log('che-za-prikol');
     warrantyAnim();
     checkWidthToBottom();
 })
