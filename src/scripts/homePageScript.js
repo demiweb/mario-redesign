@@ -1,7 +1,7 @@
 let imgPar = [...document.querySelectorAll('.img-parall')];
 // let imgBath = [...document.querySelectorAll('.mario-main__picture-bg-banner')];
 let imgBathTop = [...document.querySelectorAll('.mario-main__mario-innovation')];
-let imgBath = [imgBathTop[0].nextElementSibling];
+
 
 
 function parallaxImg() {
@@ -24,6 +24,12 @@ function parallaxImg() {
 }
 
 function hiddingTopBath() {
+    let imgBath = [];
+    if (imgBathTop[0] === undefined) {
+
+    } else {
+        imgBath = [imgBathTop[0].nextElementSibling];
+    }
 
     imgBath.forEach((img) => {
         if (imgBathTop[0] === undefined) {

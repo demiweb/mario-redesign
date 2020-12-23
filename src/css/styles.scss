@@ -1222,8 +1222,8 @@ body {
         padding-top: 20px;
 
         > h2 {
-          font-size: 26px;
-          line-height: 30px;
+          font-size: 24px !important;
+          line-height: 28px !important;
         }
       }
     }
@@ -1265,6 +1265,10 @@ body {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 750px;
   }
 
   .mario-main__video-banner {
@@ -1330,8 +1334,8 @@ body {
         padding-top: 20px;
 
         > h2 {
-          font-size: 26px;
-          line-height: 30px;
+          font-size: 24px !important;
+          line-height: 28px !important;
         }
       }
     }
@@ -5557,7 +5561,7 @@ main.main-partnership-page {
     p {
       width: 100%;
       font-size: 14px !important;
-      margin: 8px 0;
+      margin: 8px 0 !important;
     }
   }
 
@@ -6624,14 +6628,40 @@ main.main-about-mario {
 .about-mario-warranty {
   max-width: 960px;
   width: 100%;
-  margin: 30px auto;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    .about-mario-warranty__text {
+      max-width: 100%;
+
+      > span {
+        font-size: 90px;
+
+        > span {
+          font-size: 32px;
+        }
+      }
+
+      > p {
+        font-size: 14px;
+      }
+    }
+    .about-mario-warranty__img-container {
+      max-height: 360px;
+    }
+  }
 }
 
 .about-mario-warranty__text {
   max-width: 50%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   > span {
     font-size: 150px;
@@ -6670,13 +6700,20 @@ main.main-about-mario {
 .about-mario-warranty__img-container {
   width: 50%;
   height: 100%;
+  max-height: 760px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   img {
     height: 100%;
+    //width: 100%;
+    max-height: inherit;
     object-fit: contain;
   }
 }
 
+.main-about-mario {
+  .partnership-conditions__container {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}

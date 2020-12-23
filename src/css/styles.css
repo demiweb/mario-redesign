@@ -1222,8 +1222,8 @@ body .mario-footer .mario-footer__footer-top {
     padding-top: 20px;
   }
   .mario-main__mario-safety > .container > .mario-safety__text-block > h2 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 24px !important;
+    line-height: 28px !important;
   }
 }
 
@@ -1262,6 +1262,11 @@ body .mario-footer .mario-footer__footer-top {
   }
   .mario-main__mario-innovation .mario-main__video-banner > .container .mario-button:hover {
     color: #ffffff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mario-main__mario-innovation {
+    height: 750px;
   }
 }
 .mario-main__mario-innovation .mario-main__video-banner {
@@ -1328,8 +1333,8 @@ body .mario-footer .mario-footer__footer-top {
     padding-top: 20px;
   }
   .mario-main__mario-innovation .mario-main__video-banner .container > h2 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 24px !important;
+    line-height: 28px !important;
   }
 }
 .mario-main__mario-innovation .video-banner__video-container::before {
@@ -4963,7 +4968,7 @@ main.main-partnership-page {
   .partnership-conditions__block p {
     width: 100%;
     font-size: 14px !important;
-    margin: 8px 0;
+    margin: 8px 0 !important;
   }
 }
 .partnership-conditions__block:hover span {
@@ -5943,14 +5948,38 @@ main.main-about-mario {
 .about-mario-warranty {
   max-width: 960px;
   width: 100%;
-  margin: 30px auto;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  .about-mario-warranty {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-mario-warranty .about-mario-warranty__text {
+    max-width: 100%;
+  }
+  .about-mario-warranty .about-mario-warranty__text > span {
+    font-size: 90px;
+  }
+  .about-mario-warranty .about-mario-warranty__text > span > span {
+    font-size: 32px;
+  }
+  .about-mario-warranty .about-mario-warranty__text > p {
+    font-size: 14px;
+  }
+  .about-mario-warranty .about-mario-warranty__img-container {
+    max-height: 360px;
+  }
 }
 
 .about-mario-warranty__text {
   max-width: 50%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .about-mario-warranty__text > span {
   font-size: 150px;
@@ -5985,13 +6014,17 @@ main.main-about-mario {
 .about-mario-warranty__img-container {
   width: 50%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: 760px;
 }
 .about-mario-warranty__img-container img {
   height: 100%;
+  max-height: inherit;
   object-fit: contain;
+}
+
+.main-about-mario .partnership-conditions__container {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
