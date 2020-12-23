@@ -1878,7 +1878,7 @@ body .mario-footer .mario-footer__footer-top {
 
 @keyframes dash {
   to {
-    stroke-dasharray: 1775;
+    stroke-dasharray: 1975;
     stroke-dashoffset: 0;
   }
 }
@@ -5554,6 +5554,9 @@ main.main-about-mario {
   text-align: center;
   margin: 30px 0;
 }
+.mario-brand__container > h2:first-child {
+  margin-bottom: 0;
+}
 @media screen and (max-width: 768px) {
   .mario-brand__container > h2 {
     margin: 15px 0;
@@ -5563,13 +5566,13 @@ main.main-about-mario {
   stroke: #ffffff;
   width: 100%;
   max-width: 80%;
-  height: 275px;
-  margin: 0 auto;
+  height: 21vw;
+  margin: 0 auto 60px;
   stroke-width: 2px;
 }
 .mario-brand__container svg text {
   fill: transparent;
-  font-size: 16vw;
+  font-size: 21vw;
   width: 100%;
 }
 @media screen and (max-width: 1300px) {
@@ -5595,6 +5598,7 @@ main.main-about-mario {
   .mario-brand__container svg {
     height: 200px;
     max-width: none;
+    margin-bottom: 20px;
   }
   .mario-brand__container svg text {
     font-size: 29vw;
@@ -6133,6 +6137,9 @@ html {
 .main-accessories-page .mario-about .mario-about-page .container .mario-about__about-header {
   margin: auto 0;
 }
+.main-accessories-page .mario-about .mario-about-page .container .mario-about__about-header > h1, .main-accessories-page .mario-about .mario-about-page .container .mario-about__about-header > p {
+  color: #000000;
+}
 .main-accessories-page .mario-about .mario-about-page .container .mario-about__about-header > p {
   font-weight: normal;
   font-size: 14px;
@@ -6294,8 +6301,14 @@ html {
 
 .accessories-hidden-connection__video {
   width: 100%;
-  margin: 45px 0;
   height: 650px;
+}
+.accessories-hidden-connection__video + .container {
+  margin-top: 45px;
+}
+
+.main-accessories-page .video-banner__video-container::before {
+  content: none;
 }
 
 .accessories-hidden-connection__about {
@@ -6327,7 +6340,7 @@ html {
   font-weight: normal;
   max-width: 550px;
   text-align: center;
-  margin: 15px 0;
+  margin: 30px 0 20px;
 }
 .accessories-hidden-connection__about ul {
   width: 100%;
@@ -6336,14 +6349,15 @@ html {
   align-items: center;
   justify-content: center;
   list-style: none;
+  margin: 30px 0;
 }
 .accessories-hidden-connection__about ul li {
   width: calc(50% - 10px);
   height: 345px;
   border-radius: 4px;
-  box-shadow: 0 8px 12px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
   display: flex;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
   background: #ffffff;
   margin: 0 5px;
 }
@@ -6351,8 +6365,7 @@ html {
   z-index: 1;
   transform-origin: 50% 50%;
   transform: scale(1.04, 1.04);
-  box-shadow: 0 8px 12px 2px rgba(250, 129, 0, 0.07);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 .accessories-hidden-connection__about ul li a {
   flex-grow: 1;
@@ -6657,7 +6670,7 @@ html {
 .water-tap__production-list a, .shelf-hook-production a {
   width: calc(25% - 10px);
   border-radius: 4px;
-  box-shadow: 0 8px 12px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
   display: flex;
   flex-direction: column;
   align-items: center;
