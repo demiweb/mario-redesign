@@ -93,6 +93,7 @@ window.addEventListener('load', () => {
     checkWidthToBottom();
     parallaxImg();
     hiddingTopBath();
+    checkTempWidth();
 })
 
 videosBlock.forEach(videoBlock => {
@@ -281,6 +282,7 @@ window.onscroll = function () {
     checkWidthToBottom();
     parallaxImg();
     hiddingTopBath();
+    checkTempWidth();
     let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
     let boxLeft = 750 - scrollTop;
     let percentGrad = boxLeft / 10;

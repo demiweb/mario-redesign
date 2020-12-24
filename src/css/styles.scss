@@ -6200,6 +6200,7 @@ main.main-about-mario {
     &:first-child {
       margin-bottom: 0;
     }
+
     font-family: $main-font;
     @include h1-title;
     color: $white-color;
@@ -6834,6 +6835,7 @@ html {
 
 .main-accessories-page {
   background: $white-color;
+
   .mario-about {
     .mario-about-page {
       .container {
@@ -7237,12 +7239,14 @@ html {
 
   &.electrical-heat__container {
     background: transparent;
+
     .container {
       p, h2 {
         color: $black-color;
       }
     }
   }
+
   .container {
     display: flex;
     z-index: 2;
@@ -7410,6 +7414,7 @@ html {
     bottom: 0;
     background: linear-gradient(to bottom, #000000 7%, rgba(255, 255, 255, 0) 20%);
   }
+
   &.electrical-heat::after {
     background: linear-gradient(to bottom, #fafafa 7%, rgba(255, 255, 255, 0) 20%);
 
@@ -7589,3 +7594,291 @@ html {
   background: url("../img/shelf-hook-bg.jpg") no-repeat bottom;
   background-size: cover;
 }
+
+.main-type-product-page {
+  background: $white-color;
+}
+
+
+.mario-main__video-banner.mario-type-product {
+  align-items: flex-end;
+  display: flex;
+  height: 1100px;
+  background: #1c1c1c;
+
+  .video-banner__video-container {
+    bottom: 42%;
+  }
+
+  .video-banner__video-container::before {
+    content: none !important;
+
+  }
+
+  @media screen and (max-width: 1440px) {
+    height: 900px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 650px;
+    .video-banner__video-container {
+      bottom: 0;
+
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    .container {
+      .mario-about__about-header {
+        ul {
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    margin-bottom: 0;
+
+    .mario-about__about-header {
+      > h1 {
+        max-width: 720px;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        max-width: 500px;
+        justify-content: space-between;
+        margin: 20px 0;
+
+        li {
+          padding: 5px;
+
+          a {
+            text-decoration: none;
+            color: $white-color;
+            font-weight: bold;
+            border-bottom: 1px solid $orange-color;
+            width: auto;
+            position: relative;
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 27px;
+            font-family: $main-font;
+
+            &::after {
+              content: "";
+              position: absolute;
+              right: -15px;
+              top: 50%;
+              width: 8px;
+              height: 8px;
+              border-right: 2px solid $orange-color;
+              border-bottom: 2px solid $orange-color;
+              transform: translate(0, -50%) rotate(-45deg);
+              transition: transform 0.4s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mario-type-product-page {
+  width: 100%;
+  display: flex;
+}
+
+.mario-type-product-page__safety-mario {
+  background: #141414;
+  width: 100%;
+}
+
+.safety-mario__container {
+  width: 100%;
+  padding: 10% 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+
+  span {
+    font-size: 420px;
+    font-family: $main-font;
+    font-weight: bold;
+    color: $white-color;
+    line-height: 210px;
+    display: inline-block;
+    align-items: flex-start;
+    vertical-align: top;
+    max-height: 280px;
+    position: relative;
+    width: 465px;
+    transition: color 0.6s ease-out, text-shadow 0.6s;
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: transparent;
+      width: 15px;
+      height: 15px;
+      border: 10px solid $orange-color;
+      border-radius: 50%;
+      right: -20px;
+      top: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: 'C';
+      font-size: 120px;
+      line-height: 90px;
+      color: $orange-color;
+      top: 0;
+      right: -115px;
+      text-shadow: none;
+    }
+
+  }
+
+  div {
+    margin-left: auto;
+    max-width: 620px;
+
+    h2, p {
+      font-family: $main-font;
+      color: $white-color;
+    }
+
+    h2 {
+      font-size: 80px;
+      line-height: 90px;
+      font-weight: bold;
+      max-width: 400px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    span {
+      font-size: 320px;
+      width: 380px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      line-height: 140px;
+    }
+    div {
+      margin-left: 122px;
+
+      h2 {
+        font-size: 64px;
+        line-height: 72px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    span {
+      font-size: 260px;
+      line-height: 130px;
+      width: 300px;
+    }
+    div {
+      h2 {
+        font-size: 48px;
+        line-height: 52px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    span {
+      font-size: 180px;
+      line-height: 90px;
+      width: 210px;
+
+      &::before {
+        width: 10px;
+        height: 10px;
+        border: 6px solid $orange-color;
+      }
+
+      &::after {
+        font-size: 80px;
+        line-height: 60px;
+        right: -85px;
+      }
+    }
+    div {
+      h2 {
+        font-size: 48px;
+        line-height: 52px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    flex-direction: column;
+    align-items: center;
+    div {
+      margin-left: 0;
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    span {
+      font-size: 130px;
+      line-height: 60px;
+      width: 145px;
+      transform: translate(-25%, 0);
+      &::after {
+
+      }
+    }
+  }
+}
+
+.mario-type-product-page__product-benefits {
+  width: 100%;
+  background: #010101;
+}
+
+.product-benefits__container {
+  width: 100%;
+}
+
