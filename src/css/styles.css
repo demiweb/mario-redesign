@@ -5575,12 +5575,12 @@ main.main-about-mario {
   font-size: 21vw;
   width: 100%;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
   .mario-brand__container svg {
-    height: 220px;
+    height: 240px;
   }
   .mario-brand__container svg text {
-    font-size: 18vw;
+    font-size: 24vw;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -6131,6 +6131,9 @@ html {
   scroll-behavior: smooth;
 }
 
+.main-accessories-page {
+  background: #ffffff;
+}
 .main-accessories-page .mario-about .mario-about-page .container {
   padding-top: 115px;
 }
@@ -6349,7 +6352,7 @@ html {
   align-items: center;
   justify-content: center;
   list-style: none;
-  margin: 30px 0;
+  margin: 45px 0;
 }
 .accessories-hidden-connection__about ul li {
   width: calc(50% - 10px);
@@ -6467,12 +6470,22 @@ html {
 .mario-accessories__water-tap {
   width: 100%;
 }
+.mario-accessories__water-tap#electrical-heat {
+  background: #fafafa;
+  margin-top: 45px;
+}
 
 .water-tap__container {
   width: 100%;
   background: url("../img/water-tap-scheme-bg.png") no-repeat right bottom, #000000;
   background-size: 440px;
   z-index: 1;
+}
+.water-tap__container.electrical-heat__container {
+  background: transparent;
+}
+.water-tap__container.electrical-heat__container .container p, .water-tap__container.electrical-heat__container .container h2 {
+  color: #000000;
 }
 .water-tap__container .container {
   display: flex;
@@ -6628,6 +6641,9 @@ html {
   bottom: 0;
   background: linear-gradient(to bottom, #000000 7%, rgba(255, 255, 255, 0) 20%);
 }
+.water-tap__video-container.electrical-heat::after {
+  background: linear-gradient(to bottom, #fafafa 7%, rgba(255, 255, 255, 0) 20%);
+}
 @media screen and (max-width: 975px) {
   .water-tap__video-container {
     position: absolute;
@@ -6641,6 +6657,9 @@ html {
   }
   .water-tap__video-container::after {
     background: linear-gradient(to bottom, #000000 7%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #ffffff 93%);
+  }
+  .water-tap__video-container.electrical-heat::after {
+    background: linear-gradient(to bottom, #fafafa 7%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #fafafa 93%);
   }
 }
 @media screen and (max-width: 768px) {
@@ -6659,6 +6678,7 @@ html {
   background: url("../img/water-tap-scheme-2-bg.png") no-repeat right center, #ffffff;
   z-index: 2;
   background-size: 440px;
+  margin-bottom: 30px;
 }
 
 .water-tap__production-list .container, .shelf-hook-production .container {
@@ -6761,6 +6781,19 @@ html {
     width: calc(50% - 10px);
   }
 }
+@media screen and (max-width: 568px) {
+  .water-tap__production-list a, .shelf-hook-production a {
+    height: 180px;
+    padding: 8px 12px;
+  }
+  .water-tap__production-list a div, .shelf-hook-production a div {
+    height: 72px;
+  }
+  .water-tap__production-list a p, .shelf-hook-production a p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 
 .shelf-hook-production {
   width: 100%;
@@ -6771,6 +6804,13 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: -60px;
+}
+
+.shelf-hooks__bg-img {
+  width: 100%;
+  height: 650px;
+  background: url("../img/shelf-hook-bg.jpg") no-repeat bottom;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
