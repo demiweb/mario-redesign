@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/Gotham/GothamProBold.eot");
+  src: url("../fonts/Gotham/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham/GothamProBold.woff") format("woff"), url("../fonts/Gotham/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway/Raleway-Black.eot");
   src: local("Raleway Black"), local("Raleway-Black"), url("../fonts/Raleway/Raleway-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Black.woff") format("woff"), url("../fonts/Raleway/Raleway-Black.ttf") format("truetype");
@@ -3692,32 +3699,32 @@ body .mario-footer .mario-footer__footer-top {
   font-size: 12px;
 }
 
-.main-product-page .mario-main__picture-bg-banner {
+.main-product-page .mario-main__picture-bg-banner, .main-type-product-page .mario-main__picture-bg-banner {
   height: auto !important;
   background: linear-gradient(0deg, #141414 80%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
   background-size: cover, 100%;
   align-items: flex-start;
 }
-.main-product-page .mario-main__picture-bg-banner .container {
+.main-product-page .mario-main__picture-bg-banner .container, .main-type-product-page .mario-main__picture-bg-banner .container {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
-.main-product-page .mario-main__picture-bg-banner .container > h3 {
+.main-product-page .mario-main__picture-bg-banner .container > h3, .main-type-product-page .mario-main__picture-bg-banner .container > h3 {
   margin: 50px 0;
 }
 @media screen and (max-width: 968px) {
-  .main-product-page .mario-main__picture-bg-banner {
+  .main-product-page .mario-main__picture-bg-banner, .main-type-product-page .mario-main__picture-bg-banner {
     background: linear-gradient(0deg, #141414 81%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-product-page .mario-main__picture-bg-banner {
+  .main-product-page .mario-main__picture-bg-banner, .main-type-product-page .mario-main__picture-bg-banner {
     background: linear-gradient(0deg, #141414 70%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
   }
 }
 @media screen and (max-width: 568px) {
-  .main-product-page .mario-main__picture-bg-banner {
+  .main-product-page .mario-main__picture-bg-banner, .main-type-product-page .mario-main__picture-bg-banner {
     background: linear-gradient(0deg, #141414 74%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
   }
 }
@@ -6038,7 +6045,7 @@ main.main-about-mario {
   height: 50px;
   position: fixed;
   top: 55px;
-  z-index: 3;
+  z-index: 5;
   box-shadow: 0 0 11px 4px rgba(0, 0, 0, 0.15);
 }
 .mario-subheader-menu .container {
@@ -6304,7 +6311,8 @@ html {
 
 .accessories-hidden-connection__video {
   width: 100%;
-  height: 650px;
+  height: auto;
+  overflow: hidden;
 }
 .accessories-hidden-connection__video + .container {
   margin-top: 45px;
@@ -7057,6 +7065,631 @@ html {
 
 .product-benefits__container {
   width: 100%;
+  padding: 7% 0;
+  box-sizing: border-box;
+}
+.product-benefits__container > p, .product-benefits__container > h2 {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+.product-benefits__container > h2 {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.product-benefits__container > p {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+  margin-top: 30px;
+  max-width: 1000px;
+}
+.product-benefits__container > p small {
+  font-size: 36px;
+  color: #797979;
+  font-weight: bold;
+}
+.product-benefits__container > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0;
+}
+.product-benefits__container > ul > li {
+  margin: 0 10px;
+}
+.product-benefits__container > ul > li.percent p::after {
+  content: "%";
+  color: #ffffff;
+}
+.product-benefits__container > ul > li.degree p::after {
+  content: "°";
+}
+.product-benefits__container > ul > li p {
+  font-family: "Raleway", sans-serif;
+  font-size: 120px;
+  line-height: 132px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.product-benefits__container > ul > li span {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #797979;
+  display: inline-block;
+  margin: 15px 0;
+}
+@media screen and (max-width: 768px) {
+  .product-benefits__container > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .product-benefits__container > p small {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .product-benefits__container > ul > li p {
+    font-size: 54px;
+    line-height: 62px;
+  }
+  .product-benefits__container > ul > li span {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .product-benefits__container > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .product-benefits__container > p small {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .product-benefits__container > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-benefits__container > ul > li {
+    margin: 0 20px;
+  }
+  .product-benefits__container > ul > li p {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .product-benefits__container > ul {
+    justify-content: space-between;
+  }
+  .product-benefits__container > ul > li {
+    margin: 0 5px;
+  }
+}
+
+.mario-type-product-page__type-connection {
+  width: 100%;
+  background: #ffffff;
+}
+
+.type-connection__bg {
+  width: 100%;
+  height: 850px;
+  background: url("../img/connection-type-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+@media screen and (max-width: 1441px) {
+  .type-connection__bg {
+    height: 620px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .type-connection__bg {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .type-connection__bg {
+    height: 360px;
+  }
+}
+
+.type-connection__container {
+  width: 100%;
+  padding: 7% 0;
+  box-sizing: border-box;
+}
+.type-connection__container h2, .type-connection__container p {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+}
+.type-connection__container h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: bold;
+  max-width: 640px;
+}
+.type-connection__container > p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  max-width: 680px;
+  margin: 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .type-connection__container > p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0;
+  }
+}
+.type-connection__container > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  list-style: none;
+}
+.type-connection__container > ul li:first-child div img {
+  padding: 40px 0 0 40px;
+}
+.type-connection__container > ul div {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  background: #ededed;
+  margin: 30px 0;
+}
+.type-connection__container > ul div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 0 40px 40px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1441px) {
+  .type-connection__container > ul div {
+    height: 420px;
+  }
+}
+.type-connection__container > ul h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #000000;
+  font-weight: bold;
+}
+.type-connection__container > ul p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000000;
+  margin: 30px 0;
+  max-width: 600px;
+}
+@media screen and (max-width: 768px) {
+  .type-connection__container > ul li:first-child div img {
+    padding: 10px 0 0 10px;
+  }
+  .type-connection__container > ul div {
+    height: 320px;
+  }
+  .type-connection__container > ul div img {
+    padding: 0 0 10px 10px;
+  }
+  .type-connection__container > ul h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .type-connection__container > ul p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .type-connection__container > ul div {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .type-connection__container > ul {
+    grid-template-columns: 1fr;
+  }
+  .type-connection__container > ul div {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .type-connection__container > ul div img {
+    object-fit: contain;
+    width: auto;
+    margin-left: auto;
+  }
+}
+
+.main-type-product-page .mario-main__mario-innovation h2 {
+  color: #ffffff !important;
+}
+.main-type-product-page .mario-main__mario-innovation h2 strong {
+  color: #fa8100;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation: fadingOpacityOut 4s linear infinite;
+}
+
+@keyframes fadingOpacityOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.mario-type-product-page__mario-model-variables {
+  width: 100%;
+  background: #000000;
+}
+.mario-type-product-page__mario-model-variables .container {
+  padding: 5% 15px 8%;
+}
+
+.mario-model-variables__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mario-model-variables__container h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.mario-model-variables__container p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 30px 0;
+  text-align: center;
+  max-width: 560px;
+}
+@media screen and (max-width: 768px) {
+  .mario-model-variables__container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.mario-steel__container {
+  width: 100%;
+  margin-top: -120px;
+  margin-bottom: 40px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .mario-steel__container {
+    margin-top: -20px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-steel__container {
+    margin-top: 0;
+  }
+}
+.mario-steel__container ul {
+  position: absolute;
+  bottom: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mario-steel__container ul li h3 {
+  font-family: "Gotham", sans-serif;
+  font-size: 4vw;
+  text-transform: uppercase;
+  line-height: 5vw;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+}
+@media screen and (max-width: 568px) {
+  .mario-steel__container ul li h3 {
+    font-size: 7vw;
+    line-height: 7vw;
+  }
+}
+.mario-steel__container ul li p {
+  font-family: "Gotham", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16vw;
+  line-height: 11vw;
+}
+
+.mario-steel__img-container {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+.mario-steel__img-container img {
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .mario-steel__img-container {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-steel__img-container {
+    height: 280px;
+  }
+}
+
+.mario-type-product-page__find-color {
+  width: 100%;
+  background: #141414;
+}
+
+.find-color__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 6% 0;
+  box-sizing: border-box;
+}
+.find-color__container > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.find-color__container > ul > li ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  max-width: 300px;
+}
+.find-color__container > ul > li ul > li {
+  width: 90px;
+  height: 90px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 20px;
+}
+.find-color__container > ul > li ul > li:last-child {
+  background: linear-gradient(135deg, black 55%, white 98%);
+}
+.find-color__container > ul > li ul > li::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 1px solid #595959;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.find-color__container > ul > li ul > li::before {
+  position: absolute;
+  content: "";
+  width: 114px;
+  height: 114px;
+  border: 1px solid #595959;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.find-color__container > ul > li:first-child {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.find-color__container > ul > li:last-child {
+  width: 40%;
+  flex-shrink: 0;
+  height: 650px;
+}
+.find-color__container > ul > li:last-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.find-color__container > ul > li h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 80px;
+  line-height: 86px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.find-color__container > ul > li p {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 45px 0;
+}
+@media screen and (max-width: 1441px) {
+  .find-color__container > ul > li:first-child {
+    width: 50%;
+  }
+  .find-color__container > ul > li:last-child {
+    width: 50%;
+  }
+  .find-color__container > ul > li h3 {
+    font-size: 54px;
+    line-height: 62px;
+  }
+  .find-color__container > ul > li p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .find-color__container > ul > li h3 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .find-color__container > ul > li ul {
+    width: 200px;
+  }
+  .find-color__container > ul > li ul li {
+    width: 60px;
+    height: 60px;
+  }
+  .find-color__container > ul > li ul li::after {
+    width: 68px;
+    height: 68px;
+  }
+  .find-color__container > ul > li ul li::before {
+    width: 78px;
+    height: 78px;
+  }
+  .find-color__container > ul > li h3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .find-color__container > ul > li p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 25px;
+  }
+  .find-color__container > ul > li:last-child {
+    height: 380px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .find-color__container > ul {
+    flex-direction: column;
+  }
+  .find-color__container > ul > li {
+    width: 100% !important;
+  }
+  .find-color__container > ul > li:last-child {
+    height: 280px;
+  }
+  .find-color__container > ul > li ul {
+    width: 160px;
+  }
+  .find-color__container > ul > li ul li {
+    width: 40px;
+    height: 40px;
+  }
+  .find-color__container > ul > li ul li::after {
+    width: 48px;
+    height: 48px;
+  }
+  .find-color__container > ul > li ul li::before {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+.find-color__change-bath-color {
+  width: 100%;
+}
+.find-color__change-bath-color ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 750px;
+}
+.find-color__change-bath-color ul li {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  transition: width 1s;
+  height: 750px;
+}
+.find-color__change-bath-color ul li p {
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000000;
+  font-size: 48px;
+  white-space: nowrap;
+  text-shadow: 0 0 6px white;
+}
+.find-color__change-bath-color ul li img {
+  width: 100%;
+  transition: width 1s;
+  object-fit: cover;
+}
+.find-color__change-bath-color ul li:first-child {
+  left: 0;
+  z-index: 2;
+}
+.find-color__change-bath-color ul li:last-child {
+  right: 0;
+  z-index: 2;
+  justify-content: flex-end;
+}
+.find-color__change-bath-color ul li:last-child p {
+  color: #ffffff;
+  text-shadow: 0 0 6px black;
+}
+.find-color__change-bath-color ul li:hover {
+  transition: width 1s;
+}
+.find-color__change-bath-color ul li:hover img {
+  width: 100%;
+  transition: width 1s;
+}
+@media screen and (max-width: 940px) {
+  .find-color__change-bath-color ul {
+    height: 450px;
+  }
+  .find-color__change-bath-color ul li {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .find-color__change-bath-color ul {
+    flex-direction: column;
+  }
+  .find-color__change-bath-color ul li {
+    position: relative;
+    width: 100% !important;
+  }
+  .find-color__change-bath-color ul li p {
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

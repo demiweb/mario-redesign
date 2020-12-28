@@ -126,18 +126,14 @@ let currentBgAfter = '0.0';
 
 
 function isInViewport() {
-    if (afterBlock === undefined) {
+    function getVideoBlock() {
+        if (videoBlock === undefined) {
 
-    } else {
-
-        let rect = afterBlock.getBoundingClientRect();
-        // let vB = videoBlock.getBoundingClientRect();
-        let h = afterBlock.scrollHeight;
-
-        function getVideoBlock() {
-            if (videoBlock === undefined) {
+        } else {
+            if (afterBath === undefined) {
 
             } else {
+
                 let vB = videoBlock.getBoundingClientRect();
 
                 if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
@@ -166,12 +162,19 @@ function isInViewport() {
                     }
                 }
             }
-        }
 
-        function getBgDark() {
-            if (afterBath === undefined) {
+        }
+    }
+
+    function getBgDark() {
+        if (afterBath === undefined) {
+
+        } else {
+            if (afterBlockBg2 === undefined) {
 
             } else {
+                let h = afterBlock.scrollHeight;
+
                 let rect = afterBath.getBoundingClientRect();
                 if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
                     if (rect.top < 22) {
@@ -211,7 +214,19 @@ function isInViewport() {
                     }
                 }
             }
+
         }
+    }
+    if (afterBlock === undefined) {
+        getVideoBlock();
+        getBgDark();
+    } else {
+
+        let rect = afterBlock.getBoundingClientRect();
+        // let vB = videoBlock.getBoundingClientRect();
+        let h = afterBlock.scrollHeight;
+
+
 
 
         if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
@@ -288,3 +303,29 @@ window.onscroll = function () {
     let percentGrad = boxLeft / 10;
 
 }
+let wordToChange = [...document.querySelectorAll('.mario-main__mario-innovation h2 strong')][0];
+function changeWord() {
+    if (wordToChange === undefined) {
+
+    } else {
+        let currentArrayNumber = 0;
+        let wordsArray = ['час', 'температуру'];
+        setInterval(() => {
+            if (currentArrayNumber === 0) {
+                currentArrayNumber = 1;
+
+                wordToChange.innerHTML = wordsArray[currentArrayNumber];
+                // wordToChange.style.animation = 'fadingOpacityOut 4s linear infinite';
+
+                return currentArrayNumber;
+            } else if (currentArrayNumber === 1) {
+                currentArrayNumber = 0;
+                wordToChange.innerHTML = wordsArray[currentArrayNumber];
+                return currentArrayNumber;
+
+            }
+        }, 4000)
+    }
+
+}
+changeWord();

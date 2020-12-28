@@ -68,3 +68,42 @@ function marioMembersBlur() {
 }
 
 marioMembersBlur();
+
+let imgComparation = [...document.querySelectorAll('.find-color__change-bath-color ul li')]
+
+imgComparation.forEach((img, i) => {
+    img.addEventListener('mouseover', () => {
+        if (document.body.clientWidth < 578) {
+
+        } else {
+            imgComparation.forEach((img2, k) => {
+                if (i === k) {
+                    imgComparation[i].style.zIndex = '4';
+                    imgComparation[i].style.width = '85%';
+                } else {
+                    img2.style.zIndex = '2';
+                    img2.style.width = '15%';
+                }
+            })
+        }
+
+
+
+
+
+    });
+    img.addEventListener('mouseout', () => {
+        if (document.body.clientWidth < 578) {
+
+        } else {
+            imgComparation.forEach((img2, k) => {
+                img2.style.width = '50%';
+            })
+            img.style.zIndex = '3';
+            setTimeout(() => {
+                img.style.zIndex = '2'
+            }, 1000)
+        }
+
+    })
+})

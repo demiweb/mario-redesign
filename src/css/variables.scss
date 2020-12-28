@@ -1,5 +1,13 @@
 
-
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/Gotham/GothamProBold.eot");
+  src: url("../fonts/Gotham/GothamProBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Gotham/GothamProBold.woff") format("woff"),
+  url("../fonts/Gotham/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 @font-face {
   font-family: 'Raleway';
   src: url('../fonts/Raleway/Raleway-Black.eot');
