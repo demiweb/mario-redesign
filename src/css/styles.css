@@ -6040,7 +6040,7 @@ main.main-about-mario {
 
 .mario-subheader-menu {
   width: 100%;
-  background: rgba(255, 255, 255, 0.24) !important;
+  background: rgba(255, 255, 255, 0.56) !important;
   backdrop-filter: blur(10px) !important;
   height: 50px;
   position: fixed;
@@ -6069,7 +6069,6 @@ main.main-about-mario {
   font-size: 24px;
   font-weight: 600;
   color: #000000;
-  mix-blend-mode: difference;
   line-height: 28px;
 }
 .mario-subheader-menu__container a {
