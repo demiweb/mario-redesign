@@ -688,6 +688,17 @@ body {
   position: relative;
 }
 
+.mario-home {
+  .mario-main__video-banner {
+    .video-banner__video-container {
+      &::before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.67) 86%, rgba(0, 0, 0, 1) 100%);
+
+      }
+    }
+  }
+}
+
 .mario-main__video-banner {
   height: 700px;
   width: 100%;
@@ -4133,7 +4144,7 @@ body {
   }
 }
 
-.main-product-page .mario-main__picture-bg-banner, .main-type-product-page .mario-main__picture-bg-banner{
+.main-product-page .mario-main__picture-bg-banner, .main-type-product-page .mario-main__picture-bg-banner {
   height: auto !important;
   background: linear-gradient(0deg, rgba(20, 20, 20, 1) 80%, rgba(255, 255, 255, 0) 100%), url("../img/bigstock-Modern-Luxury-Black-Bathroom-346790404.jpg") no-repeat top;
   background-size: cover, 100%;
@@ -8510,14 +8521,17 @@ html {
     }
   }
 }
+
 $height-for-li: 750px;
 
 @media screen and (max-width: 768px) {
   $height-for-li: 450px;
 
 }
+
 .find-color__change-bath-color {
   width: 100%;
+
   ul {
     width: 100%;
     display: flex;
@@ -8566,6 +8580,7 @@ $height-for-li: 750px;
         right: 0;
         z-index: 2;
         justify-content: flex-end;
+
         p {
           color: $white-color;
           text-shadow: 0 0 6px rgba(0, 0, 0, 1);
@@ -8585,9 +8600,11 @@ $height-for-li: 750px;
       }
     }
   }
-  @media screen and (max-width: 940px){
+
+  @media screen and (max-width: 940px) {
     ul {
       height: 450px;
+
       li {
         height: 450px;
       }
@@ -8596,20 +8613,241 @@ $height-for-li: 750px;
   @media screen and (max-width: 600px) {
     ul {
       flex-direction: column;
+
       li {
         position: relative;
         width: 100% !important;
-         p {
-           transform: translate(-50%, -50%);
-           font-size: 28px;
-           line-height: 36px;
-         }
+
+        p {
+          transform: translate(-50%, -50%);
+          font-size: 28px;
+          line-height: 36px;
+        }
       }
     }
   }
 }
 
+// water heats page
 
+.mario-water-heat {
+  .mario-type-product-page {
+    .mario-type-product {
+      padding-bottom: 60px;
+    }
+
+    .container {
+      .mario-about__about-header {
+        > h1 {
+          max-width: 860px;
+
+          strong {
+            animation: textShadowFading 3s infinite;
+          }
+        }
+      }
+    }
+
+  }
+
+  .mario-type-product-page__mario-steel {
+    z-index: 2;
+  }
+}
+
+@keyframes textShadowFading {
+  0% {
+    text-shadow: 0 0 0 $orange-color;
+  }
+  30% {
+    text-shadow: 0 0 12px $orange-color;
+  }
+  50% {
+    text-shadow: 0 0 16px $orange-color;
+  }
+  70% {
+    text-shadow: 0 0 12px $orange-color;
+  }
+  100% {
+    text-shadow: 0 0 0 $orange-color;
+  }
+}
+
+.mario-type-product-page__mario-differences {
+  width: 100%;
+  background: $white-color;
+}
+
+.mario-differences__container {
+  width: 100%;
+  padding: 6% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.mario-differences__text {
+  align-self: center;
+
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: bold;
+    font-family: $main-font;
+    color: $black-color;
+    max-width: 600px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: $main-font;
+    color: $black-color;
+    margin: 30px 0;
+    max-width: 600px;
+  }
+}
+
+.mario-differences__block {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+
+  > div {
+    height: 520px;
+    max-width: 750px;
+    width: 100%;
+
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.mario-type-product-page__mario-warranty-time {
+  width: 100%;
+  background: $black-color;
+}
+
+.mario-warranty-time__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6% 0;
+
+  h2 {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: bold;
+    color: $white-color;
+    font-family: $main-font;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    color: $white-color;
+    font-family: $main-font;
+    max-width: 700px;
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+
+.mario-warranty-time__video-bg {
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+}
+
+.mario-type-product-page__mario-parallax-block {
+  width: 100%;
+  background: $black-color;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    @media screen and (max-width: 768px) {
+      position: static;
+      transform: none;
+    }
+
+    div {
+      align-self: center;
+      margin: 40px 0;
+    }
+
+    h2 {
+
+      font-family: $main-font;
+      color: $white-color;
+      font-size: 48px;
+      line-height: 52px;
+      font-weight: bold;
+      text-align: center;
+      max-width: 550px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      font-family: $main-font;
+      font-weight: normal;
+      color: $white-color;
+      text-align: center;
+      max-width: 550px;
+      margin: 30px 0;
+    }
+  }
+}
+
+
+.mario-parallax-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 6% 0;
+  //overflow: hidden;
+  //position: absolute;
+}
+
+.mario-parallax-block__img {
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  max-height: 1508px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  //@media screen and (max-width: 768px) {
+  //  max-height: 560px;
+  //  img {
+  //  }
+  //}
+}
 
 
 

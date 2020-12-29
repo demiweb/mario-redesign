@@ -2,6 +2,57 @@ let imgPar = [...document.querySelectorAll('.img-parall')];
 // let imgBath = [...document.querySelectorAll('.mario-main__picture-bg-banner')];
 let imgBathTop = [...document.querySelectorAll('.mario-main__mario-innovation')];
 
+let parallaxImages = [...document.querySelectorAll('.img-parallax')];
+let parallaxContainer = [...document.querySelectorAll('.mario-type-product-page__mario-parallax-block .container')];
+
+function prlImg() {
+    parallaxImages.forEach((img, i) => {
+        let spaceBello = window.innerHeight - img.getBoundingClientRect().bottom + img.offsetHeight;
+
+        let topDistance = img.getBoundingClientRect().top + img.offsetHeight;
+        let pirce = 1;
+        let imgHeight = img.offsetHeight;
+
+        let percent = spaceBello / 100;
+        console.log(topDistance + ' topdistance');
+        console.log(spaceBello + ' spaceBellow');
+
+        if (spaceBello > 200 && topDistance > -850) {
+            // console.log('picture visible')
+            if ((i + 1) % 2 === 0) {
+                pirce = -1;
+                img.style.transform = `translate(0, ${5 + pirce * percent}%)`
+
+            } else {
+                pirce = 1;
+                img.style.transform = `translate(0, ${-15 + pirce * percent}%)`
+
+            }
+        }
+    })
+    parallaxContainer.forEach((cont) => {
+        let spaceBello = window.innerHeight - cont.getBoundingClientRect().bottom + cont.offsetHeight;
+        let topDistance = cont.getBoundingClientRect().top;
+        if (window.innerWidth < 769) {
+
+        } else {
+            if (topDistance < -550) {
+                let someNumber = -topDistance -550;
+                // console.log(someNumber / 400);
+                // console.log(someNumber + 'somenumber')
+                let coef = someNumber / 400;
+                cont.style.opacity = `${1 - coef}`;
+
+
+
+            } else {
+
+            }
+        }
+
+
+    })
+}
 
 
 function parallaxImg() {
@@ -94,6 +145,7 @@ window.addEventListener('load', () => {
     parallaxImg();
     hiddingTopBath();
     checkTempWidth();
+    prlImg();
 })
 
 videosBlock.forEach(videoBlock => {
@@ -217,6 +269,7 @@ function isInViewport() {
 
         }
     }
+
     if (afterBlock === undefined) {
         getVideoBlock();
         getBgDark();
@@ -225,8 +278,6 @@ function isInViewport() {
         let rect = afterBlock.getBoundingClientRect();
         // let vB = videoBlock.getBoundingClientRect();
         let h = afterBlock.scrollHeight;
-
-
 
 
         if (578 < document.body.clientWidth && document.body.clientWidth < 768) {
@@ -264,7 +315,7 @@ function isInViewport() {
             getBgDark();
         } else {
             if (rect.top < -320) {
-                let opacityBg = ((-rect.top-150) / h) * 1.6;
+                let opacityBg = ((-rect.top - 150) / h) * 1.6;
                 if (opacityBg > 1) {
                     afterBlockBg.style.opacity = '1';
                     safetyP.style.opacity = '0';
@@ -296,6 +347,7 @@ window.onscroll = function () {
     isInViewport();
     checkWidthToBottom();
     parallaxImg();
+    prlImg();
     hiddingTopBath();
     checkTempWidth();
     let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
@@ -304,6 +356,7 @@ window.onscroll = function () {
 
 }
 let wordToChange = [...document.querySelectorAll('.mario-main__mario-innovation h2 strong')][0];
+
 function changeWord() {
     if (wordToChange === undefined) {
 
@@ -328,4 +381,5 @@ function changeWord() {
     }
 
 }
+
 changeWord();

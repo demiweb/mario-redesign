@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <title>Mario</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="../scripts/lazysizes.min.js" async></script>
+</head>
+<body>
+<header class="mario-header">
+    <div class="container">
+        <div class="mario-header__container">
+            <a href="" class="mario-header__logo">
+                <img class="lazyload" data-src="../img/logo-mario-white.png" alt="Mario">
+            </a>
+            <div class="mario-header__burger-btn-mob">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="mario-header__header-navigation">
+                <ul>
+                    <li class="current-menu-item"><a href="#">Продукція</a></li>
+                    <li><a href="#">Для партнерів</a></li>
+                    <li><a href="#">Підтримка</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Де купити?</a></li>
+                </ul>
+
+                <div class="mario-header__site-language">
+                    <a href="#">ua</a>
+                    <ul>
+                        <li><a href="#">ru</a></li>
+                        <li><a href="#">ua</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<main class="mario-main main-type-product-page mario-water-heat">
+    <section class="mario-subheader-menu">
+        <div class="container">
+            <div class="mario-subheader-menu__container">
+                <p>Водяні рушникосушарки від виробника </p>
+                <div>
+                    <a href="#">Умови партнерів</a>
+                    <a href="#" class="btn btn--comb">Де придбати?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mario-type-product-page">
+        <section class="mario-main__video-banner mario-type-product" style="z-index: 2">
+            <div class="video-banner__video-container">
+                <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/main-video.mp4"
+                       autoplay=""
+                       muted="" loop="" playsinline="" data-loaded="true"></video>
+            </div>
+            <div class="container">
+                <div class="mario-partnership__container">
+
+                    <div class="mario-about__about-header">
+                        <h1><strong>Тепло</strong>, яке триватиме все життя</h1>
+                        <p>Якщо скористатися найпростішим прикладом, то хто з нас став би займатися якими б то не було
+                            тяжкими фізичними вправами, якщо б це не приносило з собою якоїсь користі? І хто міг би по
+                            справедливості дорікнути прагнення до насолоди, яке не несло б з собою ніяких неприємностей,
+                            або того, хто уникав би такого страждання, яке не приносило б з собою ніякої насолоди</p>
+                        <ul>
+                            <li><a href="#">Докладніше про Mario</a></li>
+                            <li><a href="#">Інформація для партнерів</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="mario-type-product-page__mario-steel">
+        <div class="container">
+            <div class="mario-steel__container">
+                <div class="mario-steel__img-container">
+                    <img class="lazyload img-parall" data-src="../img/steel-bg.jpg" alt="Сталь">
+                </div>
+                <ul>
+                    <li><h3>нержавіюча сталь</h3></li>
+                    <li><p>AISI 304</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="mario-type-product-page__mario-differences">
+        <div class="container">
+            <div class="mario-differences__container">
+                <div class="mario-differences__text">
+                    <h3>Втім, тут дуже легко і просто провести відмінності, тому що, коли ми вільні і нам надана
+                        повна </h3>
+                    <p>можливість вибору бажаного, коли ніщо не заважає нам робити те, що нам більше подобається, будь
+                        яку насолоду слід визнати бажаним, а будь-яке страждання огидним. Але при деяких обставинах –
+                        або на вимогу боргу, або в силу якоїсь необхідності часто доводиться забувати про насолоди і не
+                        втікати від тягарів.</p>
+                </div>
+                <div class="mario-differences__block">
+                    <div><img class="lazyload" data-src="../img/diff-1.jpg" alt=""></div>
+                    <div><img class="lazyload" data-src="../img/diff-2.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mario-type-product-page__mario-warranty-time">
+        <div class="container">
+            <div class="mario-warranty-time__container">
+                <h2>50 років гарантії</h2>
+                <p>Якщо скористатися найпростішим прикладом, то хто з нас став би займатися якими б то не було тяжкими
+                    фізичними вправами, якщо б це не приносило з собою якоїсь користі</p>
+            </div>
+        </div>
+        <div class="mario-warranty-time__video-bg">
+            <video style="width: 100%; height: 100%; object-fit: cover; z-index: 0"
+                   src="../video/videoplayback.mp4"
+                   autoplay="" muted="" loop="" playsinline="" data-loaded="true"></video>
+
+
+        </div>
+    </section>
+    <section class="mario-type-product-page__mario-parallax-block">
+        <div class="mario-parallax-block">
+            <div class="mario-parallax-block__img">
+                <img class="lazyload img-parallax" data-src="../img/apple-watch-red.jpg" alt="">
+            </div>
+            <div class="mario-parallax-block__img">
+                <img class="lazyload img-parallax" data-src="../img/apple-watch-blue.jpg" alt="">
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div>
+                <h2>Холодний зовні, теплий всередині</h2>
+                <p>Якщо скористатися найпростішим прикладом, то хто з нас став би займатися якими б то не було тяжкими
+                    фізичними вправами, якщо б це не приносило з собою якоїсь користі? І хто міг би по справедливості
+                    дорікнути прагнення до насолоди, яке не несло б з собою ніяких неприємностей, або того, хто уникав
+                    би
+                    такого страждання, яке не приносило б з собою ніякої насолоди
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="mario-type-product-page__find-color">
+        <div class="container">
+            <div class="find-color__container">
+                <ul>
+                    <li>
+                        <h3>Обери для себе особистий колір</h3>
+                        <p>Водяний прилад призначений для квартир з автономною опалювальною системою. Також підійде для
+                            об'єктів, де є цілорічне гаряче водопостачання. Прогрів приміщення забезпечується за рахунок
+                            гарячої води, яка циркулює по трубах пристрою. Вони нагріваються, а потім віддають тепло.
+                            Так прогрівається повітря у ванній кімнаті і сушаться будь-які речі.</p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><img src="../img/dveen_model_M.png" alt="Модель"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="find-color__change-bath-color">
+            <ul>
+                <li data-number-comp="0"><img src="../img/santi.jpg" alt="Ванная">
+                    <p>Черный мат</p></li>
+                <li data-number-comp="1"><img src="../img/veer-1000-tr.jpg" alt="Ванная">
+                    <p>Белый глянец</p></li>
+            </ul>
+        </div>
+    </section>
+    <section class="mario-main__picture-bg-banner" style="z-index: 1">
+        <!--        <div class="mario-safety__bg-dark"></div>-->
+        <div class="container">
+            <h3 class="anim-fading-out">Зроби ванну кімнату зоною свого комфорту</h3>
+            <div class="mario-product-page__mario-same-products">
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Євро Снейк</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Бітуб</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Деко</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Назва якогось товара</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item ">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Євро Снейк</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Бітуб</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Деко</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Назва якогось товара</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item ">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Євро Снейк</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Бітуб</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Деко</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+                <a href="#" class="mario-same-products__single-item">
+                    <div class="mario-same-products__item-front">
+                        <div class="mario-same-products__img-container"><img src="../img/layer-same-item.png" alt="">
+                        </div>
+                        <p>Назва якогось товара</p>
+                    </div>
+                    <div class="mario-same-products__item-back">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<footer class="mario-footer">
+    <section class="mario-footer__footer-top">
+        <div class="container">
+            <div class="footer-top__container">
+
+                <div class="footer-top__list-container">
+                    <h4>Продукція</h4>
+                    <ul>
+                        <li><a href="#">Водяні</a></li>
+                        <li><a href="#">Електричні</a></li>
+                        <li><a href="#">Аксесуари</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__list-container">
+                    <h4>Для парнерів</h4>
+                    <ul>
+                        <li><a href="#">Корисна інформація</a></li>
+                        <li><a href="#">Система знижок</a></li>
+                        <li><a href="#">Навчання персоналу</a></li>
+                        <li><a href="#">Брендування торгівельної точки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__list-container footer-top__list-container--contacts">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><p><strong>0 800 474-05-39</strong></p></li>
+                        <li><a href="mailto:partner@mario.ua">partner@mario.ua</a></li>
+                        <li><p>Вінницька обл., Україна, <br>
+                            22300 Сосонське шосе, 4-В, смт. Літин</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mario-footer__footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__container">
+                <div class="footer-bottom__creation-date-copyright">
+                    <p>Працюємо з 21 листопада 1998 р</p>
+                    <span></span>
+                    <p>2020 © Усі права захищені</p>
+                </div>
+                <a class="footer-top__logo-container" href="#">
+                    <img class="lazyload" data-src="../img/mario-logo.png" alt="Logo">
+                </a>
+                <div class="footer-bottom__mario-docs">
+                    <a href="#">Політика конфіденційності</a>
+                    <span></span>
+                    <a href="#">Угода з кінцевим користувачем</a>
+                    <span></span>
+                    <a href="#">Гарантія</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../scripts/slick.min.js"></script>
+<script type="text/javascript" src="../scripts/productSlider.js"></script>
+<script type="text/javascript" src="../scripts/openReadMore.js"></script>
+<script type="text/javascript" src="../scripts/animationScript.js"></script>
+<script type="text/javascript" src="../scripts/headerAnimation.js"></script>
+<script type="text/javascript" src="../scripts/homePageScript.js"></script>
+<script type="text/javascript" src="../scripts/warrantyFindPAnim.js"></script>
+<script type="text/javascript" src="../scripts/aboutMembers.js"></script>
+
+</body>
+</html>
