@@ -5,6 +5,33 @@ let imgBathTop = [...document.querySelectorAll('.mario-main__mario-innovation')]
 let parallaxImages = [...document.querySelectorAll('.img-parallax')];
 let parallaxContainer = [...document.querySelectorAll('.mario-type-product-page__mario-parallax-block .container')];
 
+let parTitle = [...document.querySelectorAll('.mario-water-heat .mario-about__about-header')];
+let oldMatrix;
+function parallaxTitle() {
+    if (parTitle.length > 0) {
+        let title = parTitle[0];
+        let spaceBello = window.innerHeight - title.getBoundingClientRect().bottom + title.offsetHeight;
+
+        let basicMatrix = -800;
+        let topDistance = title.getBoundingClientRect().top + title.offsetHeight;
+        oldMatrix = topDistance;
+        let scrollAMount = window.scrollY;
+        let newMatrix = basicMatrix + scrollAMount;
+        if (newMatrix >= 0) {
+            newMatrix = 0;
+            title.style.transform = `matrix(1, 0, 0, 1, 0, ${newMatrix})`
+
+        } else {
+            title.style.transform = `matrix(1, 0, 0, 1, 0, ${newMatrix})`
+
+        }
+        title.style.opacity = ``
+        console.log(newMatrix + ' hihihi ' + topDistance + ' do vverha stranici');
+    }
+}
+
+parallaxTitle();
+
 function prlImg() {
     parallaxImages.forEach((img, i) => {
         let spaceBello = window.innerHeight - img.getBoundingClientRect().bottom + img.offsetHeight;
@@ -14,8 +41,8 @@ function prlImg() {
         let imgHeight = img.offsetHeight;
 
         let percent = spaceBello / 100;
-        console.log(topDistance + ' topdistance');
-        console.log(spaceBello + ' spaceBellow');
+        // console.log(topDistance + ' topdistance');
+        // console.log(spaceBello + ' spaceBellow');
 
         if (spaceBello > 200 && topDistance > -850) {
             // console.log('picture visible')
@@ -34,18 +61,21 @@ function prlImg() {
         let spaceBello = window.innerHeight - cont.getBoundingClientRect().bottom + cont.offsetHeight;
         let topDistance = cont.getBoundingClientRect().top;
         if (window.innerWidth < 769) {
-
+            cont.style.opacity = '1';
         } else {
             if (topDistance < -550) {
-                let someNumber = -topDistance -550;
+                let someNumber = -topDistance - 550;
                 // console.log(someNumber / 400);
                 // console.log(someNumber + 'somenumber')
                 let coef = someNumber / 400;
+                if (coef > 1) {
+                    coef = 1;
+                }
                 cont.style.opacity = `${1 - coef}`;
 
 
-
             } else {
+                cont.style.opacity = '1';
 
             }
         }
@@ -348,6 +378,7 @@ window.onscroll = function () {
     checkWidthToBottom();
     parallaxImg();
     prlImg();
+    parallaxTitle()
     hiddingTopBath();
     checkTempWidth();
     let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);

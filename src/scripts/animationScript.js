@@ -1,5 +1,13 @@
 let allAnimFade = [...document.querySelectorAll(".anim-fading-out")];
 let allBLurFade = [...document.querySelectorAll(".blur-js")];
+let allWaterFade = [...document.querySelectorAll('.production-advantage__container li')];
+let allOtherFades
+if (allWaterFade.length > 0) {
+    allWaterFade.forEach((wf) => {
+        wf.classList.add('anim-fading-out')
+        allAnimFade.push(wf);
+    })
+}
 
 function checkWidthToBottom() {
     allAnimFade.forEach((el, i) => {

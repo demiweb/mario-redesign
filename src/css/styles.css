@@ -1399,7 +1399,7 @@ body .mario-footer .mario-footer__footer-top {
     max-width: 86%;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 475px) {
   .mario-main__picture-bg-banner {
     height: 450px;
   }
@@ -7737,9 +7737,23 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
+@media screen and (max-width: 525px) {
+  .mario-differences__container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .mario-differences__text {
-  align-self: center;
+  height: 100%;
+}
+.mario-differences__text .pos-sticky {
+  position: sticky;
+  top: 130px;
+}
+@media screen and (max-width: 525px) {
+  .mario-differences__text .pos-sticky {
+    position: static;
+  }
 }
 .mario-differences__text h3 {
   font-size: 32px;
@@ -7757,6 +7771,24 @@ html {
   margin: 30px 0;
   max-width: 600px;
 }
+@media screen and (max-width: 925px) {
+  .mario-differences__text h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .mario-differences__text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-differences__text h3 {
+    font-size: 18px;
+  }
+  .mario-differences__text p {
+    font-size: 14px;
+  }
+}
 
 .mario-differences__block {
   display: grid;
@@ -7773,6 +7805,26 @@ html {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 925px) {
+  .mario-differences__block > div {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-differences__block > div {
+    height: 380px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-differences__block > div {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .mario-differences__block > div {
+    height: 265px;
+  }
 }
 
 .mario-type-product-page__mario-warranty-time {
@@ -7806,11 +7858,27 @@ html {
   text-align: center;
   margin: 30px 0;
 }
+@media screen and (max-width: 768px) {
+  .mario-warranty-time__container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 
 .mario-warranty-time__video-bg {
   overflow: hidden;
   width: 100%;
   height: 650px;
+}
+@media screen and (max-width: 768px) {
+  .mario-warranty-time__video-bg {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-warranty-time__video-bg {
+    height: 360px;
+  }
 }
 
 .mario-type-product-page__mario-parallax-block {
@@ -7861,6 +7929,12 @@ html {
   max-width: 550px;
   margin: 30px 0;
 }
+@media screen and (max-width: 768px) {
+  .mario-type-product-page__mario-parallax-block .container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 
 .mario-parallax-block {
   width: 100%;
@@ -7880,6 +7954,303 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.mario-water-heat .mario-type-product-page__mario-model-variables {
+  position: relative;
+  display: flex;
+}
+.mario-water-heat .mario-type-product-page__mario-model-variables .mario-model-variables__video {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.mario-water-heat .mario-type-product-page__mario-model-variables .container {
+  z-index: 2;
+}
+.mario-water-heat .mario-type-product-page__mario-model-variables .container .mario-model-variables__container {
+  padding-top: 20%;
+}
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page__mario-model-variables .container .mario-model-variables__container {
+    padding-top: 400px;
+  }
+}
+@media screen and (max-width: 658px) {
+  .mario-water-heat .mario-type-product-page__mario-model-variables .container .mario-model-variables__container {
+    padding-top: 250px;
+  }
+}
+.mario-water-heat .mario-type-product-page__mario-model-variables .container .mario-models-variables__title h2 {
+  font-size: 48px;
+  line-height: 54px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  max-width: 560px;
+}
+.mario-water-heat .mario-type-product-page__mario-model-variables .container .mario-models-variables__title p {
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  max-width: 660px;
+  margin: 45px 0;
+}
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page__mario-model-variables .container .mario-models-variables__title p {
+    margin: 15px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.mario-type-product-page__mario-model-variables {
+  width: 100%;
+  background: #000000;
+}
+.mario-type-product-page__mario-model-variables .container {
+  padding: 5% 15px 8%;
+}
+
+.mario-model-variables__production-advantage {
+  background: #000000;
+  width: 100%;
+  padding: 5% 0;
+  box-sizing: border-box;
+}
+.production-advantage__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  grid-template-rows: 1fr;
+  grid-gap: 30px;
+  padding: 5% 0;
+  margin-bottom: -650px;
+}
+@media screen and (max-width: 1000px) {
+  .production-advantage__container {
+    margin-bottom: -500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .production-advantage__container {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 525px) {
+  .production-advantage__container {
+    grid-template-columns: 1fr;
+  }
+}
+.production-advantage__container li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.production-advantage__container li:last-child > h3, .production-advantage__container li:last-child > p {
+  color: #000000 !important;
+}
+@media screen and (max-width: 768px) {
+  .production-advantage__container li:last-child > h3, .production-advantage__container li:last-child > p {
+    color: #ffffff !important;
+  }
+}
+.production-advantage__container li.img {
+  float: left;
+  overflow: hidden;
+  justify-content: flex-start;
+  height: 0;
+  padding-top: 100%;
+  align-items: flex-end;
+}
+@media screen and (max-width: 568px) {
+  .production-advantage__container li.img {
+    padding-top: 0;
+    height: 220px;
+  }
+}
+.production-advantage__container li > img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  box-shadow: inset 0 0 32px 9px rgba(0, 0, 0, 0.75);
+}
+.production-advantage__container li > h3 {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  padding-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .production-advantage__container li > h3 {
+    font-size: 24px;
+    line-height: 32px;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 568px) {
+  .production-advantage__container li > h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.production-advantage__container li > p {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff !important;
+  margin: 15px 0;
+  max-width: 450px;
+  padding-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .production-advantage__container li > p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 0;
+  }
+}
+
+.mario-water-heat .mario-type-product-page__type-connection {
+  padding-top: 650px;
+  background: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page__type-connection {
+    padding-top: 0;
+  }
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > h2, .mario-water-heat .mario-type-product-page__type-connection .container > p {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: bold;
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > h2 {
+  font-size: 48px;
+  line-height: 54px;
+  max-width: 850px;
+  padding-top: 4%;
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > p {
+  font-size: 24px;
+  line-height: 28px;
+  max-width: 700px;
+  margin: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page__type-connection .container > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  list-style: none;
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > ul div {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  background: #ededed;
+  margin: 30px 0;
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > ul div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1441px) {
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul div {
+    height: 420px;
+  }
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > ul h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #000000;
+  font-weight: bold;
+}
+.mario-water-heat .mario-type-product-page__type-connection .container > ul p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  margin: 30px 0;
+  max-width: 600px;
+}
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul div {
+    height: 320px;
+  }
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul div {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul {
+    grid-template-columns: 1fr;
+  }
+  .mario-water-heat .mario-type-product-page__type-connection .container > ul div {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mario-water-heat .mario-type-product-page {
+  height: 1600px;
+}
+.mario-water-heat .mario-type-product-page .mario-main__video-banner {
+  height: 100%;
+}
+.mario-water-heat .mario-type-product-page .video-banner__video-container {
+  display: flex;
+  justify-content: center;
+  bottom: auto;
+  z-index: 1;
+}
+.mario-water-heat .mario-type-product-page .video-banner__video-container img {
+  margin: 0 auto;
+  max-width: 1010px;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(20px) opacity(100%);
+}
+.mario-water-heat .mario-type-product-page .container {
+  z-index: auto;
+}
+.mario-water-heat .mario-type-product-page .container .mario-about__about-header {
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, -800.6);
 }
 
 /*# sourceMappingURL=styles.css.map */
