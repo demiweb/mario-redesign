@@ -2255,17 +2255,33 @@ body {
           height: 100%;
           padding: 8%;
           box-sizing: border-box;
-          background: #0000007a;
+          //background: #0000007a;
+          background: transparent;
           z-index: 2;
-          opacity: 0;
-          visibility: hidden;
+          //opacity: 0;
+          opacity: 1;
+          //visibility: hidden;
+          visibility: visible;
           transition: opacity 0.6s, visibility 0.6s;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-start;
+          &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s;
+            background:#0000007a ;
+          }
 
           h3, p {
+            position: relative;
             font-family: $main-font;
             color: $white-color;
           }
@@ -2281,6 +2297,8 @@ body {
             line-height: 24px;
             opacity: 0.6;
             margin: 6px 0;
+            transition: 0.4s;
+
           }
 
           p:nth-child(2) {
@@ -2290,6 +2308,12 @@ body {
           p:nth-child(3) {
             display: flex;
             align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            min-height: auto;
+            transition: opacity 0.4s, visibility 0.4s, height 0.4s,min-height 0.4s;
 
             &:before {
               content: url("../img/telephone.svg");
@@ -2301,6 +2325,12 @@ body {
           p:nth-child(4) {
             display: flex;
             align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            min-height: auto;
+            overflow: hidden;
+            transition: opacity 0.4s, visibility 0.4s, height 0.4s,min-height 0.4s;
 
             &:before {
               content: url("../img/email.svg");
@@ -9237,6 +9267,63 @@ $height-for-li: 750px;
         transform: matrix(1, 0, 0, 1, 0, -800.6);
       }
 
+    }
+  }
+}
+
+
+//for test contacts
+.for-video-class {
+  position: relative;
+}
+
+.for-video-class video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.for-colored--gray {
+  filter: grayscale(100%);
+  transition: filter 0.4s;
+
+}
+
+.team-members__mario-member:hover {
+  .for-colored--gray {
+    filter: grayscale(0);
+    transition: filter 0.4s;
+  }
+  .mario-member__info {
+    &::before {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+    & > p > small {
+      visibility: visible !important;
+      opacity: 1 !important;
+      transition: opacity 0.4s, visibility 0.4s;
+
+    }
+    & > p:nth-child(3) {
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: 24px !important;
+      min-height: auto !important;
+      overflow: visible !important;
+      transition: opacity 0.4s, visibility 0.4s, height 0.4s, min-height 0.4s;
+
+    }
+    & > p:nth-child(4) {
+      visibility: visible !important;
+      height: 24px !important;
+
+      min-height: auto !important;
+      overflow: visible !important;
+      opacity: 1 !important;
+      transition: opacity 0.4s, visibility 0.4s, height 0.4s,min-height 0.4s;
     }
   }
 }

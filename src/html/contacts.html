@@ -92,8 +92,8 @@
 
                 <div class="mario-team__team-members blur-js">
                     <div class="team-members__mario-member">
-                        <div class="mario-member__img">
-                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        <div class="mario-member__img for-gray">
+                            <img class="lazyload" data-src="../img/dasha-1.jpg" alt="">
                         </div>
                         <div class="mario-member__info">
                                 <h3>Сергій</h3>
@@ -103,8 +103,8 @@
                         </div>
                     </div>
                     <div class="team-members__mario-member">
-                        <div class="mario-member__img">
-                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        <div class="mario-member__img for-colored">
+                            <img class="lazyload" data-src="../img/dasha-2.jpg" alt="">
                         </div>
                         <div class="mario-member__info">
                                 <h3>Сергій</h3>
@@ -114,9 +114,8 @@
                         </div>
                     </div>
                     <div class="team-members__mario-member">
-                        <div class="mario-member__img">
-                            <img class="lazyload" data-src="../img/member.jpg" alt="">
-                        </div>
+                        <div class="mario-member__img for-video-class">
+                            <video src="../video/video-dasha.mp4" muted="" loop=""></video>                        </div>
                         <div class="mario-member__info">
                                 <h3>Сергій</h3>
                             <p>Менеджер з продажів</p>
@@ -125,8 +124,8 @@
                         </div>
                     </div>
                     <div class="team-members__mario-member">
-                        <div class="mario-member__img">
-                            <img class="lazyload" data-src="../img/member.jpg" alt="">
+                        <div class="mario-member__img for-colored--gray">
+                            <img class="lazyload" data-src="../img/dasha-2.jpg" alt="">
                         </div>
                         <div class="mario-member__info">
                                 <h3>Сергій</h3>
@@ -380,6 +379,20 @@
 
 
 </footer>
+<script>
+
+    let videoHover = [...document.querySelectorAll('.for-video-class')][0];
+    let videoHoverCont = videoHover.closest('.team-members__mario-member');
+
+    videoHoverCont.addEventListener('mouseover', () => {
+        videoHoverCont.querySelector('video').play();
+
+    })
+    videoHoverCont.addEventListener('mouseout', () => {
+        videoHoverCont.querySelector('video').pause();
+
+    })
+</script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../scripts/slick.min.js"></script>
