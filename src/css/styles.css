@@ -6862,6 +6862,7 @@ html {
 }
 .mario-main__video-banner.mario-type-product .video-banner__video-container {
   bottom: 42%;
+  background: #1f1e1f;
 }
 .mario-main__video-banner.mario-type-product .video-banner__video-container::before {
   content: none !important;
