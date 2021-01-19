@@ -8,6 +8,33 @@ if (allWaterFade.length > 0) {
         allAnimFade.push(wf);
     })
 }
+let btnGoUp = [...document.querySelectorAll('.scroll-up')];
+btnGoUp.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+        btn.classList.remove('visible')
+    })
+})
+let triggerButtonScroll = [...document.querySelectorAll('.mario-product-page__mario-same-products')];
+function checkButtonScrollTop() {
+    triggerButtonScroll.forEach((trig, i) => {
+
+        if (i === 0) {
+            let distance = trig.getBoundingClientRect().top;
+            if (distance < 100) {
+                btnGoUp[0].classList.add('visible');
+            } else {
+                btnGoUp[0].classList.remove('visible');
+            }
+        }
+    })
+}
+document.onscroll = () => {
+    checkButtonScrollTop();
+}
+
+
+
 
 function checkWidthToBottom() {
     allAnimFade.forEach((el, i) => {
@@ -51,6 +78,7 @@ function checkWidthToBottom() {
 window.addEventListener('load', () => {
     warrantyAnim();
     checkWidthToBottom();
+    checkButtonScrollTop();
 })
 
 //
