@@ -4,7 +4,34 @@ let headerLanguageCont = [...document.querySelectorAll('.mario-header__site-lang
 let headerBurgerBtn = [...document.querySelectorAll('.mario-header__burger-btn-mob')][0];
 let headerNav = [...document.querySelectorAll('.mario-header__header-navigation')][0];
 let burgerBtn = [...document.querySelectorAll('.mario-header__burger-btn-mob')][0];
+let marioShop = [...document.querySelectorAll('.mario-internet-shop')];
+let marioHeaderContacts = document.querySelector('.mario-contacts-header');
+let marioHeaderContactsLi = [...marioHeaderContacts.querySelectorAll('ul > li')];
+let marioHeaderContactsUl = marioHeaderContacts.querySelector('ul');
+let marioHeaderContactsP = marioHeaderContacts.querySelector('ul ~ p');
+let totalItemsAnimHeader = [];
+
+
 let currentHeight = document.body.clientHeight;
+
+
+
+headerList.forEach((item) => {
+    totalItemsAnimHeader.push(item);
+});
+totalItemsAnimHeader.push(marioShop[0]);
+
+[...marioShop[0].children].forEach((item) => {
+    totalItemsAnimHeader.push(item);
+});
+
+totalItemsAnimHeader.push(marioHeaderContacts);
+totalItemsAnimHeader.push(marioHeaderContactsUl);
+marioHeaderContactsLi.forEach((item) => {
+    totalItemsAnimHeader.push(item);
+});
+
+totalItemsAnimHeader.push(marioHeaderContactsP);
 window.addEventListener('resize', () => {
     if (document.body.clientWidth > 768) {
         headerList.forEach((li) => {
@@ -19,12 +46,12 @@ window.addEventListener('resize', () => {
 
             } else {
 
-                headerList.forEach((li) => {
+                totalItemsAnimHeader.forEach((li) => {
                     li.style.opacity = '0';
                 })
             }
         } else {
-            headerList.forEach((li) => {
+            totalItemsAnimHeader.forEach((li) => {
                 li.style.opacity = '0';
             })
         }
@@ -34,7 +61,7 @@ window.addEventListener('resize', () => {
 })
 
 function liVisibility() {
-    headerList.forEach((li, i) => {
+    totalItemsAnimHeader.forEach((li, i) => {
         li.style.transform = 'translate(0, 25px)';
         li.style.opacity = '0';
 
@@ -49,7 +76,7 @@ function liVisibility() {
             setTimeout(() => {
 
                 li.style.opacity = '1';
-                let time = 100 * (i + 1);
+                let time = 75 * (i + 1);
                 li.style.transform = 'translate(0, 25px)';
                 li.style.opacity = '0';
                 setTimeout(() => {
@@ -88,7 +115,7 @@ burgerBtn.addEventListener('click', () => {
 
     if (!burgerBtn.classList.contains('active-burger-btn')) {
         headerNav.style.animation = 'navFadingReverse 0.4s linear';
-        headerList.forEach((li) => {
+        totalItemsAnimHeader.forEach((li) => {
             li.style.opacity = '0';
             li.style.animation = '';
             headerLanguageCont.style.opacity = '0';

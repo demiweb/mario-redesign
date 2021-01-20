@@ -17,17 +17,22 @@ btnGoUp.forEach((btn) => {
 })
 let triggerButtonScroll = [...document.querySelectorAll('.mario-product-page__mario-same-products')];
 function checkButtonScrollTop() {
-    triggerButtonScroll.forEach((trig, i) => {
+    if(!btnGoUp[0]) {
 
-        if (i === 0) {
-            let distance = trig.getBoundingClientRect().top;
-            if (distance < 100) {
-                btnGoUp[0].classList.add('visible');
-            } else {
-                btnGoUp[0].classList.remove('visible');
+    } else {
+        triggerButtonScroll.forEach((trig, i) => {
+
+            if (i === 0) {
+                let distance = trig.getBoundingClientRect().top;
+                if (distance < 100) {
+                    btnGoUp[0].classList.add('visible');
+                } else {
+                    btnGoUp[0].classList.remove('visible');
+                }
             }
-        }
-    })
+        })
+    }
+
 }
 document.onscroll = () => {
     checkButtonScrollTop();

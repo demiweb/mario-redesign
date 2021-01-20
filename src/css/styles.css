@@ -530,6 +530,9 @@ body .mario-footer .mario-footer__footer-bottom {
   align-items: center;
   flex-grow: 1;
 }
+.mario-header__header-navigation > section {
+  display: none;
+}
 .mario-header__header-navigation > ul {
   display: flex;
   align-items: center;
@@ -648,58 +651,263 @@ body .mario-footer .mario-footer__footer-bottom {
     opacity: 0;
   }
   .mario-header__header-navigation .mario-header__site-language > a {
-    font-size: 24px;
-  }
-  .mario-header__header-navigation .mario-header__site-language > a + ul {
-    width: 56px;
-  }
-  .mario-header__header-navigation .mario-header__site-language > a + ul > li > a {
-    font-size: 24px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 768px) {
   .mario-header__header-navigation {
     visibility: hidden;
     position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     left: -15px;
     right: -15px;
     height: calc(100vh - 55px);
     top: 55px;
-    background: black;
-    border-top: 2px solid #fa8100;
+    background: #000000;
   }
+  .mario-header__header-navigation > section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .mario-header__header-navigation > section .mario-internet-shop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: #1e1e1e;
+    border-bottom: 1px solid #333333;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.4s;
+  }
+  .mario-header__header-navigation > section .mario-internet-shop > p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #a5a5a5;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.4s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > section .mario-internet-shop > p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-internet-shop > p::before {
+    content: url("../img/shopping-cart.svg");
+    height: 16px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-internet-shop > a {
+    opacity: 0;
+    border-bottom: 2px solid #fa8100;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 3px 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: transform 0.6s, opacity 0.4s, border-bottom-color 0.3s;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > section .mario-internet-shop > a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-internet-shop > a:hover {
+    border-color: transparent;
+    transition: border-bottom-color 0.3s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header {
+    background: #1e1e1e;
+    width: 100%;
+    flex-grow: 1;
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.4s;
+  }
+  .mario-header__header-navigation > section .mario-contacts-header > ul {
+    margin: 0;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    max-height: 105px;
+    border-bottom: 1px solid #333333;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul li {
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 30px;
+    margin: 0;
+  }
+  .mario-header__header-navigation > section .mario-contacts-header > ul li a, .mario-header__header-navigation > section .mario-contacts-header > ul li p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #a5a5a5;
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul li a, .mario-header__header-navigation > section .mario-contacts-header > ul li p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul li.phone a::before {
+    content: url("../img/phone-call-icon.svg");
+    height: 11px;
+    margin-right: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul li.email a::before {
+    content: url("../img/email-gray.svg");
+    height: 9px;
+    margin-right: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul li.work-time p::before {
+    content: url("../img/clock-icon.svg");
+    height: 14px;
+    margin-right: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header > ul li.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .mario-header__header-navigation > section .mario-contacts-header > ul li.socials > a {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    margin-right: 12px;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > section .mario-contacts-header > p {
+    flex-grow: 1;
+    opacity: 0;
+    width: 100%;
+    padding: 20px 15px 0 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    color: #a5a5a5;
+    display: flex;
+    box-sizing: border-box;
+    transition: transform 0.6s, opacity 0.4s;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > section .mario-contacts-header > p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
   .mario-header__header-navigation > ul {
-    position: absolute;
     flex-direction: column;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 0;
   }
   .mario-header__header-navigation > ul > li {
-    margin: 0;
+    margin: 0 0 1px 0;
     opacity: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     transition: transform 0.6s, opacity 0.4s;
     padding: 4px 0 3px;
-    height: 38px;
+    background: #1e1e1e;
+    box-sizing: border-box;
+    height: 55px;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > ul > li {
+    height: 44px;
+  }
+}
+@media screen and (max-width: 768px) {
   .mario-header__header-navigation > ul > li a {
-    font-size: 26px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #a5a5a5;
+    font-weight: 300;
     display: flex;
     align-items: center;
+    padding-left: 15px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 340px) {
+  .mario-header__header-navigation > ul > li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
   .mario-header__header-navigation .mario-header__site-language {
     position: absolute;
-    right: 15px;
-    bottom: 15px;
-  }
-  .mario-header__header-navigation .mario-header__site-language > ul {
-    top: auto;
-    bottom: 130%;
+    right: 50%;
+    /* bottom: 15px; */
+    top: -40px;
+    transform: translate(50%, 0);
   }
 }
 
