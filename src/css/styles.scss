@@ -124,11 +124,13 @@ body {
     .mario-footer__footer-top {
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       border-top: 1px solid rgba(255, 255, 255, 0.3);
-      background:#1e1e1e;
+      background: #1e1e1e;
     }
-.mario-footer__footer-bottom {
-  background: #5c5c5c;
-}
+
+    .mario-footer__footer-bottom {
+      background: #5c5c5c;
+    }
+
     @media screen and (max-width: 768px) {
     }
   }
@@ -469,6 +471,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
+
   > section {
     display: none;
   }
@@ -516,11 +519,13 @@ body {
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s, opacity 0.3s;
+
       &:hover {
         color: $orange-color;
         opacity: 1;
         transition: color 0.3s, opacity 0.3s;
       }
+
       &:last-child::before {
         content: '|';
         color: $white-color;
@@ -529,9 +534,11 @@ body {
         margin-left: 4px;
         font-weight: 400;
       }
+
       &.active {
         opacity: 1;
       }
+
       &.dropdown-open-lang + ul {
         display: flex;
       }
@@ -618,6 +625,7 @@ body {
       justify-content: flex-start;
       align-items: center;
       flex-grow: 1;
+
       .mario-internet-shop {
         width: 100%;
         display: flex;
@@ -630,6 +638,7 @@ body {
         box-sizing: border-box;
         opacity: 0;
         transition: transform 0.6s, opacity 0.4s;
+
         > p {
           font-family: $main-font;
           font-weight: 400;
@@ -645,6 +654,7 @@ body {
           @media screen and (max-width: 340px) {
             font-size: 14px;
           }
+
           &::before {
             content: url("../img/shopping-cart.svg");
             height: 16px;
@@ -652,6 +662,7 @@ body {
             margin-bottom: 3px;
           }
         }
+
         > a {
           opacity: 0;
           border-bottom: 2px solid #fa8100;
@@ -664,16 +675,18 @@ body {
           color: #ffffff;
           font-weight: 600;
           white-space: nowrap;
-          transition: transform 0.6s, opacity 0.4s,border-bottom-color 0.3s;
+          transition: transform 0.6s, opacity 0.4s, border-bottom-color 0.3s;
           @media screen and (max-width: 340px) {
             font-size: 14px;
           }
+
           &:hover {
             border-color: transparent;
             transition: border-bottom-color 0.3s;
           }
         }
       }
+
       .mario-contacts-header {
         background: #1e1e1e;
 
@@ -681,6 +694,7 @@ body {
         flex-grow: 1;
         opacity: 0;
         transition: transform 0.6s, opacity 0.4s;
+
         > ul {
           margin: 0;
           width: 100%;
@@ -698,71 +712,75 @@ body {
           @media screen and (max-width: 340px) {
             padding: 15px;
           }
-           li {
-             opacity: 0;
-             transition: transform 0.6s, opacity 0.4s;
-             display: flex;
-             align-items: center;
-             justify-content: flex-start;
-             width: 50%;
-             height: 30px;
-             margin: 0;
 
-             a, p {
-               font-family: $main-font;
-               font-weight: 400;
-               font-size: 16px;
-               line-height: 24px;
-               color: #a5a5a5;
-               display: flex;
+          li {
+            opacity: 0;
+            transition: transform 0.6s, opacity 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 50%;
+            height: 30px;
+            margin: 0;
+
+            a, p {
+              font-family: $main-font;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #a5a5a5;
+              display: flex;
 
 
-               text-decoration: none;
+              text-decoration: none;
 
-               @media screen and (max-width: 340px) {
-                 font-size: 12px;
-               }
-             }
-             &.phone {
-               a::before {
-                 content: url("../img/phone-call-icon.svg");
-                 height: 11px;
-                 margin-right: 4px;
-               }
-             }
+              @media screen and (max-width: 340px) {
+                font-size: 12px;
+              }
+            }
 
-             &.email {
-               a::before {
-                 content: url("../img/email-gray.svg");
-                 height: 9px;
-                 margin-right: 4px;
+            &.phone {
+              a::before {
+                content: url("../img/phone-call-icon.svg");
+                height: 11px;
+                margin-right: 4px;
+              }
+            }
 
-               }
-             }
-             &.work-time {
-               p::before {
-                 content: url("../img/clock-icon.svg");
-                 height: 14px;
-                 margin-right: 4px;
-               }
-             }
+            &.email {
+              a::before {
+                content: url("../img/email-gray.svg");
+                height: 9px;
+                margin-right: 4px;
 
-             &.socials {
-               display: flex;
-               align-items: center;
-               justify-content: flex-start;
-               > a {
-                 width: 24px;
-                 height: 24px;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-                 background: $white-color;
-                 margin-right: 12px;
-                 border-radius: 50%;
-               }
-             }
-           }
+              }
+            }
+
+            &.work-time {
+              p::before {
+                content: url("../img/clock-icon.svg");
+                height: 14px;
+                margin-right: 4px;
+              }
+            }
+
+            &.socials {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              > a {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $white-color;
+                margin-right: 12px;
+                border-radius: 50%;
+              }
+            }
+          }
 
 
         }
@@ -784,7 +802,7 @@ body {
           transition: transform 0.6s, opacity 0.4s;
           @media screen and (max-width: 340px) {
             font-size: 12px;
-            
+
           }
         }
       }
@@ -813,10 +831,9 @@ body {
         box-sizing: border-box;
         height: 55px;
 
-        @media  screen and (max-width: 340px) {
+        @media screen and (max-width: 340px) {
           height: 44px;
         }
-
 
 
         a {
@@ -830,7 +847,7 @@ body {
           width: 100%;
           height: 100%;
           box-sizing: border-box;
-          @media  screen and (max-width: 340px) {
+          @media screen and (max-width: 340px) {
             font-size: 14px;
           }
         }
@@ -911,7 +928,7 @@ body {
   .mario-main__video-banner {
     .video-banner__video-container {
       &::before {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0,0, 41%) 86%, #0000007d 100%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 41%) 86%, #0000007d 100%);
 
       }
     }
@@ -995,7 +1012,7 @@ body {
   width: 100%;
   background: $black-color;
   padding: 60px 0;
-  
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -1171,10 +1188,12 @@ body {
 
       .mario-main__video-banner {
         align-items: flex-end;
+
         .video-banner__video-container {
           video {
             object-fit: contain !important;
           }
+
           bottom: 200px;
         }
       }
@@ -1192,6 +1211,7 @@ body {
       .mario-products-type__title-side .mario-products__quality-icons {
         margin-top: 60px;
       }
+
       &:last-child {
         .mario-main__video-banner {
           align-items: flex-end;
@@ -1206,6 +1226,7 @@ body {
         > .video-banner__video-container {
           padding: 20px 0;
           box-sizing: border-box;
+
           video {
             object-fit: cover !important;
           }
@@ -1272,10 +1293,12 @@ body {
 
     .mario-main__video-banner {
       align-items: flex-end;
+
       > .video-banner__video-container {
-         video {
-           object-fit: contain !important;
-         }
+        video {
+          object-fit: contain !important;
+        }
+
         bottom: 200px;
       }
     }
@@ -1300,12 +1323,13 @@ body {
       > .video-banner__video-container {
         padding: 20px 0;
         box-sizing: border-box;
+
         video {
           object-fit: cover !important;
         }
       }
     }
-    
+
   }
 }
 
@@ -2767,6 +2791,7 @@ body {
           &:nth-child(5),
           &:last-child {
             width: 100%;
+
             > .mario-member__img {
               img {
                 width: 120%;
@@ -2806,6 +2831,7 @@ body {
           &:nth-child(5),
           &:last-child {
             width: 100%;
+
             > .mario-member__img {
               img {
                 width: 120%;
@@ -2815,6 +2841,7 @@ body {
             }
 
           }
+
           > .mario-member__img {
             img {
               height: 120%;
@@ -2911,6 +2938,7 @@ body {
   align-items: flex-start;
   margin: 0 0 8%;
   box-sizing: border-box;
+
   h3 {
     font-family: $main-font;
     color: $black-color;
@@ -2928,6 +2956,7 @@ body {
     line-height: 22px;
     margin: 5px 0;
   }
+
   a {
     font-family: $main-font;
     color: $black-color;
@@ -3175,7 +3204,7 @@ body {
         max-width: 55%;
         width: 100%;
         height: 340px;
-        background: rgba(244,244, 244, 0.62);
+        background: rgba(244, 244, 244, 0.62);
         backdrop-filter: blur(5px);
         box-sizing: border-box;
         padding: 20px 28px;
@@ -3184,6 +3213,7 @@ body {
         align-items: center;
         border-radius: 6px 6px 0 0;
         position: relative;
+
         svg {
           position: absolute;
           stroke: #ffffff;
@@ -3197,6 +3227,7 @@ body {
             right: 50%;
             transform: translate(50%, 0);
           }
+
           text {
             fill: transparent;
             font-size: 48px;
@@ -3204,8 +3235,6 @@ body {
             //transform: translate(-25%, 0);
           }
         }
-
-
 
 
         > h1 {
@@ -3259,7 +3288,6 @@ body {
           }
 
         }
-
 
 
         @media screen and (max-width: 525px) {
@@ -3381,6 +3409,7 @@ body {
   @media screen and (max-width: 768px) {
     margin-top: 30px;
   }
+
   > h2 {
     font-family: $main-font;
     font-size: 48px;
@@ -3734,6 +3763,7 @@ body {
         @media screen and (max-width: 375px) {
           top: 32px;
         }
+
         span {
           font-size: 14px;
           display: flex;
@@ -3793,6 +3823,7 @@ body {
   }
 
 }
+
 // product page
 
 .main-product-page {
@@ -3906,7 +3937,6 @@ body {
       position: relative;
 
 
-
       > h1 {
         @include h1-title;
         color: $white-color;
@@ -3925,20 +3955,22 @@ body {
         margin: 30px 0;
         max-width: 75%;
       }
+
       > a {
-          border-bottom: 2px solid #fa8100;
-          font-family: "Raleway", sans-serif;
-          font-size: 16px;
-          line-height: 24px;
-          padding: 3px 0;
-          box-sizing: border-box;
-          text-decoration: none;
-          color: $white-color;
-          font-weight: 600;
+        border-bottom: 2px solid #fa8100;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 3px 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: $white-color;
+        font-weight: 600;
         position: relative;
         margin-bottom: 15px;
 
         transition: border-bottom-color 0.3s, color 0.3s;
+
         &::after {
           content: "";
           position: absolute;
@@ -3951,10 +3983,12 @@ body {
           transform: translate(0, -50%) rotate(-45deg);
           transition: transform 0.4s ease-in-out;
         }
+
         &:hover {
           color: $orange-color;
           border-bottom-color: $white-color;
           transition: border-bottom-color 0.3s, color 0.3s;
+
           &::after {
             transform: translate(15px, -50%) rotate(-45deg);
             transition: transform 0.4s ease-in-out;
@@ -4022,7 +4056,7 @@ body {
       }
 
     }
-    
+
     @media screen and (max-width: 425px) {
       .product-header__side {
         & > .product-header__links-block {
@@ -4525,6 +4559,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 75px;
+
     &:first-child {
       padding-right: 76px;
       box-sizing: border-box;
@@ -4532,6 +4567,7 @@ body {
         padding-right: 47px;
       }
     }
+
     &:last-child {
       border-bottom: none;
     }
@@ -4670,7 +4706,7 @@ body {
         font-size: 10px;
         word-break: break-all;
         overflow: hidden;
-       text-overflow: ellipsis;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -4706,7 +4742,7 @@ body {
   margin: 20px 0;
   @media screen and (max-width: 575px) {
     flex-wrap: nowrap;
-  justify-content: flex-start;
+    justify-content: flex-start;
   }
   overflow-x: scroll;
 }
@@ -4834,10 +4870,12 @@ body {
 
   &.active {
     position: relative;
+
     .mario-same-products__item-front {
       background: rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(10px);
       box-shadow: 0 0 4px 3px rgba(0, 0, 0, 1);
+
       &::after {
         content: 'Ти зараз тут';
         position: absolute;
@@ -4856,6 +4894,7 @@ body {
         color: $white-color;
       }
     }
+
     .mario-same-products__item-back {
       box-shadow: 0 0 4px 3px rgba(0, 0, 0, 1);
 
@@ -4901,12 +4940,14 @@ body {
     width: 40px;
     height: 40px;
   }
+
   &.visible {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.6s, visibility 0.6s;
 
   }
+
   &::after {
     content: "";
     display: inline-block;
@@ -5014,10 +5055,12 @@ body {
     margin: 15px 0;
   }
 }
+
 .mario-same-products__item-front {
   opacity: 1;
 
 }
+
 .mario-same-products__single-item:hover {
   & .mario-same-products__item-back {
     opacity: 1;
@@ -6194,6 +6237,7 @@ main.main-partnership-page {
 .mario-partnership__partnership-conditions {
   width: 100%;
   z-index: 2;
+  background: #ffffff;
 }
 
 .partnership-conditions__container {
@@ -6221,18 +6265,6 @@ main.main-partnership-page {
   align-items: flex-start;
   text-decoration: none;
 
-  @media screen and (max-width: 768px) {
-    height: auto;
-    &:last-child {
-      height: 400px;
-    }
-    width: 100%;
-    p {
-      width: 100%;
-      font-size: 14px !important;
-      margin: 8px 0 !important;
-    }
-  }
 
   &:hover {
     span {
@@ -6272,6 +6304,19 @@ main.main-partnership-page {
   &:nth-child(2) {
     background: url("../img/partnership_bg.jpg") no-repeat center;
     background-size: cover;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    &:last-child {
+      height: 400px;
+    }
+    width: 100%;
+    p {
+      width: 100%;
+      font-size: 14px !important;
+      margin: 8px 0 !important;
+    }
   }
 }
 
@@ -6781,7 +6826,7 @@ main.main-partnership-page {
 // about company page
 
 main.main-about-mario {
-  background: $white-color;
+  background: $black-color;
 }
 
 .mario-about {
@@ -7034,12 +7079,6 @@ main.main-about-mario {
   }
 }
 
-.main-about-mario .mario-main__mario-safety {
-  padding-top: 100px;
-  @media screen and (max-width: 768px) {
-    padding-top: 0;
-  }
-}
 
 .main-about-mario .mario-about__values {
   height: auto;
@@ -7296,6 +7335,7 @@ main.main-about-mario {
 
 .mario-about__about-mario-warranty {
   width: 100%;
+  background: $white-color;
 }
 
 .about-mario-warranty {
@@ -7399,8 +7439,8 @@ main.main-about-mario {
   background: rgba(255, 255, 255, 0.56) !important;
   backdrop-filter: blur(10px) !important;
   height: 50px;
-  position: fixed;
-  top: 55px;
+  //position: fixed;
+  margin-top: 55px;
   z-index: 5;
   box-shadow: 0 0 11px 4px rgba(0, 0, 0, 0.15);
 
@@ -7413,10 +7453,14 @@ main.main-about-mario {
   }
 }
 
+.mario-subheader-menu + * {
+  margin-top: -55px;
+}
+
 .mario-subheader-menu__container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
 
@@ -7475,26 +7519,6 @@ main.main-about-mario {
       padding: 5px 12px;
     }
   }
-  @media screen and (max-width: 768px) {
-    p {
-      font-size: 12px;
-      line-height: 18px;
-    }
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    a {
-      font-size: 10px;
-      line-height: 10px;
-      margin: 5px 0;
-      white-space: nowrap;
-    }
-    a.btn {
-      padding: 5px 12px;
-    }
-  }
 }
 
 html {
@@ -7543,10 +7567,10 @@ html {
   }
 
   > a {
-    width: 25%;
-    height: 420px;
+    width: calc(100% / 3);
+    height: 380px;
     background: $white-color;
-    border: 1px solid #cdcdcd;
+
     box-sizing: border-box;
     padding: 28px;
     position: relative;
@@ -7567,6 +7591,7 @@ html {
 
       > img {
         width: 100%;
+        height: 100%;
         object-fit: contain;
       }
     }
@@ -7648,7 +7673,7 @@ html {
       height: 240px;
       p {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 16px;
       }
       > span {
         p > small {
@@ -7663,7 +7688,7 @@ html {
 
     @media screen and (max-width: 568px) {
       height: 180px;
-      width: 50%;
+
       div {
         height: 100px;
 
@@ -7672,6 +7697,8 @@ html {
         }
       }
       > span {
+        padding: 7px;
+
         p {
           font-size: 12px;
         }
@@ -7699,12 +7726,54 @@ html {
 .accessories-hidden-connection__video {
   width: 100%;
 
-  height: auto;
+  height: 600px;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  > video {
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+  }
+
+  > .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    > .accessories-hidden-connection__about {
+      width: 40%;
+
+    }
+  }
 
   + .container {
     margin-top: 45px;
   }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    > .container {
+      position: static;
+      padding-top: 30px;
+      top: auto;
+      transform: none;
+      >.accessories-hidden-connection__about {
+        width: 100%;
+        align-items: center;
+      }
+    }
+    > video {
+      width: 100%;
+      height: 450px;
+    }
+  }
+
 }
 
 .main-accessories-page .video-banner__video-container {
@@ -7717,12 +7786,14 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin: 30px 0;
 
   p, h2 {
     font-family: $main-font;
     color: $black-color;
+    text-align: center;
+    width: 100%;
   }
 
   p small {
@@ -7745,7 +7816,7 @@ html {
     font-weight: normal;
     max-width: 550px;
     text-align: center;
-    margin: 30px 0 20px;
+    margin: 30px auto 20px;
   }
 
   ul {
@@ -7783,7 +7854,7 @@ html {
         display: flex;
         justify-content: space-between;
         text-decoration: none;
-        align-items: center;
+        align-items: flex-start;
 
         div {
           height: 280px;
@@ -7799,7 +7870,8 @@ html {
             object-fit: contain;
           }
         }
-
+        span {
+        }
         p {
           font-weight: bold;
           font-size: 24px;
@@ -7807,6 +7879,7 @@ html {
           color: $black-color;
           text-align: left;
           padding-left: 6%;
+          width: 100%;
         }
       }
     }
@@ -7964,7 +8037,7 @@ html {
     }
     @media screen and (max-width: 568px) {
       p {
-        font-size: 12px;
+        font-size: 14px;
         margin: 8px 0;
       }
     }
@@ -8043,7 +8116,7 @@ html {
         }
 
         p {
-          font-size: 12px;
+          font-size: 14px;
           line-height: 16px;
         }
       }
@@ -8053,6 +8126,7 @@ html {
       align-items: center;
       .water-tap__text {
         margin: 15px 0;
+        max-width: none;
 
         h3 {
           text-align: center;
@@ -8175,19 +8249,30 @@ html {
     }
 
     span {
-      display: inline-block;
-      padding: 6px 10px;
-      background: $orange-color;
-      color: $white-color;
-      font-size: 12px;
-      line-height: 18px;
-      font-family: $main-font;
+      color: #000000;
       font-weight: bold;
-      border-radius: 15px;
+      border-bottom: 1px solid #fa8100;
+      width: auto;
+      position: relative;
+      margin: 10px 0;
+      font-size: 16px;
+      line-height: 27px;
+      font-family: "Raleway", sans-serif;
       transform: translate(0, 100px);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #fa8100;
+        border-bottom: 2px solid #fa8100;
+        transform: translate(0, -50%) rotate(-45deg);
+      }
     }
 
     &:hover {
@@ -8243,6 +8328,14 @@ html {
         line-height: 16px;
       }
     }
+    
+    @media screen and (max-width: 425px) {
+        width: 100%;
+      height: 190px;
+      div {
+        height: 100px;
+      }
+    }
   }
 }
 
@@ -8265,7 +8358,7 @@ html {
 }
 
 .main-type-product-page {
-  background: $white-color;
+  background: $black-color;
 }
 
 
@@ -8742,13 +8835,7 @@ html {
     grid-gap: 25px;
     list-style: none;
 
-    li:first-child {
-      div {
-        img {
-          padding: 40px 0 0 40px;
-        }
-      }
-    }
+
 
     div {
       overflow: hidden;
@@ -8761,7 +8848,6 @@ html {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        padding: 0 0 40px 40px;
         box-sizing: border-box;
 
       }
@@ -8789,19 +8875,11 @@ html {
     }
 
     @media screen and (max-width: 768px) {
-      li:first-child {
-        div {
-          img {
-            padding: 10px 0 0 10px;
-          }
-        }
-      }
+
       div {
         height: 320px;
 
-        img {
-          padding: 0 0 10px 10px;
-        }
+
       }
       h4 {
         font-size: 24px;
@@ -8832,6 +8910,7 @@ html {
     }
   }
 }
+
 
 .main-type-product-page {
   .mario-main__mario-innovation {

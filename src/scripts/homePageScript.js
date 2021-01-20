@@ -212,6 +212,8 @@ function isInViewport() {
         if (videoBlock === undefined) {
 
         } else {
+
+            afterBath = videoBlock.nextElementSibling;
             if (afterBath === undefined) {
 
             } else {
@@ -249,6 +251,7 @@ function isInViewport() {
     }
 
     function getBgDark() {
+        afterBath = [...document.querySelectorAll('.mario-main__picture-bg-banner')][0];
         if (afterBath === undefined) {
 
         } else {
