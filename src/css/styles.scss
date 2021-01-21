@@ -4263,7 +4263,37 @@ body {
       padding-left: 8%;
       box-sizing: border-box;
       justify-content: center;
-
+      > a {
+        color: $black-color;
+        font-weight: bold;
+        border-bottom: 1px solid $orange-color;
+        width: auto;
+        max-width: 95px;
+        text-decoration: none;
+        position: relative;
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 27px;
+        font-family: $main-font;
+        &::after {
+          content: "";
+          position: absolute;
+          right: -15px;
+          top: 50%;
+          width: 8px;
+          height: 8px;
+          border-right: 2px solid #fa8100;
+          border-bottom: 2px solid #fa8100;
+          transform: translate(0, -50%) rotate(-45deg);
+          transition: transform 0.4s ease-in-out;
+        }
+        &:hover {
+          &::after {
+            transform: translate(15px, -50%) rotate(-45deg);
+            transition: transform 0.4s ease-in-out;
+          }
+        }
+      }
       span {
         display: flex;
 
@@ -4333,16 +4363,22 @@ body {
       > div {
         width: 100%;
         padding-left: 0;
+        box-sizing: border-box;
         margin: 15px 0;
-        height: 380px;
-        align-items: center;
+        height: auto;
+        align-items: flex-start;
 
         &:last-child {
-          height: 200px;
+          height: auto;
+          padding-left: 40px;
+          box-sizing: border-box;
         }
 
         p {
-          text-align: center;
+          text-align: left;
+          display: inline-block;
+          padding: 0 60px 0 0;
+          box-sizing: border-box;
         }
 
         &:first-child {
@@ -5337,43 +5373,96 @@ a.product-delivery-rules__block {
     }
   }
 
-  &.product-delivery-rules__block--reverse {
+  &.warranty--bg {
+    background: url("../img/waranty-bg.png") no-repeat 130% center, rgba(255, 255, 255, 1);
+    background-size: 60%;
+    transition: background-size 0.6s, background-position 0.6s;
+    &:hover {
+      background-size: 70%;
+      transition: background-size 0.6s, background-position 0.6s;
+
+    }
+    
+    @media screen and (max-width: 1045px) {
+      background-size: 70%;
+      background-position: 140% center;
+      &:hover {
+        background-size: 75%;
+      }
+    }
+
+    @media screen and (max-width: 922px) {
+      background-size: 90%;
+      background-position: 175% center;
+      &:hover {
+        background-size: 100%;
+      }
+    }
+
+    @media screen and (max-width: 675px) {
+      background-size: cover;
+      background-position: 300px center;
+    }
+
+    @media screen and (max-width: 475px) {
+      background-size: cover;
+      background-position: 80px center;
+    }
+  }
+  &.delivery--bg {
+    background: url("../img/mario-pay-bg.png") no-repeat center right, rgba(0, 0, 0, 1);
+    background-size: 60%;
+    transition: background-size 0.6s, background-position 0.6s;
+
+    h2, p, span {
+      color: $white-color;
+    }
+
+    &:hover {
+      background-size: 70%;
+      transition: background-size 0.6s, background-position 0.6s;
+
+    }
+
+    @media screen and (max-width:700px) {
+background-position: bottom right;
+    }
+  }
+
+  &.payment--bg {
+    background: url("../img/novaposhta.png") no-repeat bottom left, rgba(255,255,255,1);
+    background-size: 45%;
+    transition: background-size 0.6s, background-position 0.6s;
+    &:hover {
+      background-size: 55%;
+      transition: background-size 0.6s, background-position 0.6s;
+
+    }
+  }
+
+  &.return--bg {
     background: url("../img/OCDAIG0.png") no-repeat center, $white-color;
     background-size: 100%;
     transition: background-size 0.6s, background-position 0.6s;
+    &:hover {
+      background-size: 110%;
+      transition: background-size 0.6s, background-position 0.6s;
+    }
     @media screen and (max-width: 768px) {
       background-size: 175%;
-      > div {
-        padding-left: 0 !important;
-      }
-
     }
+
+
     @media screen and (max-width: 568px) {
       background-size: 210%;
-
-      > div {
-        padding-left: 0 !important;
-      }
       &:hover {
         background-size: 135%;
         background-position: center bottom;
       }
 
     }
-
-    &:hover {
-      background-size: 110%;
-      transition: background-size 0.6s, background-position 0.6s;
-
-      > div {
-        span {
-          color: $orange-color;
-          transition: color 0.6s;
-        }
-      }
-
-    }
-
+  }
+  &.product-delivery-rules__block--reverse {
     > div {
       padding-left: 50%;
       box-sizing: border-box;
@@ -5381,6 +5470,17 @@ a.product-delivery-rules__block {
       p {
         max-width: 100%;
       }
+    }
+    @media screen and (max-width: 768px) {
+      > div {
+        padding-left: 0 !important;
+        p {
+          backdrop-filter: blur(2px);
+          color: $black-color;
+          text-shadow:  0 2px 2px $white-color;
+        }
+      }
+
     }
   }
 
@@ -5817,7 +5917,7 @@ button.mario-button {
     height: 450px;
     p {
       font-size: 16px;
-
+      text-shadow: 4px 4px 10px black;
     }
   }
 
@@ -5873,8 +5973,8 @@ button.mario-button {
         content: '';
         position: absolute;
         left: 0;
-        top: 50%;
-        transform: translate(0, -50%);
+        top: 5px;
+        transform: translate(0, 50%);
         width: 7px;
         height: 7px;
         background: $orange-color;
@@ -5884,7 +5984,6 @@ button.mario-button {
   }
 
   > p {
-    padding-left: 17px;
     box-sizing: border-box;
   }
 
@@ -6308,6 +6407,7 @@ main.main-partnership-page {
 
   @media screen and (max-width: 768px) {
     height: auto;
+    padding: 20px 60px 20px 40px;
     &:last-child {
       height: 400px;
     }
@@ -6852,11 +6952,15 @@ main.main-about-mario {
     margin-bottom: 0;
     flex-grow: 1;
     height: 100%;
+    position: relative;
   }
 
   .mario-partnership__container {
     flex-grow: 1;
     height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -6866,6 +6970,7 @@ main.main-about-mario {
   justify-content: center;
   margin: auto 0 80px;
   flex-direction: column;
+
 
   > h1 {
     margin: 15px 0;
@@ -6892,6 +6997,10 @@ main.main-about-mario {
   @media screen and (max-width: 768px) {
     margin: auto 0 30px;
   }
+}
+
+.mario-water-heat {
+
 }
 
 .mario-about__mario-brand {
@@ -7016,7 +7125,7 @@ main.main-about-mario {
     > span {
       display: inline-block;
       background: $black-color;
-      color: $white-color;
+      color: $orange-color;
     }
   }
 
@@ -7028,12 +7137,41 @@ main.main-about-mario {
     font-weight: normal;
     margin: 30px 0;
   }
-
+  > a {
+    color: $black-color;
+    font-weight: bold;
+    border-bottom: 1px solid #fa8100;
+    width: auto;
+    position: relative;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 27px;
+    font-family: $main-font;
+    text-decoration: none;
+    &:hover {
+      &::after {
+        transform: translate(15px, -50%) rotate(-45deg);
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid #fa8100;
+      border-bottom: 2px solid #fa8100;
+      transform: translate(0, -50%) rotate(-45deg);
+      transition: transform 0.4s ease-in-out;
+    }
+  }
   > span {
     color: #86868b;
-    font-family: $main-font;
+    font-family: Arial, sans-serif;
     font-size: 120px;
-    font-weight: normal;
+    font-weight: 600;
     line-height: 132px;
 
     &:last-child {
@@ -7436,13 +7574,15 @@ main.main-about-mario {
 
 .mario-subheader-menu {
   width: 100%;
+  position: fixed;
+  top: 55px;
   background: rgba(255, 255, 255, 0.56) !important;
   backdrop-filter: blur(10px) !important;
   height: 50px;
   //position: fixed;
-  margin-top: 55px;
   z-index: 5;
   box-shadow: 0 0 11px 4px rgba(0, 0, 0, 0.15);
+  transition:  transform 0.8s ease-in-out;
 
   .container {
     height: 100%;
@@ -7451,10 +7591,6 @@ main.main-about-mario {
   @media screen and (max-width: 768px) {
     height: 60px;
   }
-}
-
-.mario-subheader-menu + * {
-  margin-top: -55px;
 }
 
 .mario-subheader-menu__container {
@@ -8111,8 +8247,8 @@ html {
       padding-top: 60px;
       .water-tap__text {
         h3 {
-          font-size: 18px;
-          line-height: 24px;
+          font-size: 22px;
+          line-height: 28px;
         }
 
         p {
@@ -8474,41 +8610,20 @@ html {
 
 
   span {
-    font-size: 420px;
+    font-size: 180px;
     font-family: $main-font;
     font-weight: bold;
     color: $white-color;
-    line-height: 210px;
-    display: inline-block;
+    line-height: 120px;
+    display: inline-flex;
     align-items: flex-start;
     vertical-align: top;
     max-height: 280px;
     position: relative;
     width: 465px;
     transition: color 0.6s ease-out, text-shadow 0.6s;
-
-
-    &::before {
-      position: absolute;
-      content: '';
-      background: transparent;
-      width: 15px;
-      height: 15px;
-      border: 10px solid $orange-color;
-      border-radius: 50%;
-      right: -20px;
-      top: 0;
-    }
-
-    &::after {
-      position: absolute;
-      content: 'C';
-      font-size: 120px;
-      line-height: 90px;
-      color: $orange-color;
-      top: 0;
-      right: -115px;
-      text-shadow: none;
+    > strong {
+      line-height: 75px;
     }
 
   }
@@ -9269,7 +9384,106 @@ $height-for-li: 750px;
 
 .find-color__change-bath-color {
   width: 100%;
+  display: flex;
+  flex-direction: row;
 
+  section {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 103px 200px 50px 103px;
+    background: url("../img/bgbgbg.jpg") no-repeat center;
+    background-size: cover;
+
+    > h3 {
+      font-family: $main-font;
+      font-size: 80px;
+      line-height: 86px;
+      color: $white-color;
+      font-weight: bold;
+
+
+    }
+    > p {
+      font-size: 24px;
+      font-family: $main-font;
+      line-height: 36px;
+      color: $white-color;
+      font-weight: normal;
+      margin-top: 30px;
+    }
+
+    > a {
+      border-bottom: 2px solid $orange-color;
+      font-family: $main-font;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 3px 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: $white-color;
+      font-weight: 600;
+      justify-self: flex-end;
+      margin-top: 50px;
+      transition: border-bottom-color 0.3s;
+
+      &:hover {
+        border-bottom-color: $white-color;
+        transition: border-bottom-color 0.3s;
+
+      }
+    }
+    @media screen and (max-width:1441px) {
+      padding: 75px 15px 30px 75px;
+      > h3 {
+        font-size: 54px;
+        line-height: 62px;
+      }
+      > p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    
+    @media screen and (max-width: 975px) {
+      padding: 45px 15px 20px 45px;
+      >h3 {
+        font-size: 48px;
+        line-height: 54px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 50px 15px;
+      min-height: 350px;
+      >h3 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      > p {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      > a {
+        margin-top: 30px;
+      }
+    }
+
+    @media screen and (max-width: 525px) {
+      padding: 50px 15px;
+      > p {
+        margin-top: 15px;
+      }
+      > a {
+        margin-top:  20px;
+      }
+    }
+  }
   ul {
     width: 50%;
     display: flex;
@@ -9345,21 +9559,17 @@ $height-for-li: 750px;
       }
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
     ul {
-      flex-direction: column;
-
+      width: 100%;
       li {
-        position: relative;
-        width: 100% !important;
-
         p {
-          transform: translate(-50%, -50%);
-          font-size: 28px;
-          line-height: 36px;
+          font-size: 14px;
         }
       }
     }
+
   }
 }
 
@@ -9979,7 +10189,32 @@ $height-for-li: 750px;
       }
 
     }
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+
+      .container {
+        .mario-about__about-header {
+          opacity: 1;
+          transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+      }
+    }
   }
+
+  @media screen and (max-width: 768px) {
+    .mario-type-product {
+      flex-direction: column;
+      align-items: center;
+      .video-banner__video-container {
+        position: static;
+      }
+    }
+  }
+}
+
+.mario-water-heat .mario-type-product-page__mario-warranty-time {
+  background: $white-color;
 }
 
 
@@ -10039,6 +10274,24 @@ $height-for-li: 750px;
       overflow: visible !important;
       opacity: 1 !important;
       transition: opacity 0.4s, visibility 0.4s, height 0.4s, min-height 0.4s;
+    }
+  }
+}
+
+.mario-footer {
+  li.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    > a {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      margin-right: 12px;
+      border-radius: 50%;
     }
   }
 }

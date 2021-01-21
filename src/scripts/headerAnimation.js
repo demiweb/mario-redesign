@@ -125,4 +125,28 @@ burgerBtn.addEventListener('click', () => {
     }
 
 
+});
+
+let subHeadMenu = document.querySelector('.mario-subheader-menu');
+let oldScrollPos = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+document.addEventListener('scroll', (e) => {
+    // console.log(oldScrollPos);
+    let newScrollPos = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+    // console.log(e.deltaY);
+    if (newScrollPos > oldScrollPos) {
+            setTimeout(() => {
+                subHeadMenu.style.transform = 'translate(0, -120px)';
+            }, 400);
+
+
+    } else {
+
+        setTimeout(() => {
+            subHeadMenu.style.transform = 'translate(0, 0)';
+        }, 400);
+
+    }
+
+    oldScrollPos = newScrollPos;
+
 })

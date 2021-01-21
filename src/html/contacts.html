@@ -130,7 +130,7 @@
                     </div>
                     <div class="team-members__mario-member">
                         <div class="mario-member__img for-video-class">
-                            <video src="../video/video-dasha.mp4" muted="" loop=""></video>                        </div>
+                            <video src="../video/video-dasha-2.mp4" muted=""></video>                        </div>
                         <div class="mario-member__info">
                                 <h3>Сергій</h3>
                             <p>Менеджер з продажів</p>
@@ -364,6 +364,8 @@
                     <ul>
                         <li><p><strong>0 800 474-05-39</strong></p></li>
                         <li><a href="mailto:partner@mario.ua">partner@mario.ua</a></li>
+                        <li class="socials">
+                            <a href="#"><img src="../img/facebook-logo.svg" alt="Facebook social"></a><a href="#"><img src="../img/instagram-logo.svg" alt="Instagram social"></a></li>
                         <li><p>Вінницька обл., Україна, <br>
                             22300 Сосонське шосе, 4-В, смт. Літин</p></li>
                     </ul>
@@ -397,17 +399,6 @@
 </footer>
 <script>
 
-    let videoHover = [...document.querySelectorAll('.for-video-class')][0];
-    let videoHoverCont = videoHover.closest('.team-members__mario-member');
-
-    videoHoverCont.addEventListener('mouseover', () => {
-        videoHoverCont.querySelector('video').play();
-
-    })
-    videoHoverCont.addEventListener('mouseout', () => {
-        videoHoverCont.querySelector('video').pause();
-
-    })
 </script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

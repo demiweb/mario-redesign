@@ -9,24 +9,29 @@ let parTitle = [...document.querySelectorAll('.mario-water-heat .mario-about__ab
 let oldMatrix;
 function parallaxTitle() {
     if (parTitle.length > 0) {
-        let title = parTitle[0];
-        let spaceBello = window.innerHeight - title.getBoundingClientRect().bottom + title.offsetHeight;
+        if (window.innerWidth > 768) {
+            let title = parTitle[0];
+            let spaceBello = window.innerHeight - title.getBoundingClientRect().bottom + title.offsetHeight;
 
-        let basicMatrix = -800;
-        let topDistance = title.getBoundingClientRect().top + title.offsetHeight;
-        oldMatrix = topDistance;
-        let scrollAMount = window.scrollY;
-        let newMatrix = basicMatrix + scrollAMount;
-        if (newMatrix >= 0) {
-            newMatrix = 0;
-            title.style.transform = `matrix(1, 0, 0, 1, 0, ${newMatrix})`
+            let basicMatrix = -800;
+            let topDistance = title.getBoundingClientRect().top + title.offsetHeight;
+            oldMatrix = topDistance;
+            let scrollAMount = window.scrollY;
+            let newMatrix = basicMatrix + scrollAMount;
+            if (newMatrix >= 0) {
+                newMatrix = 0;
+                title.style.transform = `matrix(1, 0, 0, 1, 0, ${newMatrix})`
 
+            } else {
+                title.style.transform = `matrix(1, 0, 0, 1, 0, ${newMatrix})`
+
+            }
+            title.style.opacity = ``
         } else {
-            title.style.transform = `matrix(1, 0, 0, 1, 0, ${newMatrix})`
-
+            parTitle[0].style.transform = `matrix(1, 0, 0, 1, 0, 0)`;
         }
-        title.style.opacity = ``
-        console.log(newMatrix + ' hihihi ' + topDistance + ' do vverha stranici');
+
+        // console.log(newMatrix + ' hihihi ' + topDistance + ' do vverha stranici');
     }
 }
 
@@ -268,9 +273,11 @@ function isInViewport() {
                             afterBlockBg2.style.opacity = '1';
                         } else {
                             afterBlockBg2.style.opacity = opacityBg;
+                            afterBlockBg2.style.filter = 'blur(4px)';
                         }
                     } else {
                         afterBlockBg2.style.opacity = '0';
+                        afterBlockBg2.style.filter = 'none';
                     }
                 } else if (document.body.clientWidth < 578) {
                     if (rect.top < -200) {
@@ -279,6 +286,7 @@ function isInViewport() {
                             afterBlockBg2.style.opacity = '1';
                         } else {
                             afterBlockBg2.style.opacity = opacityBg;
+                            afterBlockBg2.style.filter = 'blur(4px)';
                         }
 
                     } else {
@@ -289,8 +297,10 @@ function isInViewport() {
                         let opacityBg = ((-rect.top) / h) * 1.6;
                         if (opacityBg > 1) {
                             afterBlockBg2.style.opacity = '1';
+                            afterBlockBg2.style.filter = 'none';
                         } else {
                             afterBlockBg2.style.opacity = opacityBg;
+                            afterBlockBg2.style.filter = 'blur(4px)';
                         }
 
 

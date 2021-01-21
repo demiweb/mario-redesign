@@ -3830,6 +3830,35 @@ body .mario-footer .mario-footer__footer-bottom {
   box-sizing: border-box;
   justify-content: center;
 }
+.mario-product-description__container > div > div > a {
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 1px solid #fa8100;
+  width: auto;
+  max-width: 95px;
+  text-decoration: none;
+  position: relative;
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-family: "Raleway", sans-serif;
+}
+.mario-product-description__container > div > div > a::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fa8100;
+  border-bottom: 2px solid #fa8100;
+  transform: translate(0, -50%) rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
+.mario-product-description__container > div > div > a:hover::after {
+  transform: translate(15px, -50%) rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
 .mario-product-description__container > div > div span {
   display: flex;
 }
@@ -3891,15 +3920,21 @@ body .mario-footer .mario-footer__footer-bottom {
   .mario-product-description__container > div > div {
     width: 100%;
     padding-left: 0;
+    box-sizing: border-box;
     margin: 15px 0;
-    height: 380px;
-    align-items: center;
+    height: auto;
+    align-items: flex-start;
   }
   .mario-product-description__container > div > div:last-child {
-    height: 200px;
+    height: auto;
+    padding-left: 40px;
+    box-sizing: border-box;
   }
   .mario-product-description__container > div > div p {
-    text-align: center;
+    text-align: left;
+    display: inline-block;
+    padding: 0 60px 0 0;
+    box-sizing: border-box;
   }
   .mario-product-description__container > div > div:first-child {
     width: 100%;
@@ -4781,38 +4816,93 @@ a.product-delivery-rules__block:hover > .product-delivery-rules_bg {
   transform: scale(1.1, 1.1) translate(-20px, 0);
   transition: transform 0.6s;
 }
-a.product-delivery-rules__block.product-delivery-rules__block--reverse {
+a.product-delivery-rules__block.warranty--bg {
+  background: url("../img/waranty-bg.png") no-repeat 130% center, white;
+  background-size: 60%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+a.product-delivery-rules__block.warranty--bg:hover {
+  background-size: 70%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+@media screen and (max-width: 1045px) {
+  a.product-delivery-rules__block.warranty--bg {
+    background-size: 70%;
+    background-position: 140% center;
+  }
+  a.product-delivery-rules__block.warranty--bg:hover {
+    background-size: 75%;
+  }
+}
+@media screen and (max-width: 922px) {
+  a.product-delivery-rules__block.warranty--bg {
+    background-size: 90%;
+    background-position: 175% center;
+  }
+  a.product-delivery-rules__block.warranty--bg:hover {
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 675px) {
+  a.product-delivery-rules__block.warranty--bg {
+    background-size: cover;
+    background-position: 300px center;
+  }
+}
+@media screen and (max-width: 475px) {
+  a.product-delivery-rules__block.warranty--bg {
+    background-size: cover;
+    background-position: 80px center;
+  }
+}
+a.product-delivery-rules__block.delivery--bg {
+  background: url("../img/mario-pay-bg.png") no-repeat center right, black;
+  background-size: 60%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+a.product-delivery-rules__block.delivery--bg h2, a.product-delivery-rules__block.delivery--bg p, a.product-delivery-rules__block.delivery--bg span {
+  color: #ffffff;
+}
+a.product-delivery-rules__block.delivery--bg:hover {
+  background-size: 70%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+@media screen and (max-width: 700px) {
+  a.product-delivery-rules__block.delivery--bg {
+    background-position: bottom right;
+  }
+}
+a.product-delivery-rules__block.payment--bg {
+  background: url("../img/novaposhta.png") no-repeat bottom left, white;
+  background-size: 45%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+a.product-delivery-rules__block.payment--bg:hover {
+  background-size: 55%;
+  transition: background-size 0.6s, background-position 0.6s;
+}
+a.product-delivery-rules__block.return--bg {
   background: url("../img/OCDAIG0.png") no-repeat center, #ffffff;
   background-size: 100%;
   transition: background-size 0.6s, background-position 0.6s;
 }
-@media screen and (max-width: 768px) {
-  a.product-delivery-rules__block.product-delivery-rules__block--reverse {
-    background-size: 175%;
-  }
-  a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
-    padding-left: 0 !important;
-  }
-}
-@media screen and (max-width: 568px) {
-  a.product-delivery-rules__block.product-delivery-rules__block--reverse {
-    background-size: 210%;
-  }
-  a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
-    padding-left: 0 !important;
-  }
-  a.product-delivery-rules__block.product-delivery-rules__block--reverse:hover {
-    background-size: 135%;
-    background-position: center bottom;
-  }
-}
-a.product-delivery-rules__block.product-delivery-rules__block--reverse:hover {
+a.product-delivery-rules__block.return--bg:hover {
   background-size: 110%;
   transition: background-size 0.6s, background-position 0.6s;
 }
-a.product-delivery-rules__block.product-delivery-rules__block--reverse:hover > div span {
-  color: #fa8100;
-  transition: color 0.6s;
+@media screen and (max-width: 768px) {
+  a.product-delivery-rules__block.return--bg {
+    background-size: 175%;
+  }
+}
+@media screen and (max-width: 568px) {
+  a.product-delivery-rules__block.return--bg {
+    background-size: 210%;
+  }
+  a.product-delivery-rules__block.return--bg:hover {
+    background-size: 135%;
+    background-position: center bottom;
+  }
 }
 a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
   padding-left: 50%;
@@ -4820,6 +4910,16 @@ a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
 }
 a.product-delivery-rules__block.product-delivery-rules__block--reverse > div p {
   max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  a.product-delivery-rules__block.product-delivery-rules__block--reverse > div {
+    padding-left: 0 !important;
+  }
+  a.product-delivery-rules__block.product-delivery-rules__block--reverse > div p {
+    backdrop-filter: blur(2px);
+    color: #000000;
+    text-shadow: 0 2px 2px #ffffff;
+  }
 }
 a.product-delivery-rules__block > .product-delivery-rules_bg {
   z-index: 1;
@@ -5218,6 +5318,7 @@ button.mario-button {
   }
   .mario-warranty-content__warranty-obligation p {
     font-size: 16px;
+    text-shadow: 4px 4px 10px black;
   }
 }
 @media screen and (max-width: 568px) {
@@ -5267,15 +5368,14 @@ button.mario-button {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 5px;
+  transform: translate(0, 50%);
   width: 7px;
   height: 7px;
   background: #fa8100;
   border-radius: 50%;
 }
 .mario-warranty-content .container > p {
-  padding-left: 17px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
@@ -5642,6 +5742,7 @@ main.main-partnership-page {
 @media screen and (max-width: 768px) {
   .partnership-conditions__block {
     height: auto;
+    padding: 20px 60px 20px 40px;
     width: 100%;
   }
   .partnership-conditions__block:last-child {
@@ -6132,10 +6233,14 @@ main.main-about-mario {
   margin-bottom: 0;
   flex-grow: 1;
   height: 100%;
+  position: relative;
 }
 .mario-about-page .mario-partnership__container {
   flex-grow: 1;
   height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .mario-about__about-header {
@@ -6299,7 +6404,7 @@ main.main-about-mario {
 .mario-offer_offer-card > h3 > span {
   display: inline-block;
   background: #000000;
-  color: #ffffff;
+  color: #fa8100;
 }
 .mario-offer_offer-card > p {
   font-size: 18px;
@@ -6309,11 +6414,39 @@ main.main-about-mario {
   font-weight: normal;
   margin: 30px 0;
 }
+.mario-offer_offer-card > a {
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 1px solid #fa8100;
+  width: auto;
+  position: relative;
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+.mario-offer_offer-card > a:hover::after {
+  transform: translate(15px, -50%) rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
+.mario-offer_offer-card > a::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fa8100;
+  border-bottom: 2px solid #fa8100;
+  transform: translate(0, -50%) rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
 .mario-offer_offer-card > span {
   color: #86868b;
-  font-family: "Raleway", sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 120px;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 132px;
 }
 .mario-offer_offer-card > span:last-child {
@@ -6674,12 +6807,14 @@ main.main-about-mario {
 
 .mario-subheader-menu {
   width: 100%;
+  position: fixed;
+  top: 55px;
   background: rgba(255, 255, 255, 0.56) !important;
   backdrop-filter: blur(10px) !important;
   height: 50px;
-  margin-top: 55px;
   z-index: 5;
   box-shadow: 0 0 11px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.8s ease-in-out;
 }
 .mario-subheader-menu .container {
   height: 100%;
@@ -6688,10 +6823,6 @@ main.main-about-mario {
   .mario-subheader-menu {
     height: 60px;
   }
-}
-
-.mario-subheader-menu + * {
-  margin-top: -55px;
 }
 
 .mario-subheader-menu__container {
@@ -7268,8 +7399,8 @@ html {
     padding-top: 60px;
   }
   .water-tap__preview-container .container .water-tap__text h3 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 28px;
   }
   .water-tap__preview-container .container .water-tap__text p {
     font-size: 14px;
@@ -7602,12 +7733,12 @@ html {
   justify-content: space-between;
 }
 .safety-mario__container span {
-  font-size: 420px;
+  font-size: 180px;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #ffffff;
-  line-height: 210px;
-  display: inline-block;
+  line-height: 120px;
+  display: inline-flex;
   align-items: flex-start;
   vertical-align: top;
   max-height: 280px;
@@ -7615,26 +7746,8 @@ html {
   width: 465px;
   transition: color 0.6s ease-out, text-shadow 0.6s;
 }
-.safety-mario__container span::before {
-  position: absolute;
-  content: "";
-  background: transparent;
-  width: 15px;
-  height: 15px;
-  border: 10px solid #fa8100;
-  border-radius: 50%;
-  right: -20px;
-  top: 0;
-}
-.safety-mario__container span::after {
-  position: absolute;
-  content: "C";
-  font-size: 120px;
-  line-height: 90px;
-  color: #fa8100;
-  top: 0;
-  right: -115px;
-  text-shadow: none;
+.safety-mario__container span > strong {
+  line-height: 75px;
 }
 .safety-mario__container div {
   margin-left: auto;
@@ -8286,6 +8399,104 @@ html {
 
 .find-color__change-bath-color {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.find-color__change-bath-color section {
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 103px 200px 50px 103px;
+  background: url("../img/bgbgbg.jpg") no-repeat center;
+  background-size: cover;
+}
+.find-color__change-bath-color section > h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 80px;
+  line-height: 86px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.find-color__change-bath-color section > p {
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  line-height: 36px;
+  color: #ffffff;
+  font-weight: normal;
+  margin-top: 30px;
+}
+.find-color__change-bath-color section > a {
+  border-bottom: 2px solid #fa8100;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 3px 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  justify-self: flex-end;
+  margin-top: 50px;
+  transition: border-bottom-color 0.3s;
+}
+.find-color__change-bath-color section > a:hover {
+  border-bottom-color: #ffffff;
+  transition: border-bottom-color 0.3s;
+}
+@media screen and (max-width: 1441px) {
+  .find-color__change-bath-color section {
+    padding: 75px 15px 30px 75px;
+  }
+  .find-color__change-bath-color section > h3 {
+    font-size: 54px;
+    line-height: 62px;
+  }
+  .find-color__change-bath-color section > p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .find-color__change-bath-color section {
+    padding: 45px 15px 20px 45px;
+  }
+  .find-color__change-bath-color section > h3 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .find-color__change-bath-color section {
+    width: 100%;
+    padding: 50px 15px;
+    min-height: 350px;
+  }
+  .find-color__change-bath-color section > h3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .find-color__change-bath-color section > p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .find-color__change-bath-color section > a {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .find-color__change-bath-color section {
+    padding: 50px 15px;
+  }
+  .find-color__change-bath-color section > p {
+    margin-top: 15px;
+  }
+  .find-color__change-bath-color section > a {
+    margin-top: 20px;
+  }
 }
 .find-color__change-bath-color ul {
   width: 50%;
@@ -8347,18 +8558,15 @@ html {
     height: 450px;
   }
 }
-@media screen and (max-width: 600px) {
-  .find-color__change-bath-color ul {
+@media screen and (max-width: 768px) {
+  .find-color__change-bath-color {
     flex-direction: column;
   }
-  .find-color__change-bath-color ul li {
-    position: relative;
-    width: 100% !important;
+  .find-color__change-bath-color ul {
+    width: 100%;
   }
   .find-color__change-bath-color ul li p {
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 14px;
   }
 }
 
@@ -8919,6 +9127,28 @@ html {
   opacity: 1;
   transform: matrix(1, 0, 0, 1, 0, -800.6);
 }
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page {
+    height: auto;
+  }
+  .mario-water-heat .mario-type-product-page .container .mario-about__about-header {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mario-water-heat .mario-type-product .video-banner__video-container {
+    position: static;
+  }
+}
+
+.mario-water-heat .mario-type-product-page__mario-warranty-time {
+  background: #ffffff;
+}
 
 .for-video-class {
   position: relative;
@@ -8965,6 +9195,22 @@ html {
   overflow: visible !important;
   opacity: 1 !important;
   transition: opacity 0.4s, visibility 0.4s, height 0.4s, min-height 0.4s;
+}
+
+.mario-footer li.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mario-footer li.socials > a {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  margin-right: 12px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */

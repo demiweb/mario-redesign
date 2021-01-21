@@ -17,9 +17,9 @@ setInterval(() => {
 
 }, 40);
 
-let animTemp = [...document.querySelectorAll('.safety-mario__container span')][0];
+let animTemp = [...document.querySelectorAll('.safety-mario__container span strong')][0];
 let startTemp = 15;
-let endTemp = 55;
+let endTemp = 44;
 let timer;
 function checkTempWidth() {
     if (!animTemp) {
@@ -108,4 +108,21 @@ imgComparation.forEach((img, i) => {
         }
 
     })
+});
+let videoHoverCont;
+let videoHover = [...document.querySelectorAll('.for-video-class')][0];
+if (!videoHover) {
+
+} else {
+    videoHoverCont = videoHover.closest('.team-members__mario-member');
+}
+
+videoHoverCont.addEventListener('mouseover', () => {
+    videoHoverCont.querySelector('video').play();
+
 })
+videoHoverCont.addEventListener('mouseout', () => {
+    videoHoverCont.querySelector('video').pause();
+    videoHoverCont.querySelector('video').currentTime = 0;
+
+});
