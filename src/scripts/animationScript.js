@@ -17,12 +17,11 @@ btnGoUp.forEach((btn) => {
 })
 let triggerButtonScroll = [...document.querySelectorAll('.mario-product-page__mario-same-products')];
 function checkButtonScrollTop() {
+    console.log('scroll+++')
     if(!btnGoUp[0]) {
-
+        console.log('no-button')
     } else {
-        triggerButtonScroll.forEach((trig, i) => {
 
-            if (i === 0) {
                 let distance = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
                 if (distance > 1000) {
                     btnGoUp[0].classList.add('visible');
@@ -30,8 +29,6 @@ function checkButtonScrollTop() {
                     btnGoUp[0].classList.remove('visible');
                 }
             }
-        })
-    }
 
 }
 document.onscroll = () => {

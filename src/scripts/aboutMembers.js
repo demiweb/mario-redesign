@@ -115,14 +115,14 @@ if (!videoHover) {
 
 } else {
     videoHoverCont = videoHover.closest('.team-members__mario-member');
+    videoHoverCont.addEventListener('mouseover', () => {
+        videoHoverCont.querySelector('video').play();
+
+    })
+    videoHoverCont.addEventListener('mouseout', () => {
+        videoHoverCont.querySelector('video').pause();
+        videoHoverCont.querySelector('video').currentTime = 0;
+
+    });
 }
 
-videoHoverCont.addEventListener('mouseover', () => {
-    videoHoverCont.querySelector('video').play();
-
-})
-videoHoverCont.addEventListener('mouseout', () => {
-    videoHoverCont.querySelector('video').pause();
-    videoHoverCont.querySelector('video').currentTime = 0;
-
-});
