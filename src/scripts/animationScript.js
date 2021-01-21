@@ -23,8 +23,8 @@ function checkButtonScrollTop() {
         triggerButtonScroll.forEach((trig, i) => {
 
             if (i === 0) {
-                let distance = trig.getBoundingClientRect().top;
-                if (distance < 100) {
+                let distance = self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+                if (distance > 1000) {
                     btnGoUp[0].classList.add('visible');
                 } else {
                     btnGoUp[0].classList.remove('visible');
