@@ -6958,7 +6958,7 @@ main.main-about-mario {
   .mario-partnership__container {
     flex-grow: 1;
     height: 100%;
-    position: absolute;
+    //position: absolute;
     left: 0;
     right: 0;
   }
@@ -8610,7 +8610,7 @@ html {
 
 
   span {
-    font-size: 180px;
+    font-size: 320px;
     font-family: $main-font;
     font-weight: bold;
     color: $white-color;
@@ -8623,7 +8623,7 @@ html {
     width: 465px;
     transition: color 0.6s ease-out, text-shadow 0.6s;
     > strong {
-      line-height: 75px;
+      line-height:30px;
     }
 
   }
@@ -8653,11 +8653,12 @@ html {
 
   @media screen and (max-width: 1440px) {
     span {
-      font-size: 320px;
+      font-size: 240px;
       width: 380px;
       flex-grow: 0;
       flex-shrink: 0;
-      line-height: 140px;
+      line-height: 100px;
+
     }
     div {
       margin-left: 122px;
@@ -8676,8 +8677,8 @@ html {
 
   @media screen and (max-width: 968px) {
     span {
-      font-size: 260px;
-      line-height: 130px;
+      font-size: 190px;
+      line-height: 85px;
       width: 300px;
     }
     div {
@@ -8694,8 +8695,8 @@ html {
   }
   @media screen and (max-width: 768px) {
     span {
-      font-size: 180px;
-      line-height: 90px;
+      font-size: 150px;
+      line-height: 70px;
       width: 210px;
 
       &::before {
@@ -8724,6 +8725,10 @@ html {
   }
 
   @media screen and (max-width: 568px) {
+    span {
+      justify-content: center;
+      width: 100%;
+    }
     flex-direction: column;
     align-items: center;
     div {
@@ -8740,10 +8745,9 @@ html {
   }
   @media screen and (max-width: 425px) {
     span {
-      font-size: 130px;
-      line-height: 60px;
-      width: 145px;
-      transform: translate(-25%, 0);
+      font-size: 100px;
+      line-height: 55px;
+
 
       &::after {
 
