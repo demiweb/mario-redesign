@@ -8288,7 +8288,7 @@ html {
   width: 100%;
 }
 .find-color__change-bath-color ul {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -8296,10 +8296,10 @@ html {
 }
 .find-color__change-bath-color ul li {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: flex-start;
-  width: 50%;
+  width: calc(100% / 3);
   transition: width 1s;
   height: 750px;
 }
@@ -8307,14 +8307,15 @@ html {
   font-family: "Raleway", sans-serif;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+  top: 90%;
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-weight: bold;
-  color: #000000;
-  font-size: 48px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 34px;
   white-space: nowrap;
-  text-shadow: 0 0 6px white;
+  transition: opacity 0.6s;
 }
 .find-color__change-bath-color ul li img {
   width: 100%;
@@ -8322,17 +8323,14 @@ html {
   object-fit: cover;
 }
 .find-color__change-bath-color ul li:first-child {
-  left: 0;
+  z-index: 2;
+}
+.find-color__change-bath-color ul li:nth-child(2) {
   z-index: 2;
 }
 .find-color__change-bath-color ul li:last-child {
-  right: 0;
   z-index: 2;
   justify-content: flex-end;
-}
-.find-color__change-bath-color ul li:last-child p {
-  color: #ffffff;
-  text-shadow: 0 0 6px black;
 }
 .find-color__change-bath-color ul li:hover {
   transition: width 1s;

@@ -79,10 +79,11 @@ imgComparation.forEach((img, i) => {
             imgComparation.forEach((img2, k) => {
                 if (i === k) {
                     imgComparation[i].style.zIndex = '4';
-                    imgComparation[i].style.width = '85%';
+                    imgComparation[i].style.width = 'calc((100% / 3) * 2)';
                 } else {
                     img2.style.zIndex = '2';
-                    img2.style.width = '15%';
+                    img2.style.width = 'calc((100% / 3) / 2)';
+                    img2.querySelector('p').style.opacity = '0';
                 }
             })
         }
@@ -97,7 +98,8 @@ imgComparation.forEach((img, i) => {
 
         } else {
             imgComparation.forEach((img2, k) => {
-                img2.style.width = '50%';
+                img2.style.width = 'calc(100% / 3)';
+                img2.querySelector('p').style.opacity = '1';
             })
             img.style.zIndex = '3';
             setTimeout(() => {
