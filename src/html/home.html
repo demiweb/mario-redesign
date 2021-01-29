@@ -21,7 +21,13 @@
             </div>
             <nav class="mario-header__header-navigation">
                 <ul>
-                    <li><a href="#">Продукція</a></li>
+                    <li><a href="#">Продукція</a>
+                        <ul>
+                            <li><a href="#">Електричні</a></li>
+                            <li><a href="#">Водяні</a></li>
+                            <li><a href="#">Аксесуари</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Для партнерів</a></li>
                     <li><a href="#">Підтримка</a></li>
                     <li><a href="#">Контакти</a></li>
@@ -261,6 +267,34 @@
     </section>
 </main>
 <div class="scroll-up"></div>
+
+<div class="mario-modal-overlay">
+    <div class="mario-modal-window">
+        <div class="modal-close">
+
+        </div>
+        <div class="mario-modal__content">
+            <div class="mario-modal__img-container">
+                <img src="../img/57335.jpg" alt="">
+            </div>
+            <div class="mario-modal__text-part">
+                <h3>Запрос сотрудничества</h3>
+                <form action="form">
+                    <label for="mario__input-name">Имя
+                        <input type="text" id="mario__input-name">
+                    </label>
+                    <label for="mario__input-number">Телефон
+                        <input type="text" id="mario__input-number">
+                    </label>
+                    <label for="mario__input-email">Почта
+                        <input type="text" id="mario__input-email">
+                    </label>
+                    <button type="">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="mario-footer">
     <section class="mario-footer__footer-top">
         <div class="container">

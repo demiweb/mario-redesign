@@ -487,6 +487,7 @@ body {
       padding: 9px 8px;
       border-bottom: 1px solid transparent;
       transition: border-bottom-color 0.3s;
+      position: relative;
 
       &:hover {
         border-color: $orange-color;
@@ -500,6 +501,61 @@ body {
         @include li-p-fonts;
         font-weight: 600;
         color: $white-color;
+      }
+      &:hover {
+        z-index: 2;
+        > ul {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0.4s ease, opacity 0.4s ease;
+        }
+      }
+      > ul {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        left: 0;
+        list-style: none;
+        margin: 13px 0 0;
+        padding: 0;
+        background: #1e1e1e;
+        box-shadow: 0 7px 35px #2e2e2ecc;
+        transition: visibility 0.4s ease, opacity 0.4s ease;
+        > li {
+
+          border-bottom: 1px solid transparent;
+          position: relative;
+          padding: 9px 0;
+          box-sizing: border-box;
+          transition: background-color 0.4s ease, color 0.4s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            & a {
+              color: $orange-color;
+              transition: background-color 0.4s ease, color 0.4s ease;
+
+            }
+          }
+
+          > a {
+            text-decoration: none;
+
+            white-space: nowrap;
+            font-family: "Raleway", sans-serif;
+            font-size: 14px;
+            padding: 0 8px;
+            line-height: 24px;
+            font-weight: 600;
+            color: $white-color;
+            width: 100%;
+            height: 100%;
+            transition: background-color 0.4s ease, color 0.4s ease;
+
+            box-sizing: border-box;
+          }
+        }
       }
     }
   }
@@ -864,6 +920,20 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .mario-header__header-navigation > ul > li > ul {
+    bottom: -1px;
+    transform: translate(0, 100%);
+    right: 10px;
+    left: 10px;
+    box-shadow: 0 6px 10px 1px rgba(255, 255, 255, 0.3);
+    > li {
+      border-bottom-color: $black-color;
+    }
+  }
+}
+
+
 @keyframes navFading {
   0% {
     right: 50%;
@@ -936,7 +1006,7 @@ body {
 }
 
 .mario-main__video-banner {
-  height: 700px;
+  height: 900px;
   width: 100%;
   position: relative;
   display: flex;
@@ -947,6 +1017,10 @@ body {
     z-index: 3;
     margin-bottom: 8%;
 
+  }
+
+  @media screen and (max-width: 1440px) {
+    height: 600px;
   }
 
   h1 {
@@ -1010,7 +1084,8 @@ body {
 
 .mario-main__mario-features {
   width: 100%;
-  background: $black-color;
+  backdrop-filter: invert(0.15) saturate(180%) blur(20px);
+  background: rgba(29, 29, 31, .72) !important;
   padding: 60px 0;
 
   @media screen and (max-width: 768px) {
@@ -1447,6 +1522,7 @@ body {
 
       @media screen and (max-width: 1440px) {
         font-size: 205px;
+        top: 45%;
       }
 
       @media screen and (max-width: 1080px) {
@@ -1456,22 +1532,24 @@ body {
 
       @media screen and (max-width: 978px) {
         font-size: 147px;
+        top: 35%;
       }
       @media screen and (max-width: 768px) {
         font-size: 112px;
+        top: 16%;
       }
 
       @media screen and (max-width: 578px) {
         font-size: 92px;
-        top: 44%;
+        top: 10%;
       }
       @media screen and (max-width: 478px) {
         font-size: 80px;
-        top: 37%;
+        top: 12%;
       }
       @media screen and (max-width: 412px) {
         font-size: 70px;
-        top: 23%;
+        top: 12%;
       }
       @media screen and (max-width: 375px) {
         font-size: 60px;
@@ -1740,6 +1818,7 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -1807,6 +1886,13 @@ body {
 
   @media screen and (max-width: 768px) {
     height: auto;
+  }
+}
+
+.mario-main__partner-block--reverse {
+  margin-top: 0;
+  .partner-block__half-container {
+    flex-direction: row-reverse;
   }
 }
 
@@ -3393,12 +3479,24 @@ body {
   .container {
     max-width: 920px;
   }
+
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 35px;
+  }
 }
 
 .mario-download__catalog-container {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+
+.mario-main__video-banner + .mario-download__catalog {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  //padding-bottom: 25px;
 }
 
 .mario-download__catalog-type {
@@ -3565,6 +3663,7 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     position: relative;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
 
     .btn--comb {
       position: static;
@@ -4263,6 +4362,7 @@ body {
       padding-left: 8%;
       box-sizing: border-box;
       justify-content: center;
+
       > a {
         color: $black-color;
         font-weight: bold;
@@ -4275,6 +4375,7 @@ body {
         font-size: 16px;
         line-height: 27px;
         font-family: $main-font;
+
         &::after {
           content: "";
           position: absolute;
@@ -4287,6 +4388,7 @@ body {
           transform: translate(0, -50%) rotate(-45deg);
           transition: transform 0.4s ease-in-out;
         }
+
         &:hover {
           &::after {
             transform: translate(15px, -50%) rotate(-45deg);
@@ -4294,6 +4396,7 @@ body {
           }
         }
       }
+
       span {
         display: flex;
 
@@ -4370,14 +4473,14 @@ body {
 
         &:last-child {
           height: auto;
-          padding-left: 40px;
+          padding-left: 20px;
           box-sizing: border-box;
         }
 
         p {
           text-align: left;
           display: inline-block;
-          padding: 0 60px 0 0;
+          padding: 0 30px 0 0;
           box-sizing: border-box;
         }
 
@@ -4400,7 +4503,23 @@ body {
     @media screen and (max-width: 578px) {
       > div {
         height: 320px;
+
+        &:last-child {
+          height: auto;
+          padding-left: 0;
+          box-sizing: border-box;
+        }
+
+        p {
+          text-align: left;
+          display: inline-block;
+          padding: 0;
+          margin: 15px 0;
+          box-sizing: border-box;
+        }
       }
+
+
     }
   }
 
@@ -4597,10 +4716,17 @@ body {
     height: 75px;
 
     &:first-child {
-      padding-right: 76px;
+      padding-right: 8%;
       box-sizing: border-box;
+
+      @media screen and (max-width: 1200px) {
+        padding-right: 10%;
+      }
       @media screen and (max-width: 768px) {
-        padding-right: 47px;
+        padding-right: 8%;
+      }
+      @media screen and (max-width: 525px) {
+        padding-right: 11%;
       }
     }
 
@@ -4612,15 +4738,33 @@ body {
       //max-width: 25%;
       flex-grow: 1;
       width: 25%;
-      padding-left: 10px;
+      //padding-left: 10px;
+      height: 100%;
       box-sizing: border-box;
       font-family: "Raleway", sans-serif;
       color: $black-color;
       font-weight: bold;
       font-size: 18px;
       line-height: 24px;
-      margin: 30px 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      position: relative;
+      //white-space: nowrap;
+      //text-overflow: ellipsis;
+
+      small {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -3px);
+        font-weight: normal;
+        color: $p-color;
+        line-height: 14px;
+      }
 
       &:nth-child(2) {
         //width: 35%;
@@ -4642,9 +4786,10 @@ body {
       padding-left: 10px;
       box-sizing: border-box;
       flex-grow: 2;
+      width: calc((100% / 4) - 22px);
 
       &:first-child {
-        text-align: left;
+        text-align: center;
         flex-grow: 1;
       }
 
@@ -4694,7 +4839,7 @@ body {
     > div {
       > h4 {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 16px;
       }
 
       > p {
@@ -4957,14 +5102,14 @@ body {
 }
 
 .scroll-up {
-  width: 60px;
-  height: 60px;
-  background: #00000085;
-  border: 2px solid  #ffffff75;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.42);
+  border: 2px solid #fa8100d1;
   position: fixed;
   bottom: 35px;
   right: 35px;
-  z-index: 999999;
+  z-index: 999;
   border-radius: 50%;
   cursor: pointer;
   visibility: hidden;
@@ -4988,11 +5133,11 @@ body {
     content: "";
     display: inline-block;
     position: absolute;
-    top: 60%;
+    top: 52%;
     left: 50%;
-    width: 12px;
-    height: 12px;
-    border: 4px solid #ffffff;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #fa8100d1;
     border-right-color: transparent;
     border-bottom-color: transparent;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -5377,12 +5522,13 @@ a.product-delivery-rules__block {
     background: url("../img/waranty-bg.png") no-repeat 130% center, rgba(255, 255, 255, 1);
     background-size: 60%;
     transition: background-size 0.6s, background-position 0.6s;
+
     &:hover {
       background-size: 70%;
       transition: background-size 0.6s, background-position 0.6s;
 
     }
-    
+
     @media screen and (max-width: 1045px) {
       background-size: 70%;
       background-position: 140% center;
@@ -5409,6 +5555,7 @@ a.product-delivery-rules__block {
       background-position: 80px center;
     }
   }
+
   &.delivery--bg {
     background: url("../img/mario-pay-bg.png") no-repeat center right, rgba(0, 0, 0, 1);
     background-size: 60%;
@@ -5424,15 +5571,16 @@ a.product-delivery-rules__block {
 
     }
 
-    @media screen and (max-width:700px) {
-background-position: bottom right;
+    @media screen and (max-width: 700px) {
+      background-position: bottom right;
     }
   }
 
   &.payment--bg {
-    background: url("../img/novaposhta.png") no-repeat bottom left, rgba(255,255,255,1);
+    background: url("../img/novaposhta.png") no-repeat bottom left, rgba(255, 255, 255, 1);
     background-size: 45%;
     transition: background-size 0.6s, background-position 0.6s;
+
     &:hover {
       background-size: 55%;
       transition: background-size 0.6s, background-position 0.6s;
@@ -5444,10 +5592,12 @@ background-position: bottom right;
     background: url("../img/OCDAIG0.png") no-repeat center, $white-color;
     background-size: 100%;
     transition: background-size 0.6s, background-position 0.6s;
+
     &:hover {
       background-size: 110%;
       transition: background-size 0.6s, background-position 0.6s;
     }
+
     @media screen and (max-width: 768px) {
       background-size: 175%;
     }
@@ -5462,6 +5612,7 @@ background-position: bottom right;
 
     }
   }
+
   &.product-delivery-rules__block--reverse {
     > div {
       padding-left: 50%;
@@ -5471,13 +5622,15 @@ background-position: bottom right;
         max-width: 100%;
       }
     }
+
     @media screen and (max-width: 768px) {
       > div {
         padding-left: 0 !important;
+
         p {
           backdrop-filter: blur(2px);
           color: $black-color;
-          text-shadow:  0 2px 2px $white-color;
+          text-shadow: 0 2px 2px $white-color;
         }
       }
 
@@ -5751,7 +5904,7 @@ button.mario-button {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   height: 100%;
 }
@@ -5759,7 +5912,7 @@ button.mario-button {
 .warranty__title {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 50%;
   flex-grow: 1;
   justify-content: center;
@@ -5770,7 +5923,7 @@ button.mario-button {
 
     max-width: 80%;
     margin: 0;
-    text-align: left;
+    text-align: center;
     padding-right: 50px;
   }
 
@@ -5781,6 +5934,7 @@ button.mario-button {
     line-height: 24px;
     margin: 30px 0;
     max-width: 75%;
+    text-align: center;
   }
 
   @media screen and (max-width: 1440px) {
@@ -5833,7 +5987,7 @@ button.mario-button {
 }
 
 .mario-main__video-banner.mario-warranty-page {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
 
   .video-banner__video-container::before {
@@ -5842,7 +5996,7 @@ button.mario-button {
 
   .container {
     margin-bottom: 0;
-    height: 100%;
+    height: auto;
 
     > h3, > p, > ul {
       max-width: 720px;
@@ -6043,9 +6197,10 @@ button.mario-button {
   width: 100%;
   background: url("../img/mockup-box2.png") no-repeat center bottom;
   background-size: 60%;
-
+  padding: 100px 0;
   @media screen and (max-width: 768px) {
     background: none;
+    margin: 45px 0;
   }
 }
 
@@ -6053,11 +6208,15 @@ button.mario-button {
 .mario-payment-page__container {
   width: 100%;
 
-  padding: 8% 0 0;
+  //padding: 100px 0;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    //padding: 45px 0;
+  }
 }
 
 .mario-payment-page__block {
@@ -7137,6 +7296,7 @@ main.main-about-mario {
     font-weight: normal;
     margin: 30px 0;
   }
+
   > a {
     color: $black-color;
     font-weight: bold;
@@ -7148,12 +7308,14 @@ main.main-about-mario {
     line-height: 27px;
     font-family: $main-font;
     text-decoration: none;
+
     &:hover {
       &::after {
         transform: translate(15px, -50%) rotate(-45deg);
         transition: transform 0.4s ease-in-out;
       }
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -7167,6 +7329,7 @@ main.main-about-mario {
       transition: transform 0.4s ease-in-out;
     }
   }
+
   > span {
     color: #86868b;
     font-family: Arial, sans-serif;
@@ -7582,7 +7745,7 @@ main.main-about-mario {
   //position: fixed;
   z-index: 5;
   box-shadow: 0 0 11px 4px rgba(0, 0, 0, 0.15);
-  transition:  transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 
   .container {
     height: 100%;
@@ -7879,6 +8042,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     > .accessories-hidden-connection__about {
       width: 40%;
 
@@ -7899,7 +8063,8 @@ html {
       padding-top: 30px;
       top: auto;
       transform: none;
-      >.accessories-hidden-connection__about {
+
+      > .accessories-hidden-connection__about {
         width: 100%;
         align-items: center;
       }
@@ -8006,8 +8171,10 @@ html {
             object-fit: contain;
           }
         }
+
         span {
         }
+
         p {
           font-weight: bold;
           font-size: 24px;
@@ -8398,6 +8565,7 @@ html {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+
       &::after {
         content: "";
         position: absolute;
@@ -8464,9 +8632,9 @@ html {
         line-height: 16px;
       }
     }
-    
+
     @media screen and (max-width: 425px) {
-        width: 100%;
+      width: 100%;
       height: 190px;
       div {
         height: 100px;
@@ -8622,8 +8790,9 @@ html {
     position: relative;
     width: 465px;
     transition: color 0.6s ease-out, text-shadow 0.6s;
+
     > strong {
-      line-height:30px;
+      line-height: 30px;
     }
 
   }
@@ -8953,7 +9122,6 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
     list-style: none;
-
 
 
     div {
@@ -9411,6 +9579,7 @@ $height-for-li: 750px;
 
 
     }
+
     > p {
       font-size: 24px;
       font-family: $main-font;
@@ -9440,7 +9609,8 @@ $height-for-li: 750px;
 
       }
     }
-    @media screen and (max-width:1441px) {
+
+    @media screen and (max-width: 1441px) {
       padding: 75px 15px 30px 75px;
       > h3 {
         font-size: 54px;
@@ -9451,10 +9621,10 @@ $height-for-li: 750px;
         line-height: 22px;
       }
     }
-    
+
     @media screen and (max-width: 975px) {
       padding: 45px 15px 20px 45px;
-      >h3 {
+      > h3 {
         font-size: 48px;
         line-height: 54px;
       }
@@ -9463,7 +9633,7 @@ $height-for-li: 750px;
       width: 100%;
       padding: 50px 15px;
       min-height: 350px;
-      >h3 {
+      > h3 {
         font-size: 32px;
         line-height: 38px;
       }
@@ -9484,10 +9654,11 @@ $height-for-li: 750px;
         margin-top: 15px;
       }
       > a {
-        margin-top:  20px;
+        margin-top: 20px;
       }
     }
   }
+
   ul {
     width: 50%;
     display: flex;
@@ -9532,9 +9703,11 @@ $height-for-li: 750px;
         z-index: 2;
 
       }
+
       &:nth-child(2) {
         z-index: 2;
       }
+
       &:last-child {
         z-index: 2;
         justify-content: flex-end;
@@ -9567,6 +9740,7 @@ $height-for-li: 750px;
     flex-direction: column;
     ul {
       width: 100%;
+
       li {
         p {
           font-size: 14px;
@@ -10210,6 +10384,7 @@ $height-for-li: 750px;
     .mario-type-product {
       flex-direction: column;
       align-items: center;
+
       .video-banner__video-container {
         position: static;
       }
@@ -10287,6 +10462,7 @@ $height-for-li: 750px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     > a {
       width: 24px;
       height: 24px;
@@ -10302,3 +10478,246 @@ $height-for-li: 750px;
 
 
 
+.product-header__side>svg text {
+
+  font-size: 120px;
+}
+
+@media screen and (max-width: 1440px) {
+  .product-header__side>svg text {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .product-header__side>svg text {
+    font-size: 84px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product-header__side>svg text {
+    font-size: 74px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-header__side>svg text {
+    font-size: 92px
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .product-header__side>svg text {
+    font-size: 62px
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .product-header__side>svg text {
+    font-size: 56px
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+.mario-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1002;
+  background: rgba(0, 0,0, 0.2);
+  backdrop-filter: blur(4px);
+  overflow: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4 ease;
+  &.visible-modal {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mario-modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: $white-color;
+    border-radius: 4px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    .modal-close {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border-radius: 50%;
+      top: 5px;
+      right: 5px;
+      outline: none;
+      border: 1px solid transparent;
+      transition: background-color 0.4s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        &::before, &::after {
+          background-color: #000000;
+        }
+      }
+      &::before, &::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 1px;
+        background-color: $orange-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: background-color 0.4s ease;
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: background-color 0.4s ease;
+      }
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition: background-color 0.4s ease;
+      }
+    }
+  }
+
+
+}
+
+.mario-modal__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .mario-modal__img-container {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    min-width: 300px;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .mario-modal__text-part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 15px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid $p-color;
+    min-width: 420px;
+
+     h3 {
+      font-family: $main-font;
+      font-size: 30px;
+      line-height: 36px;
+      color: $black-color;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    p {
+      font-family: $main-font;
+      font-size: 18px;
+      line-height: 24px;
+      color: $p-color;
+      font-weight: normal;
+
+      margin: 15px 0;
+    }
+    form {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: $main-font;
+        font-size: 18px;
+        line-height: 24px;
+        color: $p-color;
+        font-weight: 600;
+        margin: 15px 0 0;
+
+        input {
+          width: 100%;
+          height: 30px;
+          border: 1px solid $p-color;
+          font-family: $main-font;
+          font-size: 18px;
+          line-height: 24px;
+          color: $p-color;
+          font-weight: normal;
+          padding-left: 8px;
+          box-sizing: border-box;
+          border-radius: 4px;
+          outline: none;
+        }
+      }
+      button {
+        width: 100%;
+        height: 32px;
+        border-radius: 4px;
+        background-color: $orange-color;
+        color: $white-color;
+        border: 1px solid $orange-color;
+        box-sizing: border-box;
+        font-family: $main-font;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.4s ease, background-color 0.4s ease;
+        cursor: pointer;
+        margin-top: 15px;
+        &:hover {
+          color: $black-color;
+          background: transparent;
+          transition: color 0.4s ease, background-color 0.4s ease;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mario-modal-overlay .mario-modal-window {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    transform: none;
+  }
+  .mario-modal__content {
+    flex-direction: column;
+
+    .mario-modal__img-container {
+      min-width: auto;
+    }
+    .mario-modal__text-part {
+      margin-left: 0;
+      margin-top: 15px;
+      border-left: none;
+      border-top: 1px solid $p-color;
+      padding-left: 0;
+      min-width: auto;
+    }
+  }
+
+
+}

@@ -99,3 +99,28 @@ window.addEventListener('load', () => {
 //     let percentGrad = boxLeft / 10;
 //
 // }
+
+let allModalOpenBtn = [...document.querySelectorAll('.mario-button')];
+let modalWindowBlock = document.querySelector('.mario-modal-overlay');
+let modalCloseBtn = document.querySelector('.modal-close');
+let modalWindowContent = document.querySelector('.mario-modal-window');
+allModalOpenBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault()
+        modalWindowBlock.classList.add('visible-modal');
+        document.body.classList.add('no-scroll');
+    })
+});
+modalCloseBtn.addEventListener('click', () => {
+    modalWindowBlock.classList.remove('visible-modal');
+    document.body.classList.remove('no-scroll');
+});
+
+modalWindowBlock.addEventListener('click', () => {
+    modalWindowBlock.classList.remove('visible-modal');
+    document.body.classList.remove('no-scroll');
+});
+
+modalWindowContent.addEventListener('click', (event) => {
+    event.stopPropagation();
+})
