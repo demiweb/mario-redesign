@@ -21,12 +21,8 @@
             </div>
             <nav class="mario-header__header-navigation">
                 <ul>
-                    <li><a href="#">Продукція</a>
-                        <ul>
-                            <li><a href="#">Електричні</a></li>
-                            <li><a href="#">Водяні</a></li>
-                            <li><a href="#">Аксесуари</a></li>
-                        </ul>
+                    <li class="has-popup"><a id="production-popup" href="#">Продукція</a>
+
                     </li>
                     <li><a href="#">Для партнерів</a></li>
                     <li><a href="#">Підтримка</a></li>
@@ -59,6 +55,7 @@
                 </div>
             </nav>
         </div>
+
     </div>
 </header>
 <main class="mario-main mario-home">
@@ -274,26 +271,35 @@
 
         </div>
         <div class="mario-modal__content">
-            <div class="mario-modal__img-container">
-                <img src="../img/57335.jpg" alt="">
-            </div>
+
             <div class="mario-modal__text-part">
                 <h3>Запрос сотрудничества</h3>
                 <form action="form">
-                    <label for="mario__input-name">Имя
-                        <input type="text" id="mario__input-name">
+                    <label for="mario__input-name">
+                        <input type="text" id="mario__input-name" placeholder="Имя">
                     </label>
-                    <label for="mario__input-number">Телефон
-                        <input type="text" id="mario__input-number">
+                    <label for="mario__input-number">
+                        <input type="text" id="mario__input-number" placeholder="Телефон">
                     </label>
-                    <label for="mario__input-email">Почта
-                        <input type="text" id="mario__input-email">
+                    <label for="mario__input-email">
+                        <input type="text" id="mario__input-email" placeholder="Почта">
                     </label>
-                    <button type="">Отправить</button>
+                    <button type="">Надіслати</button>
                 </form>
             </div>
         </div>
     </div>
+</div>
+
+<div class="production-popup popup-mario">
+    <div class="close-btn-popup">
+
+    </div>
+    <ul>
+        <li><a href="#"><div><img src="../img/popup-water.png" alt=""></div><p>Водяні</p><span>Дивитися товари</span></a></li>
+        <li><a href="#"><div><img src="../img/popup-electro.png" alt=""></div><p>Електричні</p><span>Дивитися товари</span></a></li>
+        <li><a href="#"><div><img src="../img/popup-acces.png" alt=""></div><p>Аксесуари</p><span>Дивитися товари</span></a></li>
+    </ul>
 </div>
 <footer class="mario-footer">
     <section class="mario-footer__footer-top">

@@ -154,4 +154,29 @@ document.addEventListener('scroll', (e) => {
     }
 
 
+});
+
+
+let headerLiPopups = [...document.querySelectorAll('.has-popup a')];
+let popupCloseBtn = [...document.querySelectorAll('.close-btn-popup')];
+
+headerLiPopups.forEach((li) => {
+    li.addEventListener('click', (event)=> {
+        event.preventDefault();
+        let liId = li.id;
+        let popUpModal = document.querySelector(`.${liId}`);
+        console.log(popUpModal);
+        popUpModal.classList.add('popup-visible');
+    })
+});
+
+popupCloseBtn.forEach((cls) => {
+    cls.addEventListener('click', () => {
+        let closestPopup = cls.closest('.popup-mario');
+        closestPopup.classList.add('hidding');
+        setTimeout(() => {
+            closestPopup.classList.remove('popup-visible');
+            closestPopup.classList.remove('hidding');
+        }, 1200)
+    })
 })

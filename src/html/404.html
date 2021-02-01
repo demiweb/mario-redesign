@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
     <title>Mario</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/slick.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
@@ -63,68 +63,36 @@
 
     </div>
 </header>
-<main class="mario-main main-payment-page">
-    <section class="mario-main__video-banner mario-support-page" style="z-index: 2">
-        <div class="video-banner__video-container">
-            <video type="video/mp4" poster="" style="width: 100%; height: 100%; object-fit: cover; z-index: 0" src="../video/main-video.mp4"
-                   autoplay=""
-                   muted="" loop="" playsinline="" data-loaded="true"></video>
-        </div>
-        <div class="container">
-            <nav class="item-page__breadcrumbs">
-                <ul>
-                    <li><a href="./home.html">Главная</a></li>
-                    <li><a href="./home.html">Підтримка</a></li>
-                    <li><span>Оплата</span></li>
-                </ul>
-            </nav>
-            <h1 class="anim-fading-out">Оплата</h1>
-            <p class="anim-fading-out">Якщо скористатися найпростішим прикладом, то хто з нас став би займатися якими б
-                то не було тяжкими
-                фізичними вправами, якщо б це не приносило з собою якоїсь користі?</p>
-        </div>
+<main class="mario-main mario-error">
 
-    </section>
-    <section class="mario-payment-page__about-payment">
-        <div class="container">
-            <div class="mario-payment-page__container">
-                <div class="mario-payment-page__content">
-                    <h2>Способи оплати</h2>
-                    <p>Гарантійні зобов'язання виконуються виробником при наявності у клієнта технічного паспорта,
-                        завіреного організацією, яка продала виріб, із зазначенням ідентифікаційного номера та дати продажу
-                        товару.</p>
-                </div>
-
-                <div class="mario-payment-page__block">
-                    <div class="mario-payment-page__content">
-                        <div class="mario-payment-page__img-container">
-                            <img src="../img/results.svg" alt="">
-                        </div>
-
-                        <h6>Післяплатою:</h6>
-                        <p>При виборі оплати післяплатою - відправка
-                            проводитися службою Meest-Express
-                            (При отримані товару)<br>
-                            Оплата - в національній валюті</p>
-                    </div>
-                    <div class="mario-payment-page__content">
-                        <div class="mario-payment-page__img-container">
-                            <img src="../img/man.svg" alt="">
-                        </div>
-
-                        <h6>Кур'єрська доставка до дверей:</h6>
-                        <p>Кур'єрська доставка здійснюється службою
-                            Meest-Express. Оплата при отриманні товару
-                            сумою зазначену на сайті, ніяких комісій
-                            і доплат. Кур'єрська доставка безкоштовно.</p>
-                    </div>
-
-                </div>
-
-
+    <section class="mario-error-page">
+        <section class="mario-main__video-banner " style="z-index: 2">
+            <div class="video-banner__video-container">
+                <img src="../img/404-bg.jpg" alt="404">
             </div>
-        </div>
+            <div class="container">
+                <div class="mario-partnership__container">
+                    <nav class="item-page__breadcrumbs">
+                        <ul>
+                            <li><a href="./home.html">Главная</a></li>
+                            <li><span>404</span></li>
+                        </ul>
+                    </nav>
+                    <div class="mario-about__about-header">
+                        <h1>404</h1>
+                        <p>Нажаль, такої сторінки не існує. Але ви можете скористатися іншими посиланнями</p>
+                        <ul>
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Контакти</a></li>
+                            <li><a href="#">Поставити запитання</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
+
+
 
 
 </main>
@@ -135,25 +103,28 @@
 
         </div>
         <div class="mario-modal__content">
-
+            <div class="mario-modal__img-container">
+                <img src="../img/57335.jpg" alt="">
+            </div>
             <div class="mario-modal__text-part">
                 <h3>Запрос сотрудничества</h3>
                 <form action="form">
-                    <label for="mario__input-name">
-                        <input type="text" id="mario__input-name" placeholder="Имя">
+                    <label for="mario__input-name">Имя
+                        <input type="text" id="mario__input-name">
                     </label>
-                    <label for="mario__input-number">
-                        <input type="text" id="mario__input-number" placeholder="Телефон">
+                    <label for="mario__input-number">Телефон
+                        <input type="text" id="mario__input-number">
                     </label>
-                    <label for="mario__input-email">
-                        <input type="text" id="mario__input-email" placeholder="Почта">
+                    <label for="mario__input-email">Почта
+                        <input type="text" id="mario__input-email">
                     </label>
-                    <button type="">Надіслати</button>
+                    <button type="">Отправить</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 <div class="production-popup popup-mario">
     <div class="close-btn-popup">
 
@@ -164,7 +135,6 @@
         <li><a href="#"><div><img src="../img/popup-acces.png" alt=""></div><p>Аксесуари</p><span>Дивитися товари</span></a></li>
     </ul>
 </div>
-
 <footer class="mario-footer">
     <section class="mario-footer__footer-top">
         <div class="container">
