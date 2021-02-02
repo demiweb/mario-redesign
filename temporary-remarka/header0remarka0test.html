@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main-style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    html, body {
+        margin: 0 auto;
+    }
+
+    main {
+        height: 2000px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(255, 16, 28, 0.2) 0%, rgba(168, 28, 167, 0.4) 100%);
+    }
+</style>
+<body>
+<header class="rf__header">
+    <nav class="rf__navigation-menu">
+        <div class="rf__burger-menu-container">
+            <div class="rf__burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+        <div class="rf__header-navigation">
+<!--            <?php get_template_part('wrapper/wrapper-header'); ?>-->
+            <nav class="nav nav__primary clearfix">
+                <ul class="rf__main-menu">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Актерское</a></li>
+                    <li><a href="#">Ораторское</a></li>
+                    <li><a href="#">Фильммейкинг</a></li>
+                    <li><a href="#">Бизнес тренинги</a></li>
+                    <li><a href="#">Детская киношкола</a></li>
+                    <li><a href="#">Контакты и адреса</a></li>
+                </ul>
+                <nav class="rf__header-socials rf__socials_mob">
+                    <ul>
+                        <li><a href="https://www.facebook.com/remarkafilm/" title="Facebook"><img src="facebook-rf.svg"
+                                                                                                  alt="Facebook"></a></li>
+                        <li><a href="https://instagram.com/remarka.acting?igshid=1byslhffm6fat" title="Instagram"><img
+      src="./instagram-rf.svg" alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCNo3k-EuvJbse3HXzCqSUGQ" title="Youtube"><img src="youtube-rf.svg" alt="Youtube"></a></li>
+                    </ul>
+
+                </nav>
+            </nav>
+
+            <nav class="rf__header-menu-form">
+                <form action="">
+                    <input type="text" placeholder="Имя *" required>
+                    <input type="text" placeholder="Город">
+                    <input type="text" placeholder="Телефон *" required>
+                    <span  class="rf__way-select"><p>Направление</p>
+                    <ul class="rf__select-way">
+                        <li>Актерское</li>
+                        <li>Ораторское</li>
+                        <li>Фильммейкинг</li>
+                        <li>Бизнес тренинги</li>
+                        <li>Детская киношкола</li>
+
+                    </ul>
+                    </span>
+
+                    <input type="submit" value="Оставить заявку" id="left-request-menu" class="left-request-form btn btn-primary">
+                </form>
+
+            </nav>
+        </div>
+        <input type="submit" value="Оставить заявку" id="left-request" class="left-request-form btn btn-primary">
+        <nav class="rf__header-socials">
+            <ul>
+                <li><a href="https://www.facebook.com/remarkafilm/" title="Facebook"><img src="facebook-rf.svg"
+                                                                                          alt="Facebook"></a></li>
+                <li><a href="https://instagram.com/remarka.acting?igshid=1byslhffm6fat" title="Instagram"><img
+      /wp-content/themes/theme51770/images/header                  src="./instagram-rf.svg" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCNo3k-EuvJbse3HXzCqSUGQ" title="Youtube"><img src="youtube-rf.svg" alt="Youtube"></a></li>
+            </ul>
+
+        </nav>
+    </nav>
+
+    <a href="/" class="rf__main-logo" title="Remarka"><img src="logo-main-hdr.png" alt="RemarkaFilm"></a>
+
+    <nav class="rf__header-phones">
+        <div class="phone-icon rf__mob-toggler"><img src="phone-rf.svg" alt=""></div>
+        <div class="rf__phones-container">
+            <ul>
+                <li><a href="tel:+380971012001">097-101-2001</a></li>
+                <li class="breaker-line"></li>
+                <li><a href="tel:+380952729973">095-272-9973</a></li>
+
+            </ul>
+            <div class="rf__search-field">
+                <div class="rf__search-icon rf__search-toggler">
+                    <img src="loupe-rf.svg" alt="Search">
+                </div>
+                <div class="search-form">
+
+                    <form id="searchform" method="get" action="" accept-charset="utf-8">
+<!--value form action <?php echo home_url(); ?>-->
+                        <input type="text" value="" name="s" id="s" class="search-form_it">
+<!--value input 1 <?php the_search_query(); ?>-->
+                        <input type="submit" value="Поиск" id="search-submit" class="search-form_is btn btn-primary">
+                        <!--value input 2 <?php echo theme_locals("search") ?>-->
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    let brgrMenu = document.querySelector('.rf__burger-menu');
+    let mainMenu = document.querySelector('.rf__header-navigation');
+    let srchToggle = document.querySelector('.rf__search-toggler');
+    let requestToggle = document.querySelector('.rf__navigation-menu > .left-request-form');
+    let mobToggle = document.querySelector('.rf__mob-toggler');
+    let srchField = document.querySelector('.rf__search-field .search-form');
+    let formSelectWay = document.querySelector('.rf__way-select');
+    formSelectWay.addEventListener('click', () => {
+        formSelectWay.classList.toggle('opened');
+    });
+    brgrMenu.addEventListener('click', () => {
+        brgrMenu.classList.toggle('opened');
+        mainMenu.classList.toggle('opened');
+        srchField.classList.remove('opened');
+        srchToggle.classList.remove('opened');
+        mobToggle.classList.remove('opened');
+    });
+
+    requestToggle.addEventListener('click', () => {
+        brgrMenu.classList.toggle('opened');
+        mainMenu.classList.toggle('opened');
+        srchField.classList.remove('opened');
+        srchToggle.classList.remove('opened');
+        mobToggle.classList.remove('opened');
+    });
+    srchToggle.addEventListener('click', () => {
+        srchField.classList.toggle('opened');
+        srchToggle.classList.toggle('opened');
+        brgrMenu.classList.remove('opened');
+        mainMenu.classList.remove('opened');
+    });
+    mobToggle.addEventListener('click', () => {
+        mobToggle.classList.toggle('opened');
+        srchField.classList.remove('opened');
+        srchToggle.classList.remove('opened');
+        brgrMenu.classList.remove('opened');
+        mainMenu.classList.remove('opened');
+    });
+
+    let selectWayLi = [...document.querySelectorAll('.rf__select-way li')];
+
+    selectWayLi.forEach((li) => {
+        li.addEventListener('click', () => {
+            let wayInner = li.innerHTML;
+            selectWayLi.forEach((li2) => {
+                li2.classList.remove('selected');
+            });
+            li.classList.add('selected');
+            formSelectWay.querySelector('p').innerHTML = wayInner;
+        })
+    })
+
+
+</script>
+<main></main>
+</body>
+</html>
