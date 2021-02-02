@@ -43,11 +43,11 @@
                 </ul>
                 <nav class="rf__header-socials rf__socials_mob">
                     <ul>
-                        <li><a href="https://www.facebook.com/remarkafilm/" title="Facebook"><img src="facebook-rf.svg"
+                        <li><a target="_blank" href="https://www.facebook.com/remarkafilm/" title="Facebook"><img src="facebook-rf.svg"
                                                                                                   alt="Facebook"></a></li>
-                        <li><a href="https://instagram.com/remarka.acting?igshid=1byslhffm6fat" title="Instagram"><img
+                        <li><a target="_blank" href="https://instagram.com/remarka.acting?igshid=1byslhffm6fat" title="Instagram"><img
       src="./instagram-rf.svg" alt="Instagram"></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCNo3k-EuvJbse3HXzCqSUGQ" title="Youtube"><img src="youtube-rf.svg" alt="Youtube"></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCNo3k-EuvJbse3HXzCqSUGQ" title="Youtube"><img src="youtube-rf.svg" alt="Youtube"></a></li>
                     </ul>
 
                 </nav>
@@ -77,11 +77,11 @@
         <input type="submit" value="Оставить заявку" id="left-request" class="left-request-form btn btn-primary">
         <nav class="rf__header-socials">
             <ul>
-                <li><a href="https://www.facebook.com/remarkafilm/" title="Facebook"><img src="facebook-rf.svg"
+                <li><a target="_blank" href="https://www.facebook.com/remarkafilm/" title="Facebook"><img src="facebook-rf.svg"
                                                                                           alt="Facebook"></a></li>
-                <li><a href="https://instagram.com/remarka.acting?igshid=1byslhffm6fat" title="Instagram"><img
-      /wp-content/themes/theme51770/images/header                  src="./instagram-rf.svg" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/channel/UCNo3k-EuvJbse3HXzCqSUGQ" title="Youtube"><img src="youtube-rf.svg" alt="Youtube"></a></li>
+                <li><a target="_blank" href="https://instagram.com/remarka.acting?igshid=1byslhffm6fat" title="Instagram"><img
+                        src="./instagram-rf.svg" alt="Instagram"></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCNo3k-EuvJbse3HXzCqSUGQ" title="Youtube"><img src="youtube-rf.svg" alt="Youtube"></a></li>
             </ul>
 
         </nav>
@@ -98,21 +98,22 @@
                 <li><a href="tel:+380952729973">095-272-9973</a></li>
 
             </ul>
-            <div class="rf__search-field">
-                <div class="rf__search-icon rf__search-toggler">
-                    <img src="loupe-rf.svg" alt="Search">
-                </div>
-                <div class="search-form">
 
-                    <form id="searchform" method="get" action="" accept-charset="utf-8">
-<!--value form action <?php echo home_url(); ?>-->
-                        <input type="text" value="" name="s" id="s" class="search-form_it">
-<!--value input 1 <?php the_search_query(); ?>-->
-                        <input type="submit" value="Поиск" id="search-submit" class="search-form_is btn btn-primary">
-                        <!--value input 2 <?php echo theme_locals("search") ?>-->
-                    </form>
+        </div>
+        <div class="rf__search-field">
+            <div class="rf__search-icon rf__search-toggler">
+                <img src="loupe-rf.svg" alt="Search">
+            </div>
+            <div class="search-form">
 
-                </div>
+                <form id="searchform" method="get" action="" accept-charset="utf-8">
+                    <!--value form action <?php echo home_url(); ?>-->
+                    <input type="text" value="" name="s" id="s" class="search-form_it">
+                    <!--value input 1 <?php the_search_query(); ?>-->
+                    <input type="submit" value="Поиск" id="search-submit" class="search-form_is btn btn-primary">
+                    <!--value input 2 <?php echo theme_locals("search") ?>-->
+                </form>
+
             </div>
         </div>
     </nav>
@@ -149,6 +150,7 @@
         srchToggle.classList.toggle('opened');
         brgrMenu.classList.remove('opened');
         mainMenu.classList.remove('opened');
+        mobToggle.classList.remove('opened');
     });
     mobToggle.addEventListener('click', () => {
         mobToggle.classList.toggle('opened');
