@@ -9905,5 +9905,59 @@ body.no-scroll {
     position: relative;
   }
 }
+@media screen and (max-width: 768px) {
+  .main-payment-page .mario-support-page .container .item-page__breadcrumbs > ul > li a {
+    color: #000000;
+  }
+
+  .main-payment-page .mario-support-page .container h1 {
+    color: #000000;
+  }
+
+  .main-payment-page .mario-support-page .container p {
+    color: #000000;
+  }
+
+  .main-payment-page .item-page__breadcrumbs > ul > li:before {
+    color: #000000;
+  }
+}
+.about-mario-warranty__text > span {
+  background: none;
+  -webkit-background-clip: text;
+  color: #4B4B4B;
+}
+
+.mario-main__video-banner.mario-type-product {
+  height: 1400px;
+  margin-top: 50px;
+}
+
+.mario-water-heat .mario-type-product-page {
+  margin-bottom: 60px;
+}
+
+.mario-steel__container {
+  margin-top: -60px;
+}
+
+@media screen and (max-width: 1440px) {
+  .mario-main__video-banner.mario-type-product {
+    height: 1200px;
+  }
+}
+.mario-type-product .mario-about__about-header {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .mario-water-heat .mario-type-product-page {
+    margin-bottom: 0;
+  }
+
+  .mario-main__video-banner.mario-type-product {
+    height: auto;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
