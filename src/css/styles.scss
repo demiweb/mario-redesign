@@ -11152,6 +11152,10 @@ body.no-scroll {
 .mario-steel__container {
   margin-top: -60px;
 }
+
+.mario-modal__img-container {
+  padding-right: 30px;
+}
 @media screen and (max-width: 1440px) {
   .mario-main__video-banner.mario-type-product {
     height: 1200px;
@@ -11166,5 +11170,42 @@ body.no-scroll {
   }
   .mario-main__video-banner.mario-type-product {
     height: auto;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .mario-modal__content .mario-modal__img-container {
+    max-width: none;
+    padding: 0;
+    margin-top:20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .mario-modal__content .mario-modal__img-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-height: 240px;
+    height: 100%;
+  }
+  .mario-modal__content .mario-modal__text-part {
+    margin-top:0;
+  }
+  .mario-modal__content .mario-modal__text-part form label {
+    margin-top: auto;
+  }
+  .popup-mario ul li a div {
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .mario-modal__content .mario-modal__img-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-height: 150px;
+    height: 100%;
+    margin-top: 10px;
   }
 }
