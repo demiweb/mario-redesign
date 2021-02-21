@@ -940,6 +940,10 @@
     }
 }
 
+@media screen and (max-width: 1367px) and (min-height: 900px) {
+    .full-page__main { 
+        align-items: center;
+}
 
 @media screen and (max-width: 1024px) {
     .full-page__container {
