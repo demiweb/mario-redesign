@@ -464,8 +464,8 @@
 }
 @media screen and (max-width: 1440px) {
     .main-container__text h1 {
-        font-size: 48px !important;
-        line-height: 68px !important;
+        font-size: 44px !important;
+        line-height: 48px !important;
     }
 }
 .main-container__text ul {
@@ -917,6 +917,29 @@
 .full-page__socials ul li:last-child {
     margin-right: 0;
 }
+@media screen and (max-width: 1440px) {
+    .full-page__footer-container {
+        padding: 20px 0;
+    }
+    .full-page__main .partner-block__partners-logos {
+        padding-top: 3%;
+    }
+    .main-container__text ul {
+        margin: 22px 0;
+    }
+    .main-container__text ul li {
+        margin-bottom: 15px;
+    }
+   
+    .header__main nav > a {
+        height: 48px;
+    }
+
+    .header__subheader nav {
+        padding: 12px;
+    }
+}
+
 
 @media screen and (max-width: 1024px) {
     .full-page__container {
