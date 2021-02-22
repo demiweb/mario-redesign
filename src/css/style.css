@@ -940,6 +940,9 @@
     .header__subheader nav {
         padding: 12px;
     }
+    .full-page__container {
+        padding: 0 90px 0 15px;
+    }
 }
 
 @media screen and (max-width: 1367px) and (min-height: 900px) {
@@ -963,6 +966,7 @@
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1650px) {
+
     .mario__full-page-home {
         height: auto;
         flex-grow: 1;
