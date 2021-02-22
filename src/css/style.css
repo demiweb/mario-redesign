@@ -962,7 +962,7 @@
         margin: 32px 0;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 1367px) {
+@media screen and (min-width: 768px) and (max-width: 1650px) {
     .mario__full-page-home {
         height: auto;
         flex-grow: 1;
