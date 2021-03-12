@@ -1168,6 +1168,8 @@
     margin: 0 auto;
 }
 .mario-buy__select {
+    z-index: 1;
+    position: relative;
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
