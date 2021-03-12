@@ -1143,6 +1143,593 @@
     }
 }
 
+.mario-contacts.mario-where-buy .mario-manufacture{
+    -webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+.mario-contacts.mario-where-buy + .mario-buy-list {
+    z-index: 1;
+}
+.mario-contacts.mario-where-buy .mario-contacts__container .mario-contacts__contacts-header h1 {
+    font-size: 70px;
+    line-height: 85px;
+}
+.main-contacts.where-buy {
+    z-index: 2;
+}
+.mario-buy-list {
+    width: 100%;
+    padding-bottom: 70px;
+}
+.mario-buy__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mario-buy__select {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 50px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.mario-buy__select h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 52px;
+    line-height: 58px;
+    color: #000000;
+    font-weight: 700;
+    font-family:Raleway,sans-serif;
+}
+.select-type {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+
+}
+.select-type > span{
+    cursor: pointer;
+    width: 100%;
+    height: 48px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border: 2px solid #fa8100;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 4px 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    position: relative;
+
+}
+
+.select-type > span::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-right: none;
+    border-top: none;
+    right: 14px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg);
+    -moz-transform: translate(0, -50%) rotate(-45deg);
+    -ms-transform: translate(0, -50%) rotate(-45deg);
+    -o-transform: translate(0, -50%) rotate(-45deg);
+    transform: translate(0, -50%) rotate(-45deg);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
+    -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
+}
+.select-type select {
+    display: none;
+}
+.select-type.open > span::after {
+    -webkit-transform: translate(0, -50%) rotate(135deg);
+    -moz-transform: translate(0, -50%) rotate(135deg);
+    -ms-transform: translate(0, -50%) rotate(135deg);
+    -o-transform: translate(0, -50%) rotate(135deg);
+    transform: translate(0, -50%) rotate(135deg);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
+    -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
+
+}
+.custom-selector {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border: 2px solid #fa8100;
+    border-top: none;
+    border-bottom: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 1.5s ease;
+    -o-transition: max-height 1.5s ease;
+    -moz-transition: max-height 1.5s ease;
+    transition: max-height 1.5s ease;
+
+}
+.select-type.open .custom-selector {
+    max-height: 600px;
+    -webkit-transition: max-height 1.5s ease;
+    -o-transition: max-height 1.5s ease;
+    -moz-transition: max-height 1.5s ease;
+    transition: max-height 1.5s ease;
+
+}
+.custom-selector span {
+    cursor: pointer;
+    height: 42px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 4px 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid #fa8100;
+    background: white;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    position: relative;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+
+
+}
+
+.custom-selector span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    background: rgba(250, 129, 0, 0.1);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+
+}
+.custom-selector span:hover::after {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+.mario-buy__mags {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+
+}
+.single-mag {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0 40px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.single-mag .img {
+    width: 211px;
+    height: 65px;
+
+}
+.single-mag .img img {
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+.about-mag {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: -webkit-calc((15% - (211px / 4)) + 10%);
+    width: -moz-calc((15% - (211px / 4)) + 10%);
+    width: calc((15% - (211px / 4)) + 10%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10%;
+    min-width: 250px;
+}
+
+.about-mag p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #595959;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.about-mag p strong{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+.about-mag a {
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(0, 135, 238);
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+}
+.mag-contacts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: -webkit-calc((30% - (211px / 4)) + 10%);
+    width: -moz-calc((30% - (211px / 4)) + 10%);
+    width: calc((30% - (211px / 4)) + 10%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10%;
+    min-width: 410px;
+}
+.mag-contacts p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #595959;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.mag-contacts a{
+    font-size: 16px;
+    line-height: 22px;
+    color: #595959;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    margin: 0 0 10px;
+    display: inline-block;
+}
+.mag-contacts >*:last-child {
+    margin-bottom: 0;
+}
+.single-mag > a {
+    color: #000;
+    font-weight: 700;
+    border-bottom: 1px solid #fa8100;
+    width: auto;
+    max-width: 95px;
+    text-decoration: none;
+    position: relative;
+    margin: 10px 20px 10px auto;
+    font-size: 16px;
+    line-height: 27px;
+    font-family: Raleway,sans-serif;
+
+}
+.single-mag > a::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #fa8100;
+    border-bottom: 2px solid #fa8100;
+    -webkit-transform: translate(0,-50%) rotate(
+            -45deg
+    );
+    -moz-transform: translate(0,-50%) rotate(
+            -45deg
+    );
+    -ms-transform: translate(0,-50%) rotate(
+            -45deg
+    );
+    -o-transform: translate(0,-50%) rotate(
+            -45deg
+    );
+    transform: translate(0,-50%) rotate(
+            -45deg
+    );
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: -webkit-transform .4s ease-in-out;
+    -o-transition: -o-transform .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out, -moz-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out, -moz-transform .4s ease-in-out, -o-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+.single-mag > a:hover::after {
+    -webkit-transform: translate(15px,-50%) rotate(
+            -45deg
+    );
+    -moz-transform: translate(15px,-50%) rotate(
+            -45deg
+    );
+    -ms-transform: translate(15px,-50%) rotate(
+            -45deg
+    );
+    -o-transform: translate(15px,-50%) rotate(
+            -45deg
+    );
+    transform: translate(15px,-50%) rotate(
+            -45deg
+    );
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: -webkit-transform .4s ease-in-out;
+    -o-transition: -o-transform .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out, -moz-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out, -moz-transform .4s ease-in-out, -o-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+@media screen and (max-width: 992px) {
+    .about-mag p {
+        font-size: 16px;
+    }
+    .about-mag {
+        padding-left: 5%;
+        min-width: 170px;
+    }
+    .mag-contacts {
+        padding-left: 5%;
+        min-width: 350px;
+    }
+    .single-mag .img {
+        width: 128px;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .single-mag {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .single-mag .img {
+        width: 100%;
+
+        margin: 0 auto 25px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .single-mag .img img {
+        width: 211px;
+        margin: 0 auto;
+    }
+    .about-mag {
+        width: -webkit-calc(100% / 3);
+        width: -moz-calc(100% / 3);
+        width: calc(100% / 3);
+        padding-left: 0;
+        min-width: 0;
+    }
+    .mag-contacts {
+        width: -webkit-calc(100% / 3);
+        width: -moz-calc(100% / 3);
+        width: calc(100% / 3);
+        padding-left: 0;
+        min-width: 0;
+    }
+}
+@media screen and (max-width: 580px) {
+    .about-mag {
+        width: 50%;
+        padding-left: 0;
+        min-width: 0;
+    }
+    .mag-contacts {
+        width: 50%;
+        padding-left: 0;
+        min-width: 0;
+    }
+
+    .single-mag > a {
+        margin: 35px auto 10px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .about-mag {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .mag-contacts {
+        width: 100%;
+
+    }
+}
+
 /*fullpage mario home*/
 
 

@@ -181,6 +181,7 @@ window.addEventListener('load', () => {
     hiddingTopBath();
     checkTempWidth();
     prlImg();
+    ifSelectTypeOnPage();
 })
 
 videosBlock.forEach(videoBlock => {
