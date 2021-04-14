@@ -1170,9 +1170,34 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .mario-buy__select {
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     position: relative;
     display: -webkit-box;
@@ -1327,18 +1352,19 @@
     box-sizing: border-box;
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: max-height 1.5s ease;
-    -o-transition: max-height 1.5s ease;
-    -moz-transition: max-height 1.5s ease;
-    transition: max-height 1.5s ease;
+    -webkit-transition: max-height 0.4s ease;
+    -o-transition: max-height 0.4s ease;
+    -moz-transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease;
 
 }
 .select-type.open .custom-selector {
-    max-height: 600px;
-    -webkit-transition: max-height 1.5s ease;
-    -o-transition: max-height 1.5s ease;
-    -moz-transition: max-height 1.5s ease;
-    transition: max-height 1.5s ease;
+    max-height: 170px;
+    overflow-y: scroll;
+    -webkit-transition: max-height 0.6s ease;
+    -o-transition: max-height 0.6s ease;
+    -moz-transition: max-height 0.6s ease;
+    transition: max-height 0.6s ease;
 
 }
 .custom-selector span {
@@ -1405,7 +1431,9 @@
     transition: opacity 0.3s ease;
 }
 .mario-buy__mags {
-    width: 100%;
+    width: 45%;
+    padding-right: 2%;
+    margin-right: 3%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -1428,8 +1456,41 @@
     -moz-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    max-height: 550px;
+    overflow-y: scroll;
 
 }
+.mario-buy__mags::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: #FAFAFA;
+    border: 3px solid #FAFAFA;
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px #FAFAFA;
+}
+
+/* Track */
+.mario-buy__mags::-webkit-scrollbar-track {
+    background: #FAFAFA;
+    border-radius: 10px;
+    width: 4px;
+
+    box-sizing: border-box;
+}
+
+/* Handle */
+.mario-buy__mags::-webkit-scrollbar-thumb {
+    background: #C7C7C7;
+    border-radius: 10px;
+    width: 4px;
+
+}
+
+/* Handle on hover */
+.mario-buy__mags::-webkit-scrollbar-thumb:hover {
+    background: #959595;
+}
+
 .single-mag {
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -1437,29 +1498,33 @@
     box-sizing: border-box;
     padding: 40px 0 40px 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.4);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-box-orient: horizontal;
-    -moz-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -moz-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -moz-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-webkit-box-orient: horizontal;*/
+    /*-webkit-box-direction: normal;*/
+    /*-webkit-flex-direction: row;*/
+    /*-moz-box-orient: horizontal;*/
+    /*-moz-box-direction: normal;*/
+    /*-ms-flex-direction: row;*/
+    /*flex-direction: row;*/
+    /*-webkit-box-align: center;*/
+    /*-webkit-align-items: center;*/
+    /*-moz-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*align-items: center;*/
+    /*-webkit-box-pack: start;*/
+    /*-webkit-justify-content: flex-start;*/
+    /*-moz-box-pack: start;*/
+    /*-ms-flex-pack: start;*/
+    /*justify-content: flex-start;*/
 }
+
+
+
+
 .single-mag .img {
     width: 211px;
     height: 65px;
@@ -1470,6 +1535,7 @@
     -o-object-fit: contain;
     object-fit: contain;
 }
+
 .about-mag {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1645,6 +1711,53 @@
     transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out, -moz-transform .4s ease-in-out, -o-transform .4s ease-in-out;
     transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
 }
+/*new single-mag*/
+.single-mag {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 15px 0 15px;
+}
+.single-mag .img {
+    width: 170px;
+
+}
+.mag-contacts {
+    padding-left: 0;
+}
+.mag-contacts a, .mag-contacts p {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.about-mag p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 6px;
+}
+/*new single-mag*/
 @media screen and (max-width: 992px) {
     .about-mag p {
         font-size: 16px;
@@ -1694,17 +1807,20 @@
         width: 211px;
         margin: 0 auto;
     }
+    .single-mag > a {
+        margin-right: auto;
+    }
     .about-mag {
-        width: -webkit-calc(100% / 3);
-        width: -moz-calc(100% / 3);
-        width: calc(100% / 3);
+        width: -webkit-calc(100% / 2);
+        width: -moz-calc(100% / 2);
+        width: calc(100% / 2);
         padding-left: 0;
         min-width: 0;
     }
     .mag-contacts {
-        width: -webkit-calc(100% / 3);
-        width: -moz-calc(100% / 3);
-        width: calc(100% / 3);
+        width: -webkit-calc(100% / 2);
+        width: -moz-calc(100% / 2);
+        width: calc(100% / 2);
         padding-left: 0;
         min-width: 0;
     }
@@ -1763,9 +1879,30 @@
 
 /*page where to buy*/
 /*page where to buy MAP*/
+.map-container {
+    width: 50%;
 
+}
 #mapid {
-    height: 300px;
+    height: 100%;
+    z-index: 1;
+}
+
+.single-mag {
+
+}
+
+@media screen and (max-width: 600px) {
+    .mario-buy__mags {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .map-container {
+        margin-top: 40px;
+        width: 100%;
+        height: 400px;
+    }
 }
 
 /*page where to buy MAP */
