@@ -30,6 +30,7 @@ function ifSelectTypeOnPage() {
                 newSpan.innerHTML = optInnerText;
                 opt.closest('.select-type').querySelector('.custom-selector').appendChild(newSpan);
                 newSpan.addEventListener('click', () => {
+                    ifHaveDots();
                     let spanInner = newSpan.innerHTML;
                     let spanValue = newSpan.dataset.value;
                     newSpan.closest('.select-type').querySelector('span').innerHTML = spanInner;
