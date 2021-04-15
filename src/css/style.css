@@ -1882,10 +1882,12 @@
 .map-container {
     width: 50%;
 
+
 }
 #mapid {
     height: 100%;
     z-index: 1;
+
 }
 
 .single-mag {

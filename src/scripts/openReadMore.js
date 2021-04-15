@@ -68,7 +68,11 @@ function goToDotMap() {
     allMapsDots.forEach((ot) => {
         let aLinkMap = ot.querySelector('.mag-on-map');
         aLinkMap.addEventListener('click', (e) => {
-            e.preventDefault();
+            // if (window.innerWidth > 640) {
+                e.preventDefault();
+            // }
+            document.getElementById("mapid").scrollIntoView();
+
             let xCoord1 = Number(ot.dataset.locationX);
             let yCoord1 = Number(ot.dataset.locationY);
             map.panTo(new L.LatLng(xCoord1, yCoord1));
@@ -150,6 +154,18 @@ function createMapBuy() {
         let aLinkMap = ot.querySelector('.mag-on-map');
         aLinkMap.addEventListener('click', (e) => {
             e.preventDefault();
+            if (window.innerWidth > 640) {
+
+
+            } else {
+                $('html,body').animate({ scrollTop: $('#mapid').offset().top - 100 }, 600);
+
+            }
+
+            // let idMap = document.getElementById('mapid').getBoundingClientRect().top;
+
+
+            // e.preventDefault();
             let xCoord1 = Number(ot.dataset.locationX);
             let yCoord1 = Number(ot.dataset.locationY);
             map.setView([xCoord1, yCoord1], 18);
